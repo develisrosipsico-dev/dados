@@ -1,0 +1,700 @@
+{
+  "task_id": "TAREFA_002",
+  "review_id": "tarefa-002-v1",
+  "record_version": 1,
+  "created_at": "2026-10-16T23:51:10.541733+00:00",
+  "decision": "confirmed",
+  "reviewer_kind": "automated_assistant_visual_and_structural_review_not_human",
+  "unit": {
+    "node_id": "node_6e1afe030552a2892149acd5",
+    "element_id": "elem_07801c5585119203e7f02cae",
+    "title": "A PERDA DO OFÍCIO",
+    "classification": "section",
+    "level": 3,
+    "parent_id": "node_0357e0c292c6ecffe3791f27",
+    "base_quality_status": "review_required",
+    "page_local": 5,
+    "page_index": 4,
+    "block_id": "p000004_b00001",
+    "source_spans": [
+      {
+        "bbox": [
+          76.9921875,
+          212.6280059814453,
+          283.47186279296875,
+          238.67901611328125
+        ],
+        "block_char_end": 17,
+        "block_char_start": 0,
+        "block_id": "p000004_b00001",
+        "char_end": 429,
+        "char_start": 412,
+        "page_index": 4,
+        "pdf_page_label": null,
+        "printed_page_number": null
+      }
+    ]
+  },
+  "sources": {
+    "application_version": "0.2.0",
+    "corpus_version": "corpus_d43918f06609b65f21f89425",
+    "base_git_commit": "8f4077e8297bf03b2cdb1a5df7ebf9b456cf5c3f",
+    "published_package": "story-capitulo-1-revisao-documental-v0.2.0.zip",
+    "sha256": {
+      "original.pdf": "dabd10538ffdc866c6fa24187ffb1b9f784f647a01d5286a9c6a91cd7015633d",
+      "metadata.json": "f0cd8e1be56eacbe189b15ca6f5267bfb37da1fc9022e11d62892515347158c9",
+      "structure.json": "4d24cc423c343e6886e0842c8b3b9953a75d947a31fcc23a95cc907e297f269c",
+      "pages_raw.jsonl": "64e0b2d3cc7adf6c53a663470080fecf2a03ab203c55d5ed08817a248de56811",
+      "paragraphs.jsonl": "a89f1e48e0bbc1f5ddfd4584792b6a87b67f340dafa8d00ea51a5ee60b0a1900",
+      "elements.jsonl": "7db9c696d5449ff8ccf1d3eb573657b8bcf6863ad83c5df1ee3b02c40e005631",
+      "validation_report.json": "794068fd3b258e5e39456b928e1aeed4c1c6c4cfe6cb72aff6d5eba099860547"
+    },
+    "published_package_sha256": "3c40e59046f51875b7c12bdba26572ab222499d36fe2fa7f0262cda77a412481",
+    "substitution": {
+      "requested": "structure(2).json",
+      "examined": "structure.json",
+      "reason": "structure(2).json indisponível no workspace. Utilizado structure.json da versão 0.2.0 publicada, com hash conferido e igualdade byte a byte com o ZIP. O PDF original.pdf é idêntico a story-capitulo-1.pdf. A revisão se vincula aos hashes registrados."
+    }
+  },
+  "evidence": {
+    "visual_inspection_performed": true,
+    "visual_scope": [
+      {
+        "page_local": 5,
+        "page_index": 4,
+        "region": "página inteira",
+        "purpose": "Localizar o título e conferir posição, composição e início dos parágrafos da seção."
+      },
+      {
+        "page_local": 1,
+        "page_index": 0,
+        "clip_pt": [
+          60,
+          90,
+          550,
+          325
+        ],
+        "purpose": "Comparar somente a apresentação do título principal e da seção anterior; sem revisar suas classificações."
+      },
+      {
+        "page_local": 6,
+        "page_index": 5,
+        "clip_pt": [
+          65,
+          65,
+          545,
+          722
+        ],
+        "purpose": "Conferir continuidade e limites visuais dos parágrafos associados."
+      },
+      {
+        "page_local": 7,
+        "page_index": 6,
+        "clip_pt": [
+          65,
+          65,
+          545,
+          687
+        ],
+        "purpose": "Conferir sequência dos parágrafos associados até seu término; outras pendências não examinadas."
+      },
+      {
+        "page_local": 8,
+        "page_index": 7,
+        "clip_pt": [
+          65,
+          65,
+          365,
+          102
+        ],
+        "purpose": "Identificar O IMPERATIVO DA ESTÓRIA exclusivamente como limite final, sem aprová-lo."
+      }
+    ],
+    "render_scale": 1.5,
+    "page_dimensions_pt": [
+      612,
+      792
+    ],
+    "typography": {
+      "font": "CenturyGothic-Bold",
+      "size_pt": 21.247499465942383,
+      "font_flags": 20,
+      "bold": true,
+      "uppercase": true,
+      "alignment": "left_at_body_margin",
+      "bbox_pt": [
+        76.9921875,
+        212.6280059814453,
+        283.47186279296875,
+        238.67901611328125
+      ],
+      "gap_from_preceding_body_bbox_pt": 37.63337707519531,
+      "gap_to_following_body_bbox_pt": 17.95428466796875,
+      "body_font": "LiberationSerif",
+      "body_size_pt": 15,
+      "spacing_note": "Medidas entre caixas extraídas; não entre os contornos de tinta dos glifos."
+    },
+    "comparison": {
+      "chapter": {
+        "title": "O PROBLEMA DA ESTÓRIA",
+        "font": "UnderwoodChampion",
+        "size_pt": 27.494998931884766,
+        "alignment": "centered",
+        "page_local": 1,
+        "chapter_number": "1"
+      },
+      "previous_section_style_only": {
+        "title": "O DECLÍNIO DA ESTÓRIA",
+        "font": "CenturyGothic-Bold",
+        "size_pt": 21.247499465942383,
+        "font_flags": 20,
+        "alignment": "left_at_body_margin",
+        "decision_issued_in_this_task": false
+      },
+      "observations": [
+        "O título alvo é visualmente separado do texto acima e do corpo abaixo, com fonte sem serifa, negrito e caixa alta.",
+        "Apresenta o mesmo tamanho, família, peso e alinhamento da seção anterior. O capítulo tem fonte distinta, maior e centralizada.",
+        "A equivalência entre os cabeçalhos de seção, a posição no fluxo e o ancestral capítulo sustentam section nível 3; não há evidência visual de capítulo, subseção ou parágrafo corrente.",
+        "O título antecede o parágrafo iniciado por A arte da estória é a força cultural dominante no mundo. A seção termina com o parágrafo de ordem 27 na página local 7, antes do próximo cabeçalho na página local 8.",
+        "A inspeção é documental e visual, sem interpretação conceitual do texto."
+      ]
+    },
+    "text": {
+      "visible_pdf": "A PERDA DO OFÍCIO",
+      "native_pdf": "A PERDA DO OFÍCIO",
+      "raw_block": "A PERDA DO OFÍCIO",
+      "structure_title": "A PERDA DO OFÍCIO",
+      "element_clean": "A PERDA DO OFÍCIO",
+      "exact_match": true,
+      "raw_block_range": [
+        0,
+        17
+      ],
+      "raw_page_range": [
+        412,
+        429
+      ]
+    },
+    "hierarchy": {
+      "work_id": "doc_68538e2dac8d252a47d272de",
+      "chapter_id": "node_0357e0c292c6ecffe3791f27",
+      "section_id": "node_6e1afe030552a2892149acd5",
+      "parent_existing": true,
+      "chain_valid": true
+    },
+    "paragraph_scope": {
+      "count": 13,
+      "global_orders": [
+        15,
+        27
+      ],
+      "page_indexes": [
+        4,
+        5,
+        6
+      ],
+      "first_text_start": "A arte da estória é a força cultural dominante no mundo, e a sétima arte é o meio dominante desse grande empre",
+      "last_text_end": "eículo para a estória que expresse nossa interpretação de um mundo cada vez mais agnóstico. Não é pouca coisa.",
+      "paragraphs": [
+        {
+          "paragraph_id": "para_5372a7a56a3532ae1cc6350a",
+          "global_order": 15,
+          "parent_id": "node_6e1afe030552a2892149acd5",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_6e1afe030552a2892149acd5",
+          "previous_id": "para_22250639d044baf648f46e90",
+          "next_id": "para_01de0afdcf42ac3f5c5757aa",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                256.63330078125,
+                534.71923828125,
+                411.99462890625
+              ],
+              "block_char_end": 633,
+              "block_char_start": 0,
+              "block_id": "p000004_b00002",
+              "char_end": 1063,
+              "char_start": 430,
+              "page_index": 4,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_01de0afdcf42ac3f5c5757aa",
+          "global_order": 16,
+          "parent_id": "node_6e1afe030552a2892149acd5",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_6e1afe030552a2892149acd5",
+          "previous_id": "para_5372a7a56a3532ae1cc6350a",
+          "next_id": "para_6f7efd83f6372b69e80be88b",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                414.13330078125,
+                534.8095092773438,
+                499.74462890625
+              ],
+              "block_char_end": 323,
+              "block_char_start": 0,
+              "block_id": "p000004_b00003",
+              "char_end": 1387,
+              "char_start": 1064,
+              "page_index": 4,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_6f7efd83f6372b69e80be88b",
+          "global_order": 17,
+          "parent_id": "node_6e1afe030552a2892149acd5",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_6e1afe030552a2892149acd5",
+          "previous_id": "para_01de0afdcf42ac3f5c5757aa",
+          "next_id": "para_caade631e596614541d7b20f",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                501.88330078125,
+                534.7901000976562,
+                656.49462890625
+              ],
+              "block_char_end": 565,
+              "block_char_start": 0,
+              "block_id": "p000004_b00004",
+              "char_end": 1953,
+              "char_start": 1388,
+              "page_index": 4,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_caade631e596614541d7b20f",
+          "global_order": 18,
+          "parent_id": "node_6e1afe030552a2892149acd5",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_6e1afe030552a2892149acd5",
+          "previous_id": "para_6f7efd83f6372b69e80be88b",
+          "next_id": "para_628cbd513455c4c5392c9a06",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                658.63330078125,
+                535.015380859375,
+                709.74462890625
+              ],
+              "block_char_end": 216,
+              "block_char_start": 0,
+              "block_id": "p000004_b00005",
+              "char_end": 2170,
+              "char_start": 1954,
+              "page_index": 4,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            },
+            {
+              "bbox": [
+                76.9921875,
+                72.133544921875,
+                534.8430786132812,
+                174.994873046875
+              ],
+              "block_char_end": 375,
+              "block_char_start": 0,
+              "block_id": "p000005_b00000",
+              "char_end": 375,
+              "char_start": 0,
+              "page_index": 5,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_628cbd513455c4c5392c9a06",
+          "global_order": 19,
+          "parent_id": "node_6e1afe030552a2892149acd5",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_6e1afe030552a2892149acd5",
+          "previous_id": "para_caade631e596614541d7b20f",
+          "next_id": "para_a52cedc5110bfe4c36f4f9c1",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                177.133544921875,
+                534.9747314453125,
+                348.994873046875
+              ],
+              "block_char_end": 731,
+              "block_char_start": 0,
+              "block_id": "p000005_b00001",
+              "char_end": 1107,
+              "char_start": 376,
+              "page_index": 5,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_a52cedc5110bfe4c36f4f9c1",
+          "global_order": 20,
+          "parent_id": "node_6e1afe030552a2892149acd5",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_6e1afe030552a2892149acd5",
+          "previous_id": "para_628cbd513455c4c5392c9a06",
+          "next_id": "para_a10cebcdafe8f29586e36fec",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                351.133544921875,
+                534.8628540039062,
+                436.744873046875
+              ],
+              "block_char_end": 333,
+              "block_char_start": 0,
+              "block_id": "p000005_b00002",
+              "char_end": 1441,
+              "char_start": 1108,
+              "page_index": 5,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_a10cebcdafe8f29586e36fec",
+          "global_order": 21,
+          "parent_id": "node_6e1afe030552a2892149acd5",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_6e1afe030552a2892149acd5",
+          "previous_id": "para_a52cedc5110bfe4c36f4f9c1",
+          "next_id": "para_4fb513f5e5b41f5cd6681a99",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                438.883544921875,
+                534.9910278320312,
+                645.994873046875
+              ],
+              "block_char_end": 823,
+              "block_char_start": 0,
+              "block_id": "p000005_b00003",
+              "char_end": 2265,
+              "char_start": 1442,
+              "page_index": 5,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_4fb513f5e5b41f5cd6681a99",
+          "global_order": 22,
+          "parent_id": "node_6e1afe030552a2892149acd5",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_6e1afe030552a2892149acd5",
+          "previous_id": "para_a10cebcdafe8f29586e36fec",
+          "next_id": "para_bbd6e9e8a596458d83fead19",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                648.133544921875,
+                534.8282470703125,
+                716.494873046875
+              ],
+              "block_char_end": 294,
+              "block_char_start": 0,
+              "block_id": "p000005_b00004",
+              "char_end": 2560,
+              "char_start": 2266,
+              "page_index": 5,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_bbd6e9e8a596458d83fead19",
+          "global_order": 23,
+          "parent_id": "node_6e1afe030552a2892149acd5",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_6e1afe030552a2892149acd5",
+          "previous_id": "para_4fb513f5e5b41f5cd6681a99",
+          "next_id": "para_44679a8b4be3d5901f4b12cf",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                72.133544921875,
+                535.0056762695312,
+                105.994873046875
+              ],
+              "block_char_end": 135,
+              "block_char_start": 0,
+              "block_id": "p000006_b00000",
+              "char_end": 135,
+              "char_start": 0,
+              "page_index": 6,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_44679a8b4be3d5901f4b12cf",
+          "global_order": 24,
+          "parent_id": "node_6e1afe030552a2892149acd5",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_6e1afe030552a2892149acd5",
+          "previous_id": "para_bbd6e9e8a596458d83fead19",
+          "next_id": "para_cad4bd0f80993a24fac3efe0",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                108.133544921875,
+                534.9837646484375,
+                262.744873046875
+              ],
+              "block_char_end": 619,
+              "block_char_start": 0,
+              "block_id": "p000006_b00001",
+              "char_end": 755,
+              "char_start": 136,
+              "page_index": 6,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_cad4bd0f80993a24fac3efe0",
+          "global_order": 25,
+          "parent_id": "node_6e1afe030552a2892149acd5",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_6e1afe030552a2892149acd5",
+          "previous_id": "para_44679a8b4be3d5901f4b12cf",
+          "next_id": "para_63907e26d33a05cfc44bbc84",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                264.883544921875,
+                534.9402465820312,
+                384.994873046875
+              ],
+              "block_char_end": 483,
+              "block_char_start": 0,
+              "block_id": "p000006_b00002",
+              "char_end": 1239,
+              "char_start": 756,
+              "page_index": 6,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_63907e26d33a05cfc44bbc84",
+          "global_order": 26,
+          "parent_id": "node_6e1afe030552a2892149acd5",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_6e1afe030552a2892149acd5",
+          "previous_id": "para_cad4bd0f80993a24fac3efe0",
+          "next_id": "para_565b7527bcf17f12cb5c731a",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                387.133544921875,
+                534.993896484375,
+                576.244873046875
+              ],
+              "block_char_end": 778,
+              "block_char_start": 0,
+              "block_id": "p000006_b00003",
+              "char_end": 2018,
+              "char_start": 1240,
+              "page_index": 6,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_565b7527bcf17f12cb5c731a",
+          "global_order": 27,
+          "parent_id": "node_6e1afe030552a2892149acd5",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_6e1afe030552a2892149acd5",
+          "previous_id": "para_63907e26d33a05cfc44bbc84",
+          "next_id": "para_e6844048d18f8dd141ab7fae",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                578.383544921875,
+                534.9617919921875,
+                681.244873046875
+              ],
+              "block_char_end": 394,
+              "block_char_start": 0,
+              "block_id": "p000006_b00004",
+              "char_end": 2413,
+              "char_start": 2019,
+              "page_index": 6,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        }
+      ],
+      "next_boundary_only": {
+        "title": "O IMPERATIVO DA ESTÓRIA",
+        "node_id": "node_3c218d9bc62678cc2593ecbf",
+        "page_local": 8,
+        "page_index": 7,
+        "block_id": "p000007_b00000",
+        "bbox_pt": [
+          76.9921875,
+          70.87800598144531,
+          349.75372314453125,
+          96.92901611328125
+        ],
+        "reviewed_or_approved": false
+      },
+      "scope_result": "Os 13 parágrafos de ordens 15–27 pertencem integralmente ao intervalo da seção. Nenhum parágrafo de outra seção está dentro desse intervalo; não há sobreposição na transição para a seção seguinte."
+    }
+  },
+  "checks": {
+    "execution": "Asserts locais executados nesta tarefa; não foi reexecutado o pipeline, a suíte global ou outras revisões. A decisão também depende da inspeção visual descrita.",
+    "passed": 19,
+    "failed": 0,
+    "results": [
+      {
+        "test": "fonte_pdf_e_versao_0_2_0_identificadas",
+        "result": "passed"
+      },
+      {
+        "test": "fontes_conferidas_byte_a_byte_com_pacote_publicado",
+        "result": "passed"
+      },
+      {
+        "test": "titulo_unico_na_pagina_no_e_elemento_primario",
+        "result": "passed"
+      },
+      {
+        "test": "texto_exato_incluindo_grafia_acentos_ordem",
+        "result": "passed"
+      },
+      {
+        "test": "posicao_fonte_peso_tamanho_conferidos_no_pdf",
+        "result": "passed"
+      },
+      {
+        "test": "limite_final_corresponde_ao_pdf_sem_aprovar_vizinho",
+        "result": "passed"
+      },
+      {
+        "test": "source_spans_do_titulo_validos_e_consistentes",
+        "result": "passed"
+      },
+      {
+        "test": "estilo_equivale_ao_da_secao_anterior_sem_reclassifica_la",
+        "result": "passed"
+      },
+      {
+        "test": "composicao_distingue_secao_de_capitulo_e_paragrafo",
+        "result": "passed"
+      },
+      {
+        "test": "parentesco_obra_capitulo_secao_valido_sem_ciclo",
+        "result": "passed"
+      },
+      {
+        "test": "identificadores_do_no_e_elemento_derivados_corretamente",
+        "result": "passed"
+      },
+      {
+        "test": "13_paragrafos_ordens_15_a_27_e_escopo_sem_intrusos",
+        "result": "passed"
+      },
+      {
+        "test": "sequencia_visual_dos_paragrafos_monotonica",
+        "result": "passed"
+      },
+      {
+        "test": "parent_chapter_section_validos_em_todos_os_13",
+        "result": "passed"
+      },
+      {
+        "test": "previous_next_reciprocos_inclusive_limites",
+        "result": "passed"
+      },
+      {
+        "test": "fatias_brutas_correspondem_ao_texto_dos_13",
+        "result": "passed"
+      },
+      {
+        "test": "source_spans_dos_paragrafos_sem_sobreposicao",
+        "result": "passed"
+      },
+      {
+        "test": "estado_global_e_gate_continuam_bloqueados",
+        "result": "passed"
+      },
+      {
+        "test": "pdf_bruto_historico_derivados_e_demais_alertas_intactos",
+        "result": "passed"
+      }
+    ]
+  },
+  "changes": {
+    "corrections": [],
+    "before": {
+      "classification": "section",
+      "level": 3,
+      "parent_id": "node_0357e0c292c6ecffe3791f27",
+      "paragraph_count": 13
+    },
+    "after": {
+      "classification": "section",
+      "level": 3,
+      "parent_id": "node_0357e0c292c6ecffe3791f27",
+      "paragraph_count": 13
+    },
+    "corpus_files_modified": [],
+    "ids_changed": false,
+    "source_spans_changed": false,
+    "raw_or_pdf_changed": false,
+    "application": "Registro complementar auditável somente; nenhuma correção ou reescrita dos derivados do corpus foi necessária. A confirmação não foi aplicada por mecanismo automático ao relatório-base."
+  },
+  "remaining_uncertainty": {
+    "target_documentary_ambiguities": [],
+    "file_identity_scope": "Não se atesta uma cópia local não fornecida chamada structure(2).json; a decisão está vinculada ao snapshot publicado 0.2.0 e aos hashes registrados.",
+    "other_12_pending_items": "Permanecem abertos, sem exame ou aprovação nesta tarefa. A seção anterior foi usada apenas para comparação visual; o título seguinte apenas para delimitação."
+  },
+  "global_approval": {
+    "status": "review_required",
+    "chunking_gate_allowed": false,
+    "fidelity_certified": false,
+    "human_approval_claimed": false,
+    "base_report_unchanged": true,
+    "note": "O relatório-base preserva suas pendências históricas; este registro resolve apenas a revisão documental do alvo indicado. Não há aprovação global, chunking, embeddings, BM25, E5 ou RAG."
+  }
+}
