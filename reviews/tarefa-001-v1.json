@@ -1,0 +1,322 @@
+{
+  "record_schema_version": "1.0",
+  "review_id": "tarefa-001-v1",
+  "created_at": "2026-10-16T23:46:12.547070+00:00",
+  "reviewer": {
+    "type": "assistant_documentary_review",
+    "method": "Inspeção visual direta e verificações estruturais locais; sem aprovação humana declarada."
+  },
+  "decision": "confirmed",
+  "unit": {
+    "node_id": "node_2698e965313687d1be33bd57",
+    "title": "O DECLÍNIO DA ESTÓRIA",
+    "classification": "section",
+    "parent_id": "node_0357e0c292c6ecffe3791f27",
+    "element_id": "elem_f15721caf1b29b28936af66f",
+    "page_local": 1,
+    "page_index": 0,
+    "block_id": "p000000_b00002",
+    "source_spans": [
+      {
+        "bbox": [
+          76.9921875,
+          288.37799072265625,
+          323.4035949707031,
+          314.42901611328125
+        ],
+        "block_char_end": 21,
+        "block_char_start": 0,
+        "block_id": "p000000_b00002",
+        "char_end": 45,
+        "char_start": 24,
+        "page_index": 0,
+        "pdf_page_label": null,
+        "printed_page_number": null
+      }
+    ]
+  },
+  "source_binding": {
+    "requested_filename": "structure(2).json",
+    "examined_filename": "structure.json",
+    "filename_note": "structure(2).json não foi disponibilizado neste workspace. Conferido o nó de ID idêntico no structure.json da entrega publicada; a decisão está vinculada a esses bytes e não certifica uma cópia local diferente.",
+    "base_commit": "74f9b6d08de9bb8208bc9872b6dc4a6ead9a8623",
+    "corpus_version": "corpus_d43918f06609b65f21f89425",
+    "source_archive": "story-capitulo-1-revisao-documental-v0.2.0.zip",
+    "file_sha256": {
+      "original.pdf": "dabd10538ffdc866c6fa24187ffb1b9f784f647a01d5286a9c6a91cd7015633d",
+      "pages_raw.jsonl": "64e0b2d3cc7adf6c53a663470080fecf2a03ab203c55d5ed08817a248de56811",
+      "structure.json": "4d24cc423c343e6886e0842c8b3b9953a75d947a31fcc23a95cc907e297f269c",
+      "paragraphs.jsonl": "a89f1e48e0bbc1f5ddfd4584792b6a87b67f340dafa8d00ea51a5ee60b0a1900",
+      "elements.jsonl": "7db9c696d5449ff8ccf1d3eb573657b8bcf6863ad83c5df1ee3b02c40e005631",
+      "metadata.json": "f0cd8e1be56eacbe189b15ca6f5267bfb37da1fc9022e11d62892515347158c9",
+      "validation_report.json": "794068fd3b258e5e39456b928e1aeed4c1c6c4cfe6cb72aff6d5eba099860547"
+    }
+  },
+  "evidence": {
+    "visual_inspection": {
+      "first_page": "Página inteira renderizada em 1,5× e examinada visualmente. Título abaixo da abertura numerada do capítulo, alinhado à margem esquerda do corpo, em linha própria e separado do corpo por espaço. Não há indício de legenda, cabeçalho recorrente, parágrafo corrente ou título de novo capítulo.",
+      "boundary": "Recorte visual da página local 5, y=50–241 pt, usado somente para identificar o término da seção; nenhuma decisão sobre a classificação do cabeçalho seguinte.",
+      "page_dimensions_points": [
+        612,
+        792
+      ]
+    },
+    "typography": {
+      "section": {
+        "font": "CenturyGothic-Bold",
+        "size_pt": 21.247499465942383,
+        "font_flags": 20,
+        "bold": true,
+        "bbox": [
+          76.9921875,
+          288.37799072265625,
+          323.4035949707031,
+          314.42901611328125
+        ],
+        "alignment": "left_at_body_margin"
+      },
+      "chapter_comparison": {
+        "title": "O PROBLEMA DA ESTÓRIA",
+        "font": "UnderwoodChampion",
+        "size_pt": 27.494998931884766,
+        "font_flags": 4,
+        "bold_flag": false,
+        "bbox": [
+          136.91015625,
+          175.35951232910156,
+          475.0882263183594,
+          206.0765838623047
+        ],
+        "alignment": "centered",
+        "chapter_number": "1"
+      },
+      "body_font": "LiberationSerif",
+      "body_size_pt": 15,
+      "gap_after_chapter_bbox_pt": 82.30140686035156,
+      "gap_before_body_bbox_pt": 17.95428466796875,
+      "spacing_measurement": "Distâncias entre bounding boxes; não são medidas da tinta dos glifos."
+    },
+    "text": {
+      "pdf_visible": "O DECLÍNIO DA ESTÓRIA",
+      "pdf_native": "O DECLÍNIO DA ESTÓRIA",
+      "raw": "O DECLÍNIO DA ESTÓRIA",
+      "element_clean": "O DECLÍNIO DA ESTÓRIA",
+      "node_title": "O DECLÍNIO DA ESTÓRIA",
+      "exact_match": true
+    },
+    "paragraph_membership": {
+      "count": 14,
+      "global_orders": [
+        1,
+        14
+      ],
+      "first_text_start": "Imagine, em um dia inteiro, as páginas de prosa viradas, peças encenadas, filmes exibidos, o fluxo interminável de comédia e drama",
+      "last_text_start": "Hoje, porém, filmes asiáticos viajam pela América do Norte e do mundo, comovendo e deliciando milhões, apanhando o holofote intern",
+      "last_text_end": "woodianos fariam bem em olhar para o leste, onde os artistas tem paixão por contar estórias e a habilidade de contá-las belamente.",
+      "paragraphs": [
+        {
+          "paragraph_id": "para_a773889f5db211089fc62019",
+          "global_order": 1,
+          "page_indexes": [
+            0
+          ]
+        },
+        {
+          "paragraph_id": "para_74d1bd49f411b49f7dd09c0a",
+          "global_order": 2,
+          "page_indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "paragraph_id": "para_a67b30e151b8e5b4e92aadbc",
+          "global_order": 3,
+          "page_indexes": [
+            1
+          ]
+        },
+        {
+          "paragraph_id": "para_81cb60f65a269edaf2e72807",
+          "global_order": 4,
+          "page_indexes": [
+            1
+          ]
+        },
+        {
+          "paragraph_id": "para_426ae9a3d498c2e137d33841",
+          "global_order": 5,
+          "page_indexes": [
+            1
+          ]
+        },
+        {
+          "paragraph_id": "para_4e71bff32e26285868637135",
+          "global_order": 6,
+          "page_indexes": [
+            1,
+            2
+          ]
+        },
+        {
+          "paragraph_id": "para_02580e4d0608db7331ec1ad1",
+          "global_order": 7,
+          "page_indexes": [
+            2
+          ]
+        },
+        {
+          "paragraph_id": "para_2132df9c18928f71a0f20a40",
+          "global_order": 8,
+          "page_indexes": [
+            2
+          ]
+        },
+        {
+          "paragraph_id": "para_31b298cdecb9413cc0240395",
+          "global_order": 9,
+          "page_indexes": [
+            2,
+            3
+          ]
+        },
+        {
+          "paragraph_id": "para_0234ed0db292146ce49e2ebc",
+          "global_order": 10,
+          "page_indexes": [
+            3
+          ]
+        },
+        {
+          "paragraph_id": "para_e275623f9ab632fc32716913",
+          "global_order": 11,
+          "page_indexes": [
+            3
+          ]
+        },
+        {
+          "paragraph_id": "para_70fc377ca9fd32a71b45f878",
+          "global_order": 12,
+          "page_indexes": [
+            3
+          ]
+        },
+        {
+          "paragraph_id": "para_724d87e4a798b976943f0462",
+          "global_order": 13,
+          "page_indexes": [
+            3
+          ]
+        },
+        {
+          "paragraph_id": "para_22250639d044baf648f46e90",
+          "global_order": 14,
+          "page_indexes": [
+            4
+          ]
+        }
+      ],
+      "next_boundary_only": {
+        "title": "A PERDA DO OFÍCIO",
+        "node_id": "node_6e1afe030552a2892149acd5",
+        "page_local": 5,
+        "page_index": 4,
+        "block_id": "p000004_b00001",
+        "bbox": [
+          76.9921875,
+          212.6280059814453,
+          283.47186279296875,
+          238.67901611328125
+        ],
+        "reviewed_or_approved": false
+      }
+    }
+  },
+  "answers": {
+    "section_classification_correct": true,
+    "title_exact": true,
+    "hierarchical_position_correct": true,
+    "paragraphs_linked_to_appropriate_section": true,
+    "divergences_requiring_correction": []
+  },
+  "rationale": "A diferença de família, tamanho e alinhamento em relação à abertura numerada do capítulo, a separação espacial e a posição anterior ao corpo confirmam um título de seção subordinada a O PROBLEMA DA ESTÓRIA. A transcrição coincide exatamente com o PDF e os 14 parágrafos até o próximo cabeçalho pertencem à seção e mantêm navegação consistente.",
+  "corrections": [],
+  "audit": {
+    "change_type": "append_only_review_record",
+    "classification_before": "section",
+    "classification_confirmed": "section",
+    "base_quality_status": "review_required",
+    "review_decision": "confirmed",
+    "application": "Confirmação registrada apenas neste registro complementar. O snapshot do corpus e seu relatório não foram reescritos; nenhum aprovador automático consumiu esta revisão.",
+    "ids_changed": false,
+    "source_and_raw_changed": false,
+    "other_pending_items_examined_or_approved": false,
+    "global_status": "review_required",
+    "chunking_gate_allowed": false,
+    "fidelity_certified": false,
+    "processes_executed": [
+      "renderização visual de página/recorte",
+      "asserts locais da unidade e de seus vínculos"
+    ],
+    "pending_item_semantics": "Esta decisão resolve somente a identificação/classificação do nó indicado. As outras 13 pendências não foram examinadas nem aprovadas; o relatório-base conserva seu estado histórico."
+  },
+  "tests": {
+    "scope": "Exclusivamente a unidade, seus 14 parágrafos e o limite seguinte; sem reexecutar pipeline ou validação das outras pendências.",
+    "passed": 13,
+    "failed": 0,
+    "results": [
+      {
+        "test": "pdf_original_identico_ao_pdf_publicado",
+        "result": "passed"
+      },
+      {
+        "test": "titulo_pdf_bruto_elemento_no_exatamente_iguais",
+        "result": "passed"
+      },
+      {
+        "test": "tipografia_e_caixa_conferidas_diretamente_no_pdf",
+        "result": "passed"
+      },
+      {
+        "test": "acentuacao_ordem_e_offsets_brutos_preservados",
+        "result": "passed"
+      },
+      {
+        "test": "estilo_e_composicao_subordinados_ao_capitulo",
+        "result": "passed"
+      },
+      {
+        "test": "ids_derivados_consistentes",
+        "result": "passed"
+      },
+      {
+        "test": "parentesco_obra_capitulo_secao_sem_ciclo",
+        "result": "passed"
+      },
+      {
+        "test": "14_paragrafos_exatos_no_intervalo_entre_cabecalhos",
+        "result": "passed"
+      },
+      {
+        "test": "parent_id_chapter_id_section_id_em_todos_os_14",
+        "result": "passed"
+      },
+      {
+        "test": "ordem_previous_next_e_fim_antes_da_secao_seguinte",
+        "result": "passed"
+      },
+      {
+        "test": "rastreabilidade_bruta_dos_14_paragrafos",
+        "result": "passed"
+      },
+      {
+        "test": "bloqueio_global_preservado",
+        "result": "passed"
+      },
+      {
+        "test": "nenhum_arquivo_do_corpus_ou_pdf_modificado",
+        "result": "passed"
+      }
+    ]
+  }
+}
