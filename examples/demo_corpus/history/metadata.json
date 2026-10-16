@@ -1,0 +1,67 @@
+{
+  "bibliographic": {
+    "author": "Gerador de testes",
+    "edition": null,
+    "provenance": "PDF metadata unless bibliographic_evidence specifies a checked source excerpt",
+    "publisher": null,
+    "title": "Capítulo sintético de demonstração",
+    "year": null
+  },
+  "bibliographic_evidence": {},
+  "character_offsets": "Unicode code points, half-open [start,end); pages_raw.text_raw",
+  "corpus_version": "corpus_19af66ec645d5d25926ab423",
+  "document_id": "doc_6f54b0e793c246cd1cfbfc0e",
+  "file_id": "sha256:3e53d87b600218b5d03d4b7173687827a0c2228f7e7e1edc1c18888c6f2b52d8",
+  "filename": "capitulo_sintetico.pdf",
+  "identity_policy": "IDs deterministic within corpus version; source/configuration/implementation/tool changes create a new version",
+  "out_of_scope_pages": [],
+  "page_count": 2,
+  "page_index_convention": "zero-based physical PDF index",
+  "pdf_metadata": {
+    "author": "Gerador de testes",
+    "format": "PDF 1.7",
+    "title": "Capítulo sintético de demonstração"
+  },
+  "pdf_outline": [],
+  "pdf_page_label_rules": [],
+  "processing": {
+    "application_version": "0.1.0",
+    "config": {
+      "bibliographic_evidence": null,
+      "document_id": null,
+      "join_hyphens": false,
+      "merge_pages": true,
+      "ocr": "auto",
+      "ocr_dpi": 300,
+      "ocr_language": "por",
+      "pages": [
+        0,
+        1
+      ]
+    },
+    "implementation_sha256": "7f0fffc246d2eb40b9c1a4ae7392d1d9f483fb6d9c3eac64986ebc7741c6ec9f",
+    "ocr_model_sha256": {},
+    "pymupdf_version": "1.26.7"
+  },
+  "schema_version": "1.0",
+  "selected_pages": [
+    0,
+    1
+  ],
+  "sha256": "3e53d87b600218b5d03d4b7173687827a0c2228f7e7e1edc1c18888c6f2b52d8",
+  "source_characteristics": {
+    "by_page": [
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 0
+      },
+      {
+        "kind": "text",
+        "method": "native",
+        "page_index": 1
+      }
+    ],
+    "scope": "selected_pages_only"
+  }
+}

@@ -1,5 +1,7 @@
 # Story — protótipo controlado do capítulo 1
 
+> Relatório histórico. A entrega atual está na [revisão 0.2.0](REVISAO_DOCUMENTAL_0_2.md).
+
 **Relatório histórico da versão 0.1.0.** A revisão do usuário identificou uma
 fragmentação e inversão de palavras na página 3 que a cobertura textual não
 detectava. O corpus de 78 parágrafos descrito abaixo foi substituído pela versão

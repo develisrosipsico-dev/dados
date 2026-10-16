@@ -5,7 +5,7 @@ import math
 from .layout import inline_connections
 
 
-def validate(metadata, pages, structure, paragraphs, elements, events):
+def validate_integrity(metadata, pages, structure, paragraphs, elements, events):
     errors = []
 
     def require(condition, code, **context):
@@ -59,7 +59,7 @@ def validate(metadata, pages, structure, paragraphs, elements, events):
         if paragraph["source_spans"]:
             span = paragraph["source_spans"][0]
             page = page_map.get(span["page_index"], {})
-            order = page.get("reading_order", [])
+            order = structure.get("page_reading_order", {}).get(str(span["page_index"]), page.get("reading_order", []))
             rank = next((i for i, item in enumerate(order) if item["block_id"] == span["block_id"]
                          and item["block_char_start"] <= span["block_char_start"]
                          and item["block_char_end"] >= span["block_char_end"]), -1)
@@ -129,7 +129,7 @@ def validate(metadata, pages, structure, paragraphs, elements, events):
             if previous_owner in para_ids and next_owner in para_ids:
                 require(previous_owner == next_owner, "inline_paragraph_split", page_index=key[0],
                         block_id=key[1], previous_unit_id=previous_owner, next_unit_id=next_owner)
-            order = page_map[key[0]].get("reading_order", [])
+            order = structure.get("page_reading_order", {}).get(str(key[0]), page_map[key[0]].get("reading_order", []))
             ranks = [next((i for i, item in enumerate(order) if item["block_id"] == key[1]
                            and item["block_char_start"] <= offset < item["block_char_end"]), -1)
                      for offset in (before, after)]
@@ -170,3 +170,78 @@ def validate(metadata, pages, structure, paragraphs, elements, events):
                         "Printed page numbers require visual verification; embedded labels are separate.",
                         "OCR and sentence boundaries require human review.",
                         "Vector figures and borderless tables may remain unrecognized."]}
+
+
+def validate(metadata, pages, structure, paragraphs, elements, events):
+    from .quality import assess_document
+    result = validate_integrity(metadata, pages, structure, paragraphs, elements, events)
+    documentary = assess_document(metadata, pages, structure, paragraphs, elements, events)
+    raw_codes = {"page_coverage", "unknown_source", "block_offsets", "page_offsets", "source_slice", "raw_text_changed",
+                 "transformation_chain", "missing_transformation_audit", "unjustified_clean_text", "text_gap_or_duplicate",
+                 "block_coverage", "block_reconstruction", "page_reconstruction", "unlogged_page_failure"}
+    raw_errors = [e for e in result["checks"]["errors"] if e["code"] in raw_codes]
+    formal = [e for e in result["checks"]["errors"] if e["code"] not in raw_codes]
+    documentary["formal_relationship_errors"] = formal
+    blockers = raw_errors+formal+result["checks"]["processing_errors"]+documentary["blockers"]
+    status = "blocked" if blockers else "review_required" if documentary["review_items"] else "approved"
+    result.update(schema_version="1.1", status=status,
+                  raw_integrity={"status": "failed" if raw_errors or result["checks"]["processing_errors"] else "passed",
+                                 "errors": raw_errors, "raw_reconstruction_matches": result["checks"]["raw_reconstruction_matches"]},
+                  documentary_quality=documentary)
+    categories = {
+        "raw_integrity": not raw_errors and not result["checks"]["processing_errors"],
+        "identifiers_relationships_and_order": not formal,
+        "documentary_reconstruction": not documentary["blockers"],
+        "reading_order": not any(e["code"] in {"visual_x_inversion", "visual_y_inversion", "inline_reading_order", "source_order"} for e in formal+documentary["blockers"]),
+        "paragraph_boundaries": not any(e["code"] in {"merged_visual_paragraphs", "inline_paragraph_split"} for e in formal+documentary["blockers"]),
+        "hierarchy": not any("hierarchy" in e["code"] or e["code"] in {"missing_paragraph_chapter", "missing_paragraph_section"} for e in formal+documentary["blockers"]),
+        "special_elements": not any("note_" in e["code"] or "quote" in e["code"] for e in documentary["blockers"]),
+        "graphic_geometry_and_type": not any("graphic_" in e["code"] for e in documentary["blockers"]),
+        "normalization_provenance": not any("normalization_map_" in e["code"] for e in documentary["blockers"]),
+        "manual_review_of_unsafe_cases": not documentary["review_items"],
+    }
+    result["blocking_criteria"] = [{"criterion": name, "passed": passed} for name, passed in categories.items()]
+    result["chunking_gate"] = {"allowed": all(categories.values()), "required_state": "approved",
+                               "blocking_error_count": len(blockers), "pending_review_count": len(documentary["review_items"]),
+                               "reason": "All implemented documentary criteria satisfied." if all(categories.values()) else "Documentary blockers or unsafe cases remain unresolved."}
+    result["metrics"].update(documentary["metrics"])
+    result["checks"]["documentary_errors"] = documentary["blockers"]
+    result["fidelity_certified"] = False
+    return result
+
+
+def validate_corpus(path):
+    from pathlib import Path
+    from .storage import load_corpus
+    from .ingest import sha256
+    import json
+    path = Path(path)
+    data = load_corpus(path)
+    report = validate(**data)
+    checks = [("original.pdf", data["metadata"]["sha256"], "source_hash_mismatch"),
+              ("pages_raw.jsonl", data["metadata"].get("processing", {}).get("raw_pages_sha256"), "raw_artifact_hash_mismatch")]
+    for manifest_file in sorted((path/"history").rglob("manifest.json")) if (path/"history").exists() else []:
+        manifest = json.loads(manifest_file.read_text(encoding="utf-8"))
+        for filename, expected in manifest.items():
+            target = (manifest_file.parent/filename).resolve()
+            if not target.is_relative_to(path.resolve()):
+                checks.append((None, expected, "history_artifact_outside_corpus"))
+            elif not target.is_file():
+                checks.append((str(target), expected, "history_artifact_missing"))
+            else:
+                checks.append((str(target), expected, "history_artifact_hash_mismatch"))
+    for filename, expected, code in checks:
+        target = path/filename if filename is not None else None
+        if expected and (target is None or not target.is_file() or sha256(target) != expected):
+            error = {"code": code}
+            report["checks"]["errors"].append(error)
+            report["raw_integrity"]["errors"].append(error)
+            report["raw_integrity"]["status"] = "failed"
+            report["status"] = "blocked"
+            report["metrics"]["consistency_errors"] += 1
+            report["chunking_gate"].update(allowed=False, reason="Artifact digest differs from the registered source.")
+            report["chunking_gate"]["blocking_error_count"] += 1
+            for criterion in report["blocking_criteria"]:
+                if criterion["criterion"] == "raw_integrity":
+                    criterion["passed"] = False
+    return report

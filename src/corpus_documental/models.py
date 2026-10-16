@@ -25,6 +25,7 @@ class Config:
     merge_pages: bool = False
     document_id: str | None = None
     bibliographic_evidence: dict | None = None
+    source_context: dict | None = None
 
     def validate(self, total_pages):
         if not self.pages or tuple(sorted(set(self.pages))) != self.pages:
@@ -39,6 +40,11 @@ class Config:
             raise ValueError("Idiomas OCR devem usar nomes como por ou por+eng.")
         if self.bibliographic_evidence is not None and not isinstance(self.bibliographic_evidence, dict):
             raise ValueError("Evidências bibliográficas devem ser um objeto JSON por campo.")
+        if self.source_context is not None:
+            if (not isinstance(self.source_context, dict) or not isinstance(self.source_context.get("page_index_offset"), int)
+                    or self.source_context["page_index_offset"] < 0
+                    or not re.fullmatch(r"[0-9a-f]{64}", self.source_context.get("original_sha256", ""))):
+                raise ValueError("Contexto do recorte exige original_sha256 e page_index_offset não negativo.")
 
     def to_dict(self):
         return asdict(self)

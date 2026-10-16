@@ -1,0 +1,9 @@
+{
+  "../pages_raw.jsonl": "46ecd6dd4df0dd429288e96cf8561a892d782882966341fc5d0b93004f024098",
+  "elements.jsonl": "d499708496b8272a41fad4d45d85626dd17dd52760d4e79168fc7653ca5c7a85",
+  "metadata.json": "70c3b0b8ca43b85c6e20c8ed31825ebe710a237e775c48abd1e032fac64ab043",
+  "paragraphs.jsonl": "b5a4aa99b4809cf2b81222b53bafe4eefd4a4b405d32b0f8e328b05256079596",
+  "processing_log.jsonl": "7cbe5be85ecec15f0212f3c99d05b88df8b9545e1ad945fa503441ee15646b0b",
+  "structure.json": "11e680d38bd138eca62bfabd3ef40555ca8f401d72aa65bbae571737d294cd40",
+  "validation_report.json": "8691b82c8e0076ceb6e3598c45a72e4b7db1e1ff881590d64ea319e398cd3644"
+}

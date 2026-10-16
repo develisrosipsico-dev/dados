@@ -7,7 +7,7 @@ import pytest
 from corpus_documental.audit import Audit
 from corpus_documental.cli import main, parse_pages
 from corpus_documental.models import Config
-from corpus_documental.normalization import normalize
+from corpus_documental.normalization import normalize, normalize_document
 from corpus_documental.pipeline import process
 from corpus_documental.storage import load_corpus
 from corpus_documental.validation import validate
@@ -93,7 +93,9 @@ def test_controlled_normalization_and_suspect_characters():
     assert changes[0]["before"] == raw
     for a, b in zip(changes, changes[1:]):
         assert a["after"] == b["before"]
-    joined, _ = normalize(raw, Config(pages=(0,), join_hyphens=True), audit, "p2")
+    unsafe, _ = normalize(raw, Config(pages=(0,), join_hyphens=True), audit, "p2")
+    assert "hifeni- zação" in unsafe
+    joined, _, _ = normalize_document(raw, Config(pages=(0,), join_hyphens=True), audit, "p3", word_evidence={"hifenização"})
     assert "hifenização" in joined
     assert {e["code"] for e in audit.events} >= {"suspect_characters", "hyphenation_candidate", "normalization"}
 
@@ -126,7 +128,7 @@ def test_validation_rejects_documentary_corruption(book, tmp_path, mutation, cod
     elif mutation == "classification":
         p["classification"] = ""
     report = validate(**data)
-    assert report["status"] == "failed"
+    assert report["status"] == "blocked"
     assert code in {e["code"] for e in report["checks"]["errors"]}
 
 
@@ -164,7 +166,7 @@ def test_failed_ocr_is_explicit_and_keeps_native(tmp_path, monkeypatch):
     data = load_corpus(output)
     assert data["pages"][0]["native_extraction"]["blocks"]
     assert any(e["code"] == "ocr_failed" for e in data["events"])
-    assert report["status"] == "failed"
+    assert report["status"] == "blocked"
     assert "ocr_failed" in {e["code"] for e in report["checks"]["processing_errors"]}
 
 
@@ -180,7 +182,7 @@ def test_page_failure_is_preserved_and_reported(book, tmp_path, monkeypatch):
     _, data, report = run(book, tmp_path)
     assert len(data["pages"]) == 2 and data["pages"][1]["status"] == "failed"
     assert report["metrics"]["pages_failed"] == 1
-    assert report["status"] == "failed"
+    assert report["status"] == "blocked"
 
 
 def test_cli_requires_scope_and_revalidates_source(book, tmp_path, capsys):

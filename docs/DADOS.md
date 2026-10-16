@@ -1,4 +1,4 @@
-# Contrato documental — esquema 1.0
+# Contrato documental — esquema 1.1
 
 ## Convenções
 
@@ -27,7 +27,7 @@ também preservam a proveniência; edição, editora e ano ausentes ficam `null`
 ## `metadata.json`
 
 Inclui `schema_version`, `file_id`, `document_id`, `sha256`, `filename`,
-`page_count`, `bibliographic`, `pdf_metadata`, `pdf_page_label_rules`,
+`page_count`, `processing.raw_pages_sha256`, `previous_corpus_version`, `source_context`, `bibliographic`, `pdf_metadata`, `pdf_page_label_rules`,
 `selected_pages`, `out_of_scope_pages`, `corpus_version`, `processing` e
 `source_characteristics`. A caracterização textual/digitalizada/mista é uma
 heurística do **recorte**, sem conclusão sobre páginas não processadas.
@@ -66,8 +66,10 @@ posição e dimensões; seus pixels continuam disponíveis no PDF original.
 `text_raw` concatena blocos textuais na **ordem nativa**, separados por `\n`.
 As linhas de cada bloco também são separadas por `\n`. Esses separadores são uma
 serialização da extração, não caracteres garantidamente presentes no arquivo.
-Não se altera esse texto quando a ordem geométrica muda. `reading_order` referencia
-bloco e intervalo local, pois um bloco nativo pode conter linhas de duas colunas.
+Não se altera esse arquivo quando a ordem geométrica muda. O campo legado
+`reading_order` do bruto não é atualizado: a ordem derivada fica em
+`structure.page_reading_order`, com bloco e intervalos locais. Um bloco nativo
+pode conter linhas de duas colunas ou vários parágrafos visuais.
 
 Quando há tentativa de OCR, `native_extraction` retém os blocos e o texto nativos.
 A camada usada nas unidades estruturadas fica em `text_raw`/`blocks`, com o método
@@ -81,6 +83,9 @@ vetoriais são preservados em `drawings`, sem interpretar seu conteúdo.
 (`part`, `chapter`, `section`, `subsection`), `title`, `element_id` e `level`.
 Os níveis ausentes não são criados. Títulos tipográficos sem nível identificável
 ficam como elementos `title_candidate`, com revisão pendente.
+Nós reconhecidos por estilo incluem `source_spans`, evidência e estado de revisão.
+Um número grande centralizado associado ao título pode fornecer o número do
+capítulo; ele não se converte em paginação impressa.
 
 Marcadores podem confirmar um título dividido entre número e texto. Ancestrais
 fora do recorte podem ser nós contextuais com `element_id = null` e evidência do
@@ -102,6 +107,8 @@ Cada registro contém:
 | `source_spans` | Uma ou mais origens físicas, na ordem de composição |
 | `transformations` | Operação e valores completos `before`/`after`, encadeados |
 | `classification`, `quality_status` | Tipo e estado da revisão |
+| `normalization_map` | Intervalos limpos ligados ao texto bruto composto e às origens físicas |
+| `hierarchy_review_required` | Necessidade de revisar o contexto ancestral |
 | `sentences` | Períodos subordinados, com IDs e offsets no texto **limpo** |
 
 Cada origem tem `page_index`, `printed_page_number`, `pdf_page_label`, `block_id`,
@@ -113,8 +120,10 @@ das fatias, separadas por um `\n` explicitamente introduzido na composição.
 Períodos cobrem exatamente o texto limpo, incluindo espaços entre frases. Seus
 offsets não indexam a camada bruta; a origem física é consultada pelo parágrafo
 pai e pelas transformações. As fronteiras linguísticas são provisórias, baseadas
-em pontuação e exceções de abreviaturas. Não há alinhamento lexical de caracteres
-entre as camadas limpa e bruta.
+em pontuação e exceções de abreviaturas. `normalization_map` registra intervalos do texto limpo, intervalos no bruto
+composto e `source_refs` físicos correspondentes. Separadores introduzidos na
+composição são explicitados. Operações de NFC podem mapear um grupo de caracteres
+a um intervalo, sem prometer alinhamento lexical um a um.
 
 ## `elements.jsonl`
 
@@ -125,11 +134,15 @@ o mesmo contrato de texto e origens, com `element_id` em vez de `paragraph_id`.
 
 `text_ownership = primary` identifica os elementos que possuem fatias de texto.
 `derived` identifica células de tabela extraídas adicionalmente, sem reivindicar
-novamente o texto; `none` indica imagem ou traçado. Tabelas têm `cells` e `bbox`.
+novamente o texto; `reference` aponta ao texto primário (citação ou chamada), sem dupla posse;
+`none` indica imagem ou traçado. Tabelas têm `cells` e `bbox`.
 O texto associado referencia `related_table_ids`. Figuras raster referenciam
 `source_block_id`; candidatos vetoriais, `source_drawing_index`.
 
-Vínculos não verificados, como nota → chamada no corpo ou legenda → figura,
+Chamadas numéricas sobrescritas podem ser vinculadas a notas numeradas com
+evidência; os vínculos são bidirecionais e incluem offsets no texto limpo.
+Notas na mesma página são diferenciadas das finais. Vínculos não verificados,
+como uma chamada ambígua ou legenda → figura,
 permanecem `null`, sem associações inventadas. Uma nota detectada por posição e
 tipografia exige revisão; grupos de notas numeradas pequenas podem ser
 `endnote_candidate`, sem afirmar se são notas finais ou de rodapé.
@@ -157,3 +170,25 @@ objetos da mesma linha visual. `inline_paragraph_split` identifica fragmentos
 indevidamente separados em parágrafos; `inline_reading_order` identifica a
 inversão desses objetos. O evento `inline_line_reconstruction` registra os
 offsets nativos envolvidos. Fontes e intervalos brutos permanecem intactos.
+
+## Extensões de validação e histórico — 0.2.0
+
+Os 19 desenhos do capítulo conservam `source_bbox` e índice no bruto. A região
+visível é limitada à página; `layout_artifact` distingue fundos brancos que
+extrapolam a página e `separator_rule` distingue a linha de separação das notas.
+A razão da exclusão de figuras fica registrada. O bruto não é apagado.
+
+`history/manifest.json` registra os hashes dos seis derivados anteriores; revisões
+sucessivas preservam o histórico existente. `validate_corpus()` verifica hashes
+do PDF, do bruto e do histórico, além dos contratos relacionais.
+
+O relatório separa `raw_integrity` de `documentary_quality`. Seus estados são
+`blocked`, `review_required` e `approved`. `blocking_criteria` explicita os critérios
+e `chunking_gate.allowed` só abre quando todos passam, incluindo a ausência de
+casos inseguros pendentes. `fidelity_certified` permanece falso: aprovação das
+verificações implementadas não equivale a certificação visual completa.
+
+As verificações documentais incluem linhas por baseline/x, ordem dos parágrafos,
+recuo com linha terminal curta, ancestralidade, citações, chamadas/notas, tipos e
+caixas gráficas, correspondência do mapa, cobertura e não sobreposição primária.
+Consulte [a revisão 0.2.0](REVISAO_DOCUMENTAL_0_2.md) para os critérios e resultados.

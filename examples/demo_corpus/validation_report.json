@@ -1,10 +1,117 @@
 {
+  "blocking_criteria": [
+    {
+      "criterion": "raw_integrity",
+      "passed": true
+    },
+    {
+      "criterion": "identifiers_relationships_and_order",
+      "passed": true
+    },
+    {
+      "criterion": "documentary_reconstruction",
+      "passed": true
+    },
+    {
+      "criterion": "reading_order",
+      "passed": true
+    },
+    {
+      "criterion": "paragraph_boundaries",
+      "passed": true
+    },
+    {
+      "criterion": "hierarchy",
+      "passed": true
+    },
+    {
+      "criterion": "special_elements",
+      "passed": true
+    },
+    {
+      "criterion": "graphic_geometry_and_type",
+      "passed": true
+    },
+    {
+      "criterion": "normalization_provenance",
+      "passed": true
+    },
+    {
+      "criterion": "manual_review_of_unsafe_cases",
+      "passed": false
+    }
+  ],
   "checks": {
+    "documentary_errors": [],
     "errors": [],
     "processing_errors": [],
     "raw_reconstruction_matches": true
   },
+  "chunking_gate": {
+    "allowed": false,
+    "blocking_error_count": 0,
+    "pending_review_count": 7,
+    "reason": "Documentary blockers or unsafe cases remain unresolved.",
+    "required_state": "approved"
+  },
+  "documentary_quality": {
+    "blockers": [],
+    "formal_relationship_errors": [],
+    "metrics": {
+      "block_quotes": 0,
+      "blocking_documentary_errors": 0,
+      "chapters": 1,
+      "classified_drawings": 0,
+      "drawings": 0,
+      "endnotes": 0,
+      "layout_artifacts": 0,
+      "note_calls": 0,
+      "pending_review_count": 7,
+      "sections": 2,
+      "single_word_paragraphs": 0,
+      "subsections": 0
+    },
+    "review_items": [
+      {
+        "code": "element_requires_review",
+        "element_id": "elem_f514b44dc5d924582b33470c",
+        "kind": "header"
+      },
+      {
+        "code": "element_requires_review",
+        "element_id": "elem_249a95f487fa60a8bf52fb18",
+        "kind": "footnote"
+      },
+      {
+        "code": "element_requires_review",
+        "element_id": "elem_dd184e6689f62526793eb3f0",
+        "kind": "footer"
+      },
+      {
+        "code": "element_requires_review",
+        "element_id": "elem_67436b8877796b46a72a8c79",
+        "kind": "header"
+      },
+      {
+        "code": "element_requires_review",
+        "element_id": "elem_d275b8580159b6d8c2a0283b",
+        "kind": "reference"
+      },
+      {
+        "code": "element_requires_review",
+        "element_id": "elem_91ee0b1c080161e7ddda382a",
+        "kind": "footer"
+      },
+      {
+        "code": "hyphenation_candidate",
+        "event_id": "event_000016",
+        "unit_id": "para_1b2edb1fdb96cb9f67b3ae7a"
+      }
+    ],
+    "status": "review_required"
+  },
   "fidelity": "Preservation relative to extracted text checked; fidelity to visible PDF is not certified.",
+  "fidelity_certified": false,
   "limitations": [
     "Reading order, hierarchy and paragraph segmentation are heuristic.",
     "Printed page numbers require visual verification; embedded labels are separate.",
@@ -13,9 +120,17 @@
   ],
   "metrics": {
     "block_coverage_ratio": 1.0,
+    "block_quotes": 0,
+    "blocking_documentary_errors": 0,
+    "chapters": 1,
     "classified_blocks": 14,
+    "classified_drawings": 0,
     "consistency_errors": 0,
     "cross_page_paragraphs": 1,
+    "drawings": 0,
+    "endnotes": 0,
+    "layout_artifacts": 0,
+    "note_calls": 0,
     "ocr_pages": 0,
     "page_record_coverage_ratio": 1.0,
     "pages_extracted": 2,
@@ -24,8 +139,12 @@
     "pages_selected": 2,
     "pages_without_text": 0,
     "paragraphs": 4,
-    "paragraphs_requiring_review": 4,
+    "paragraphs_requiring_review": 2,
+    "pending_review_count": 7,
+    "sections": 2,
     "segmentation_confidence": "not_calibrated; heuristic rules, manual review required",
+    "single_word_paragraphs": 0,
+    "subsections": 0,
     "text_blocks": 14,
     "warning_count": 10
   },
@@ -33,7 +152,12 @@
     0,
     1
   ],
-  "schema_version": "1.0",
+  "raw_integrity": {
+    "errors": [],
+    "raw_reconstruction_matches": true,
+    "status": "passed"
+  },
+  "schema_version": "1.1",
   "scope": {
     "out_of_scope_pages": [],
     "selected_pages": [

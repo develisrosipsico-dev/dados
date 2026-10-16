@@ -173,5 +173,5 @@ def test_validation_rejects_legacy_inline_split_despite_complete_coverage(reorde
     expected_errors = {"inline_paragraph_split"}
     if reordered:
         expected_errors.add("inline_reading_order")
-    assert report["status"] == "failed"
+    assert report["status"] == "blocked"
     assert_preserved(page, legacy, elements, audit.events, report, expected_errors=expected_errors)

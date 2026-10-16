@@ -6,12 +6,11 @@ import sys
 
 import pymupdf
 
-from .ingest import sha256
 from .inspection import get_paragraph, make_server, render_page
 from .models import Config
 from .pipeline import process
 from .storage import load_corpus
-from .validation import validate
+from .validation import validate_corpus
 
 
 def parse_pages(value):
@@ -42,11 +41,13 @@ def main(argv=None):
     run.add_argument("--ocr", choices=["auto", "never", "always"], default="auto")
     run.add_argument("--ocr-language", default="por")
     run.add_argument("--ocr-dpi", type=int, default=300)
-    run.add_argument("--join-hyphens", action="store_true", help="Autorizar remoção auditada de hífens em fim de linha")
+    run.add_argument("--join-hyphens", action="store_true", help="Tentar junções corroboradas na fonte, mantendo revisão das alterações")
     run.add_argument("--merge-pages", action="store_true", help="Autorizar junção heurística entre páginas; exige revisão")
     run.add_argument("--document-id", help="Identificador bibliográfico externo, se já verificado")
     run.add_argument("--bibliography", type=Path, help="JSON de metadados com trechos de evidência verificáveis no PDF")
-    for name in ("validate", "paragraph", "render", "inspect"):
+    run.add_argument("--raw-pages", type=Path, help="Reutilizar pages_raw.jsonl byte a byte, preservando o histórico")
+    run.add_argument("--source-context", type=Path, help="JSON de referência ao recorte original, separado dos índices locais")
+    for name in ("validate", "check-ready", "paragraph", "render", "inspect"):
         sub = commands.add_parser(name)
         sub.add_argument("corpus", type=Path)
         if name == "paragraph":
@@ -65,23 +66,21 @@ def main(argv=None):
             config = Config(pages=args.pages, ocr=args.ocr, ocr_language=args.ocr_language,
                             ocr_dpi=args.ocr_dpi, join_hyphens=args.join_hyphens,
                             merge_pages=args.merge_pages, document_id=args.document_id,
-                            bibliographic_evidence=json.loads(args.bibliography.read_text(encoding="utf-8")) if args.bibliography else None)
-            report = process(args.source, args.output, config)
+                            bibliographic_evidence=json.loads(args.bibliography.read_text(encoding="utf-8")) if args.bibliography else None,
+                            source_context=json.loads(args.source_context.read_text(encoding="utf-8")) if args.source_context else None)
+            report = process(args.source, args.output, config, raw_pages_path=args.raw_pages)
             print(json.dumps(report, ensure_ascii=False, indent=2))
-            return 2 if report["status"] == "failed" else 0
+            return 2 if report["status"] == "blocked" else 0
         if args.command == "inspect":
             with make_server(args.corpus, port=args.port) as server:
                 print(f"Inspeção local ativa na porta {args.port}. Ctrl+C para encerrar.", flush=True)
                 server.serve_forever()
             return 0
         data = load_corpus(args.corpus)
-        if args.command == "validate":
-            report = validate(**data)
-            if sha256(args.corpus/"original.pdf") != data["metadata"]["sha256"]:
-                report["checks"]["errors"].append({"code": "source_hash_mismatch"})
-                report["status"] = "failed"
-            print(json.dumps(report, ensure_ascii=False, indent=2))
-            return 2 if report["status"] == "failed" else 0
+        if args.command in {"validate", "check-ready"}:
+            report = validate_corpus(args.corpus)
+            print(json.dumps(report["chunking_gate"] if args.command == "check-ready" else report, ensure_ascii=False, indent=2))
+            return 2 if report["status"] == "blocked" or (args.command == "check-ready" and not report["chunking_gate"]["allowed"]) else 0
         if args.command == "paragraph":
             print(json.dumps(get_paragraph(data, args.paragraph_id), ensure_ascii=False, indent=2))
         elif args.command == "render":

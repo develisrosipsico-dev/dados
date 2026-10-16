@@ -2,6 +2,12 @@ from pathlib import Path
 
 import pymupdf
 import pytest
+import json
+from zipfile import ZipFile
+
+from corpus_documental.models import Config
+from corpus_documental.pipeline import process
+from corpus_documental.storage import load_corpus
 
 
 def synthetic_book(path):
@@ -33,3 +39,23 @@ def synthetic_book(path):
 @pytest.fixture
 def book(tmp_path):
     return synthetic_book(tmp_path/"ensaio.pdf")
+
+
+@pytest.fixture(scope="session")
+def reviewed_story(tmp_path_factory):
+    """Regressão obrigatória no PDF real e nos artefatos entregues da versão 0.1.1."""
+    project = Path(__file__).resolve().parents[1]
+    source = project/"story-capitulo-1.pdf"
+    assert source.is_file(), "O PDF de regressão deve acompanhar o checkout."
+    folder = tmp_path_factory.mktemp("story_incremental")
+    previous = folder/"previous"
+    previous.mkdir()
+    with ZipFile(project/"story-capitulo-1-corpus-corrigido.zip") as archive:
+        for name in ("metadata.json", "structure.json", "pages_raw.jsonl", "paragraphs.jsonl", "elements.jsonl", "processing_log.jsonl", "validation_report.json"):
+            (previous/name).write_bytes(archive.read("story-capitulo-1-corrigido/"+name))
+    context = json.loads((project/"examples/story_excerpt_context.json").read_text())
+    output = folder/"revised"
+    config = Config(pages=tuple(range(18)), merge_pages=True, source_context=context)
+    report = process(source, output, config, raw_pages_path=previous/"pages_raw.jsonl")
+    return {"source": source, "previous": previous, "output": output, "data": load_corpus(output),
+            "config": config, "report": report}

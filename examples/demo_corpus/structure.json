@@ -1,5 +1,10 @@
 {
-  "corpus_version": "corpus_19af66ec645d5d25926ab423",
+  "body_metrics": {
+    "left": 50.0,
+    "right": 289.9869384765625,
+    "size": 11.0
+  },
+  "corpus_version": "corpus_07899ca3737a40a79855934a",
   "document_id": "doc_6f54b0e793c246cd1cfbfc0e",
   "nodes": [
     {
@@ -10,40 +15,170 @@
       "title": "Capítulo sintético de demonstração"
     },
     {
-      "element_id": "elem_5d7713f11d4139af7dd61baa",
+      "element_id": "elem_8ac57ea038d2d76c69b757be",
       "evidence": {
         "type": "explicit_text_marker"
       },
       "kind": "chapter",
       "level": 2,
-      "node_id": "node_2fce2683aee03d70852c5748",
+      "node_id": "node_2c0018b22627d0b2cdd38605",
       "parent_id": "doc_6f54b0e793c246cd1cfbfc0e",
       "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            50.0,
+            79.57499694824219,
+            323.52398681640625,
+            105.68099975585938
+          ],
+          "block_char_end": 31,
+          "block_char_start": 0,
+          "block_id": "p000000_b00002",
+          "char_end": 56,
+          "char_start": 25,
+          "page_index": 0,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
       "title": "Capítulo 1 - Documento de teste"
     },
     {
-      "element_id": "elem_cec4e7a9739ee519c3e3e89e",
+      "element_id": "elem_cf5531611407895a413d7679",
       "evidence": {
         "type": "explicit_text_marker"
       },
       "kind": "section",
       "level": 3,
-      "node_id": "node_d96cf34b622a8d7769ed6d46",
-      "parent_id": "node_2fce2683aee03d70852c5748",
+      "node_id": "node_0ae609c9186c846a9571dfad",
+      "parent_id": "node_2c0018b22627d0b2cdd38605",
       "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            50.0,
+            133.875,
+            179.22500610351562,
+            154.48500061035156
+          ],
+          "block_char_end": 19,
+          "block_char_start": 0,
+          "block_id": "p000000_b00003",
+          "char_end": 76,
+          "char_start": 57,
+          "page_index": 0,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
       "title": "1.1 Rastreabilidade"
     },
     {
-      "element_id": "elem_f363e54355f2b59347dc1843",
+      "element_id": "elem_701cfdd180120bb7f4ed57b8",
       "evidence": {
         "type": "explicit_text_marker"
       },
       "kind": "section",
       "level": 3,
-      "node_id": "node_90757adc1cd12541a38c3a30",
-      "parent_id": "node_2fce2683aee03d70852c5748",
+      "node_id": "node_cb70e8a4c37919b7db23077d",
+      "parent_id": "node_2c0018b22627d0b2cdd38605",
       "quality_status": "automated",
+      "source_spans": [
+        {
+          "bbox": [
+            50.0,
+            233.875,
+            221.72000122070312,
+            254.48500061035156
+          ],
+          "block_char_end": 26,
+          "block_char_start": 0,
+          "block_id": "p000001_b00004",
+          "char_end": 161,
+          "char_start": 135,
+          "page_index": 1,
+          "pdf_page_label": null,
+          "printed_page_number": null
+        }
+      ],
       "title": "Referências bibliográficas"
     }
-  ]
+  ],
+  "page_reading_order": {
+    "0": [
+      {
+        "block_char_end": 22,
+        "block_char_start": 0,
+        "block_id": "p000000_b00000"
+      },
+      {
+        "block_char_end": 31,
+        "block_char_start": 0,
+        "block_id": "p000000_b00002"
+      },
+      {
+        "block_char_end": 19,
+        "block_char_start": 0,
+        "block_id": "p000000_b00003"
+      },
+      {
+        "block_char_end": 62,
+        "block_char_start": 0,
+        "block_id": "p000000_b00004"
+      },
+      {
+        "block_char_end": 57,
+        "block_char_start": 0,
+        "block_id": "p000000_b00005"
+      },
+      {
+        "block_char_end": 44,
+        "block_char_start": 0,
+        "block_id": "p000000_b00006"
+      },
+      {
+        "block_char_end": 42,
+        "block_char_start": 0,
+        "block_id": "p000000_b00007"
+      },
+      {
+        "block_char_end": 1,
+        "block_char_start": 0,
+        "block_id": "p000000_b00001"
+      }
+    ],
+    "1": [
+      {
+        "block_char_end": 22,
+        "block_char_start": 0,
+        "block_id": "p000001_b00000"
+      },
+      {
+        "block_char_end": 51,
+        "block_char_start": 0,
+        "block_id": "p000001_b00002"
+      },
+      {
+        "block_char_end": 57,
+        "block_char_start": 0,
+        "block_id": "p000001_b00003"
+      },
+      {
+        "block_char_end": 26,
+        "block_char_start": 0,
+        "block_id": "p000001_b00004"
+      },
+      {
+        "block_char_end": 48,
+        "block_char_start": 0,
+        "block_id": "p000001_b00005"
+      },
+      {
+        "block_char_end": 1,
+        "block_char_start": 0,
+        "block_id": "p000001_b00001"
+      }
+    ]
+  }
 }

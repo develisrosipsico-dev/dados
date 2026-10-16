@@ -1,5 +1,7 @@
 # Correção A — palavras justificadas separadas em parágrafos
 
+> Relatório histórico. A entrega atual está na [revisão 0.2.0](REVISAO_DOCUMENTAL_0_2.md).
+
 Versão da aplicação: **0.1.1**. Fonte do teste real: `story-capitulo-1.pdf`,
 página física 3, correspondente à página física 21 do livro completo.
 

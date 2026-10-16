@@ -48,6 +48,7 @@ button,select{padding:.5rem;cursor:pointer}article{border:1px solid #cad1d8;marg
 .notice{color:#744000}#status{margin:.8rem 0}summary{cursor:pointer}@media(max-width:850px){main{grid-template-columns:1fr}}
 </style><h1>Inspeção do corpus documental</h1>
 <p>Compare o texto com o PDF. Alertas e classificações heurísticas exigem revisão.</p>
+<p id="gate" class="notice" role="status"></p>
 <label>Página física do PDF <select id="pages"></select></label><div id="status" role="status"></div>
 <main><section><img id="pdf" alt="Página original, com regiões do parágrafo selecionado destacadas">
 <details><summary>Extração bruta da página</summary><pre id="raw"></pre></details></section>
@@ -62,10 +63,11 @@ $('status').textContent='Estado da extração: '+d.page.status+' | Método: '+d.
 $('pdf').src='/api/image?index='+i;$('raw').textContent=d.page.text_raw;
 $('paragraphs').replaceChildren();for(const p of d.paragraphs){const a=document.createElement('article');
 const b=document.createElement('button');b.textContent=p.paragraph_id;b.onclick=()=>{$('pdf').src='/api/image?index='+i+'&paragraph='+encodeURIComponent(p.paragraph_id)};a.append(b);
+pre('Parágrafo '+p.paragraph_global_order+' | '+p.classification+' | '+p.hierarchy.map(n=>n.title||n.kind).join(' → '),a);
 pre(p.text_clean,a);const detail=document.createElement('details');const sum=document.createElement('summary');sum.textContent='Hierarquia, origem, texto bruto e transformações';detail.append(sum);pre(p,detail);a.append(detail);$('paragraphs').append(a)}
 $('elements').replaceChildren();for(const e of d.elements){const a=document.createElement('details');const s=document.createElement('summary');s.textContent=e.kind+' — '+(e.text_clean||e.element_id);a.append(s);pre(e,a);$('elements').append(a)}
 $('alerts').textContent=JSON.stringify(d.events,null,2)}catch(e){$('status').textContent=e.message}}
-api('/api/meta').then(d=>{for(const i of d.selected_pages){const o=document.createElement('option');o.value=i;o.textContent=String(i+1);$('pages').append(o)}$('pages').onchange=show;show()}).catch(e=>{$('status').textContent=e.message});
+api('/api/meta').then(d=>{const v=d.validation_summary;$('gate').textContent='Estado documental: '+v.status+' | Etapa de chunking: '+(v.chunking_gate.allowed?'liberada pelos critérios implementados':'bloqueada')+' | Fidelidade visual não certificada';for(const i of d.selected_pages){const o=document.createElement('option');o.value=i;o.textContent=String(i+1);$('pages').append(o)}$('pages').onchange=show;show()}).catch(e=>{$('status').textContent=e.message});
 </script></html>"""
 
 
@@ -82,7 +84,9 @@ class Handler(BaseHTTPRequestHandler):
             if url.path == "/":
                 body, mime = HTML.encode(), "text/html; charset=utf-8"
             elif url.path == "/api/meta":
-                body = json.dumps(self.data["metadata"], ensure_ascii=False).encode()
+                body = json.dumps({**self.data["metadata"], "validation_summary": self.data["validation_summary"]}, ensure_ascii=False).encode()
+            elif url.path == "/api/report":
+                body = json.dumps(self.data["validation_summary"], ensure_ascii=False).encode()
             elif url.path in {"/api/page", "/api/image"}:
                 index = int(query.get("index", [""])[0])
                 if index not in self.data["metadata"]["selected_pages"]:
@@ -116,6 +120,8 @@ class Handler(BaseHTTPRequestHandler):
 
 
 def make_server(corpus, host="127.0.0.1", port=8765):
+    from .validation import validate_corpus
     data = load_corpus(corpus)
+    data["validation_summary"] = validate_corpus(corpus)
     handler = partial(Handler, corpus=Path(corpus), data=data)
     return ThreadingHTTPServer((host, port), handler)

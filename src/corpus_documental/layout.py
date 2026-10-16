@@ -43,7 +43,9 @@ def is_inline_continuation(first, second, lines=()):
         return False
     gap = second["bbox"][0] - first["bbox"][2]
     size = max(font_size({"lines": [first]}), font_size({"lines": [second]}), 1)
-    if not -1 <= gap <= 2 * size:
+    bridge = any(l["bbox"][0] <= first["bbox"][2] and l["bbox"][2] >= second["bbox"][0]
+                 and not same_visual_line(l, first) for l in lines)
+    if not -1 <= gap <= (4 if bridge else 2) * size:
         return False
     if re.match(r"^\s*(?:[•●▪◦–—-]|\d+[.)]|[A-Za-z][.)])\s+", second["text"]):
         return False
@@ -97,31 +99,45 @@ def _column_order(blocks):
     return sorted(blocks, key=lambda b: (round(b["bbox"][1], 1), b["bbox"][0]))
 
 
+def _ordered_lines(lines):
+    from .composition import visual_rows
+    intervals = sorted((l["bbox"][0], l["bbox"][2]) for l in lines)
+    if intervals:
+        right = intervals[0][1]
+        for left, end in intervals[1:]:
+            split = (left+right)/2
+            if left-right >= 12 and _persistent_gutter(lines, split):
+                return (_ordered_lines([l for l in lines if l["bbox"][2] <= split]) +
+                        _ordered_lines([l for l in lines if l["bbox"][0] >= split]))
+            right = max(right, end)
+    return [line for row in visual_rows(lines) for line in row]
+
+
 def _physical_fragments(block):
     """Alguns PDFs agrupam linhas de colunas distintas no mesmo objeto nativo."""
     if block["type"] != "text" or not block.get("lines"):
         return [block]
-    groups, current, start, offset = [], [], 0, 0
-    for line in block["lines"]:
+    from .composition import make_segment
+    native, offset = [], 0
+    for i, line in enumerate(block["lines"]):
+        end = offset+len(line["text"])+(i+1 < len(block["lines"]))
+        native.append({**line, "_source_start": offset, "_source_end": end})
+        offset = end
+    groups, current = [], []
+    for line in _ordered_lines(native):
         if current:
             a, b = current[-1]["bbox"], line["bbox"]
             separate = (max(a[0], b[0]) - min(a[2], b[2]) > 12
                         and not is_inline_continuation(current[-1], line, block["lines"]))
+            if separate and not same_visual_line(current[-1], line) and b[1] >= a[1]:
+                split = (max(a[0], b[0])+min(a[2], b[2]))/2
+                separate = _persistent_gutter(block["lines"], split)
             if separate:
-                groups.append((start, offset, current))
-                current, start = [], offset
+                groups.append(current)
+                current = []
         current.append(line)
-        offset += len(line["text"]) + 1
-    groups.append((start, len(block["text_raw"]), current))
-    fragments = []
-    for start, end, lines in groups:
-        boxes = [line["bbox"] for line in lines]
-        fragments.append({**block, "text_raw": block["text_raw"][start:end], "lines": lines,
-                          "source_block_start": start, "source_block_end": end,
-                          "char_start": block["char_start"] + start,
-                          "bbox": [min(b[0] for b in boxes), min(b[1] for b in boxes),
-                                   max(b[2] for b in boxes), max(b[3] for b in boxes)]})
-    return fragments
+    groups.append(current)
+    return [make_segment(block, group) for group in groups]
 
 
 def reading_order(page, audit):
