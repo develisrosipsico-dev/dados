@@ -1,5 +1,11 @@
 # Story — protótipo controlado do capítulo 1
 
+**Relatório histórico da versão 0.1.0.** A revisão do usuário identificou uma
+fragmentação e inversão de palavras na página 3 que a cobertura textual não
+detectava. O corpus de 78 parágrafos descrito abaixo foi substituído pela versão
+0.1.1, com 73 parágrafos. Consulte a [correção e validação atual](CORRECAO_FLUXO.md).
+Preservar todos os caracteres não comprova a ordem e a segmentação corretas.
+
 Fonte recebida: `story.pdf`, 493 páginas. Título e autor nos metadados internos:
 **Story**, **Robert Mckee**. A página física 4 fornece a referência
 “Curitiba : Arte & Letra, 2006.”, registrada como evidência de editora e ano.

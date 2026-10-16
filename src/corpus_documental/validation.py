@@ -2,6 +2,8 @@
 from collections import Counter, defaultdict
 import math
 
+from .layout import inline_connections
+
 
 def validate(metadata, pages, structure, paragraphs, elements, events):
     errors = []
@@ -121,6 +123,17 @@ def validate(metadata, pages, structure, paragraphs, elements, events):
         covered_blocks += complete
         rebuilt = "".join(text for _, _, text in sorted(fragments[key]))
         require(rebuilt == block["text_raw"], "block_reconstruction", block_id=key[1])
+        for before, after in inline_connections(block):
+            previous_owner = next((owner for start, end, owner in ownership[key] if start <= before < end), None)
+            next_owner = next((owner for start, end, owner in ownership[key] if start <= after < end), None)
+            if previous_owner in para_ids and next_owner in para_ids:
+                require(previous_owner == next_owner, "inline_paragraph_split", page_index=key[0],
+                        block_id=key[1], previous_unit_id=previous_owner, next_unit_id=next_owner)
+            order = page_map[key[0]].get("reading_order", [])
+            ranks = [next((i for i, item in enumerate(order) if item["block_id"] == key[1]
+                           and item["block_char_start"] <= offset < item["block_char_end"]), -1)
+                     for offset in (before, after)]
+            require(0 <= ranks[0] <= ranks[1], "inline_reading_order", page_index=key[0], block_id=key[1])
     for page in pages:
         reconstructed = "\n".join("".join(text for _, _, text in sorted(fragments[(page["page_index"], b["block_id"])]))
                                   for b in page["blocks"] if b["type"] == "text")

@@ -3,7 +3,7 @@ from collections import Counter
 import re
 import statistics
 
-from .layout import font_size, margin_key, reading_order, repeated_margins
+from .layout import font_size, margin_key, reading_order, repeated_margins, same_visual_line
 from .models import stable_id
 from .normalization import normalize
 
@@ -20,7 +20,7 @@ def segments(block):
             gap = line["bbox"][1] - previous["bbox"][3]
             prev_size = font_size({"lines": [previous]})
             size = font_size({"lines": [line]})
-            if gap > .8 * height or abs(prev_size - size) > 1.5:
+            if not same_visual_line(previous, line) and (gap > .8 * height or abs(prev_size - size) > 1.5):
                 cuts.append(offset)
         offset += len(line["text"]) + (1 if i < len(lines) - 1 else 0)
     cuts.append(len(block["text_raw"]))

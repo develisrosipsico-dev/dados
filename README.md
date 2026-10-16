@@ -5,16 +5,19 @@ a extração física e produzir unidades documentais localizáveis no PDF origin
 Não utiliza modelos de linguagem, embeddings, índices de recuperação ou resumos.
 
 O capítulo 1 de `story.pdf`, “O problema da estória”, foi processado nas páginas
-físicas **19–36**, delimitadas pelos marcadores do PDF. O resultado está em
-`corpora/story-capitulo-1/`, separado do código pelo `.gitignore`.
-São 78 parágrafos, dez com origem em duas páginas, e seis notas finais candidatas.
-O [relatório do capítulo real](docs/STORY_CAPITULO_1.md) registra as limitações.
+físicas **19–36**, delimitadas pelos marcadores do PDF. A versão **0.1.1** corrige
+a fragmentação de palavras justificadas na página 3 do capítulo: são **73 parágrafos**,
+dez com origem em duas páginas, e seis notas finais candidatas.
+O [relatório da correção](docs/CORRECAO_FLUXO.md) registra o caso e as limitações.
 O corpus em [`examples/demo_corpus`](examples/demo_corpus) é **sintético** e
 permanece disponível para demonstrar o fluxo sem depender do livro.
 
 O capítulo 1 também está disponível para download direto pelo GitHub:
 [PDF com as 18 páginas](story-capitulo-1.pdf) ou
 [ZIP contendo somente esse PDF](capitulo-1-story.zip).
+O [corpus corrigido com JSON/JSONL e inspeção](story-capitulo-1-corpus-corrigido.zip)
+também está disponível. Corpora da versão 0.1.0 devem ser reprocessados em nova pasta;
+a validação antiga de cobertura não detectava a fragmentação identificada.
 
 ## Clonar em outra máquina
 
@@ -32,10 +35,27 @@ export TESSDATA_PREFIX="$PWD/.local/tessdata"
 corpus inspect examples/demo_corpus
 ```
 
-O clone inclui código, testes, documentação e o exemplo sintético. O corpus real
-foi entregue separadamente em `story-capitulo-1.zip`: para inspecioná-lo localmente,
-extraia a pasta `story-capitulo-1` do ZIP dentro de `corpora/` e execute
-`corpus inspect corpora/story-capitulo-1`.
+O clone inclui código, testes, documentação, o exemplo sintético e o ZIP do corpus
+corrigido. Para abrir esse resultado sem reprocessar:
+
+```bash
+mkdir -p corpora
+unzip -n story-capitulo-1-corpus-corrigido.zip -d corpora
+corpus inspect corpora/story-capitulo-1-corrigido
+```
+
+Para atualizar a instalação e gerar uma nova versão a partir do PDF local:
+
+```bash
+git pull --ff-only
+source .venv/bin/activate
+corpus process Corpora/story-capitulo-1.pdf --pages 1-18 --merge-pages \
+  --output Corpora/story-capitulo-1-corrigido
+corpus inspect Corpora/story-capitulo-1-corrigido
+```
+
+Pare o inspetor antigo com Ctrl+C antes de iniciar outro na mesma porta. A saída
+precisa ser uma pasta nova; a aplicação preserva o corpus anterior para comparação.
 
 ## Instalação
 
@@ -76,8 +96,8 @@ O serviço é somente leitura e escuta na interface de loopback. Encerre com Ctr
 Para inspecionar o capítulo já processado:
 
 ```bash
-corpus inspect corpora/story-capitulo-1
-corpus paragraph corpora/story-capitulo-1 para_749a8e0f324172055219f003
+corpus inspect corpora/story-capitulo-1-corrigido
+corpus paragraph corpora/story-capitulo-1-corrigido para_e819e28b37515935f9211f2f
 ```
 
 O registro bibliográfico opcional aceita campos com evidências conferidas na fonte:

@@ -151,3 +151,9 @@ subordinados não são contados como cópias adicionais do conteúdo.
 
 Essa verificação demonstra conservação da **extração recebida**, não a correção
 de OCR nem a exatidão das fronteiras e classificações em relação à página visível.
+
+Desde a versão 0.1.1, o validador também verifica as conexões geométricas entre
+objetos da mesma linha visual. `inline_paragraph_split` identifica fragmentos
+indevidamente separados em parágrafos; `inline_reading_order` identifica a
+inversão desses objetos. O evento `inline_line_reconstruction` registra os
+offsets nativos envolvidos. Fontes e intervalos brutos permanecem intactos.

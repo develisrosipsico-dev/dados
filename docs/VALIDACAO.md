@@ -8,7 +8,10 @@ se referem à suíte de testes e ao corpus sintético. O restante do livro não 
 
 Execução no ambiente: Python 3.12.14, PyMuPDF 1.26.7, pytest 8.4.2.
 
-`python -m pytest -q`: **28 testes passaram**, sem falhas ou skips neste ambiente.
+`python -m pytest -q`: **35 testes passaram**, sem falhas ou skips neste ambiente.
+Sete regressões de fluxo foram incluídas na versão 0.1.1 após o relato do usuário;
+a suíte inicial de 28 casos não cobria palavras justificadas emitidas como linhas
+independentes. Consulte a [análise da correção](CORRECAO_FLUXO.md).
 O caso de OCR real utilizou o modelo português oficial `tessdata_fast`, revisão
 `87416418657359cb625c412a48b6e1d6d41c29bd`, SHA-256
 `c4932b937207a9514b7514d518b931a99938c02a28a5a5a553f8599ed58b7deb`.
@@ -22,6 +25,9 @@ instala o modelo e executa a suíte.
 | Falhas explícitas | Erro injetado em uma página e OCR indisponível produzem eventos e estado `failed` |
 | Cobertura textual | Fatias classificadas cobrem integralmente os blocos e reconstroem a extração |
 | Ordem de leitura | Duas colunas, incluindo linhas agrupadas num mesmo bloco nativo, ordenadas por geometria |
+| Linha justificada | Palavras da mesma linha, inclusive com variação de fonte, permanecem no parágrafo e antes da continuação |
+| Separações legítimas | Colunas com gutters de 105 e 17 pt e listas lado a lado não são unidas |
+| Validação do erro legado | Fragmentação e inversão são detectadas mesmo com cobertura de 100%, offsets e relações consistentes |
 | Separação do corpo | Títulos, notas, margens repetidas e referências mantidos como elementos |
 | Hierarquia incerta | Título apenas tipográfico fica candidato; não se cria capítulo arbitrário |
 | Marcadores PDF | Número e título separados vinculados ao capítulo; ancestral fora do recorte documentado |

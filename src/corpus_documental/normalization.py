@@ -15,6 +15,9 @@ def normalize(raw, config, audit, unit_id):
             text = updated
 
     apply("unicode_nfc", unicodedata.normalize("NFC", text))
+    # O separador entre objetos `lines` não é uma quebra visual quando já existe
+    # espaço no texto nativo. Mantém esse espaço sem introduzir outro artificial.
+    apply("reuse_existing_line_boundary_space", re.sub(r"(?<=[ \t])\n(?=\S)", "", text))
     if re.search(r"\w-\n\w", text):
         audit.add("hyphenation_candidate", "Hífen de fim de linha pode ser lexical ou de diagramação.",
                   severity="warning", unit_id=unit_id)
