@@ -1,0 +1,784 @@
+{
+  "task_id": "TAREFA_003",
+  "review_id": "tarefa-003-v1",
+  "record_version": 1,
+  "created_at": "2026-10-16T23:56:09.450810+00:00",
+  "decision": "confirmed",
+  "reviewer_kind": "automated_assistant_visual_and_structural_review_not_human",
+  "unit": {
+    "node_id": "node_3c218d9bc62678cc2593ecbf",
+    "element_id": "elem_78b0e658267f253edd76ca46",
+    "title": "O IMPERATIVO DA ESTÓRIA",
+    "classification": "section",
+    "level": 3,
+    "parent_id": "node_0357e0c292c6ecffe3791f27",
+    "base_quality_status": "review_required",
+    "page_local": 8,
+    "page_index": 7,
+    "block_id": "p000007_b00000",
+    "source_spans": [
+      {
+        "bbox": [
+          76.9921875,
+          70.87800598144531,
+          349.75372314453125,
+          96.92901611328125
+        ],
+        "block_char_end": 23,
+        "block_char_start": 0,
+        "block_id": "p000007_b00000",
+        "char_end": 23,
+        "char_start": 0,
+        "page_index": 7,
+        "pdf_page_label": null,
+        "printed_page_number": null
+      }
+    ]
+  },
+  "sources": {
+    "application_version": "0.2.0",
+    "corpus_version": "corpus_d43918f06609b65f21f89425",
+    "base_git_commit": "368862d39d8db35f3ac8646a49fa33ed68d34a0b",
+    "published_package": "story-capitulo-1-revisao-documental-v0.2.0.zip",
+    "published_package_sha256": "3c40e59046f51875b7c12bdba26572ab222499d36fe2fa7f0262cda77a412481",
+    "file_sha256": {
+      "original.pdf": "dabd10538ffdc866c6fa24187ffb1b9f784f647a01d5286a9c6a91cd7015633d",
+      "metadata.json": "f0cd8e1be56eacbe189b15ca6f5267bfb37da1fc9022e11d62892515347158c9",
+      "structure.json": "4d24cc423c343e6886e0842c8b3b9953a75d947a31fcc23a95cc907e297f269c",
+      "pages_raw.jsonl": "64e0b2d3cc7adf6c53a663470080fecf2a03ab203c55d5ed08817a248de56811",
+      "paragraphs.jsonl": "a89f1e48e0bbc1f5ddfd4584792b6a87b67f340dafa8d00ea51a5ee60b0a1900",
+      "elements.jsonl": "7db9c696d5449ff8ccf1d3eb573657b8bcf6863ad83c5df1ee3b02c40e005631",
+      "validation_report.json": "794068fd3b258e5e39456b928e1aeed4c1c6c4cfe6cb72aff6d5eba099860547"
+    },
+    "request_text_sha256": "96a3dffa922fc79bf9e35ef04df2c5cc23c9cf3277490fe464eb4643d46277e4",
+    "substitution": {
+      "requested": "structure(2).json",
+      "examined": "structure.json",
+      "reason": "structure(2).json indisponível no workspace. Conferido o SHA-256 e a igualdade byte a byte de structure.json com o pacote publicado 0.2.0. original.pdf é idêntico a story-capitulo-1.pdf. A decisão se vincula aos hashes registrados."
+    }
+  },
+  "evidence": {
+    "visual_inspection_performed": true,
+    "render_scale": 1.5,
+    "page_dimensions_pt": [
+      612,
+      792
+    ],
+    "visual_scope": [
+      {
+        "page_local": 8,
+        "page_index": 7,
+        "region": "página inteira",
+        "purpose": "Título, início da seção, posição e ordem dos registros; citações observadas exclusivamente para pertença e ordem."
+      },
+      {
+        "page_local": 1,
+        "page_index": 0,
+        "clip_pt": [
+          60,
+          90,
+          550,
+          325
+        ],
+        "purpose": "Comparação visual de estilo com capítulo e seção anterior; sem reaprovação."
+      },
+      {
+        "page_local": 9,
+        "page_index": 8,
+        "clip_pt": [
+          65,
+          65,
+          545,
+          723
+        ],
+        "purpose": "Continuidade, limites e sequência dos registros associados."
+      },
+      {
+        "page_local": 10,
+        "page_index": 9,
+        "clip_pt": [
+          65,
+          65,
+          545,
+          686
+        ],
+        "purpose": "Continuidade e término do intervalo direto."
+      },
+      {
+        "page_local": 11,
+        "page_index": 10,
+        "clip_pt": [
+          65,
+          65,
+          320,
+          102
+        ],
+        "purpose": "Somente identificação do subtítulo que delimita o intervalo; nenhuma decisão sobre sua classificação."
+      }
+    ],
+    "typography": {
+      "font": "CenturyGothic-Bold",
+      "size_pt": 21.247499465942383,
+      "font_flags": 20,
+      "bold": true,
+      "uppercase": true,
+      "alignment": "left_at_body_margin",
+      "bbox_pt": [
+        76.9921875,
+        70.87800598144531,
+        349.75372314453125,
+        96.92901611328125
+      ],
+      "top_to_title_bbox_pt": 70.87800598144531,
+      "preceding_spacing_note": "Cabeçalho no início da página; não há bloco textual anterior nesta página nem se mede espaçamento através da quebra de página.",
+      "gap_to_body_bbox_pt": 17.95428466796875,
+      "body_font": "LiberationSerif",
+      "body_size_pt": 15,
+      "measurement_note": "Medidas de caixas extraídas em pontos; não são distâncias entre os contornos da tinta."
+    },
+    "comparison": {
+      "chapter_title": "O PROBLEMA DA ESTÓRIA",
+      "chapter_font": "UnderwoodChampion",
+      "chapter_size_pt": 27.494998931884766,
+      "chapter_alignment": "centered",
+      "section_style_reference_title": "O DECLÍNIO DA ESTÓRIA",
+      "section_style_reference_font": "CenturyGothic-Bold",
+      "section_style_reference_size_pt": 21.247499465942383,
+      "reference_classification_reviewed_or_approved": false
+    },
+    "text": {
+      "pdf_visible": "O IMPERATIVO DA ESTÓRIA",
+      "pdf_native": "O IMPERATIVO DA ESTÓRIA",
+      "raw_block": "O IMPERATIVO DA ESTÓRIA",
+      "structure_title": "O IMPERATIVO DA ESTÓRIA",
+      "element_clean": "O IMPERATIVO DA ESTÓRIA",
+      "exact_match": true,
+      "raw_block_range": [
+        0,
+        23
+      ],
+      "raw_page_range": [
+        0,
+        23
+      ]
+    },
+    "observations": [
+      "Título em linha própria, caixa alta, negrito, alinhado à margem esquerda do corpo no topo da página local 8.",
+      "Fonte CenturyGothic-Bold e tamanho 21,247499 pt foram conferidos diretamente no PDF, além da inspeção visual. O estilo coincide com o padrão de seção comparado; o capítulo usa fonte distinta, maior e centralizada.",
+      "A composição e o vínculo documental sustentam section nível 3, subordinada ao capítulo O PROBLEMA DA ESTÓRIA; não há evidência de título de capítulo, subseção ou parágrafo.",
+      "O texto inicial começa por Quando me mudei para Los Angeles. O intervalo direto termina com o registro 41 na página local 10, antes de Boa estória bem contada na página local 11.",
+      "Os dois registros atualmente rotulados block_quote foram considerados apenas na pertença, sequência e rastreabilidade. Nenhuma decisão foi tomada sobre sua classificação ou formatação."
+    ],
+    "hierarchy": {
+      "work_id": "doc_68538e2dac8d252a47d272de",
+      "chapter_id": "node_0357e0c292c6ecffe3791f27",
+      "section_id": "node_3c218d9bc62678cc2593ecbf",
+      "level": 3,
+      "chain_valid": true
+    },
+    "direct_record_scope": {
+      "count": 14,
+      "global_orders": [
+        28,
+        41
+      ],
+      "page_indexes": [
+        7,
+        8,
+        9
+      ],
+      "first_text_start": "Quando me mudei para Los Angeles, fazia o que muitos fazem para continuar comendo e escrevendo – eu ",
+      "last_text_end": "la. Apenas um bobo tentaria. Preferivelmente, um escritor deve entender a forma da estória. Isso é inevitável.",
+      "records": [
+        {
+          "paragraph_id": "para_e6844048d18f8dd141ab7fae",
+          "global_order": 28,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_3c218d9bc62678cc2593ecbf",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_3c218d9bc62678cc2593ecbf",
+          "previous_id": "para_565b7527bcf17f12cb5c731a",
+          "next_id": "para_9fadb7abe2268da24f99f6da",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                114.88330078125,
+                534.9354858398438,
+                234.99462890625
+              ],
+              "block_char_end": 481,
+              "block_char_start": 0,
+              "block_id": "p000007_b00001",
+              "char_end": 505,
+              "char_start": 24,
+              "page_index": 7,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_9fadb7abe2268da24f99f6da",
+          "global_order": 29,
+          "existing_classification": "block_quote",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_3c218d9bc62678cc2593ecbf",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_3c218d9bc62678cc2593ecbf",
+          "previous_id": "para_e6844048d18f8dd141ab7fae",
+          "next_id": "para_1ab5ab6d7272df619c1e8baa",
+          "source_spans": [
+            {
+              "bbox": [
+                97.2421875,
+                252.4749755859375,
+                512.5144653320312,
+                366.9334716796875
+              ],
+              "block_char_end": 758,
+              "block_char_start": 0,
+              "block_id": "p000007_b00002",
+              "char_end": 1264,
+              "char_start": 506,
+              "page_index": 7,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_1ab5ab6d7272df619c1e8baa",
+          "global_order": 30,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_3c218d9bc62678cc2593ecbf",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_3c218d9bc62678cc2593ecbf",
+          "previous_id": "para_9fadb7abe2268da24f99f6da",
+          "next_id": "para_62857398ab09db0511502dc1",
+          "source_spans": [
+            {
+              "bbox": [
+                99.4921875,
+                390.13330078125,
+                316.09222412109375,
+                406.74462890625
+              ],
+              "block_char_end": 36,
+              "block_char_start": 0,
+              "block_id": "p000007_b00003",
+              "char_end": 1301,
+              "char_start": 1265,
+              "page_index": 7,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_62857398ab09db0511502dc1",
+          "global_order": 31,
+          "existing_classification": "block_quote",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_3c218d9bc62678cc2593ecbf",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_3c218d9bc62678cc2593ecbf",
+          "previous_id": "para_1ab5ab6d7272df619c1e8baa",
+          "next_id": "para_3bd4bbea6c13882c16abfcc9",
+          "source_spans": [
+            {
+              "bbox": [
+                97.2421875,
+                423.4749755859375,
+                512.43408203125,
+                563.4334716796875
+              ],
+              "block_char_end": 908,
+              "block_char_start": 0,
+              "block_id": "p000007_b00004",
+              "char_end": 2210,
+              "char_start": 1302,
+              "page_index": 7,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_3bd4bbea6c13882c16abfcc9",
+          "global_order": 32,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_3c218d9bc62678cc2593ecbf",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_3c218d9bc62678cc2593ecbf",
+          "previous_id": "para_62857398ab09db0511502dc1",
+          "next_id": "para_f312bc1ce3f790ac4458b49a",
+          "source_spans": [
+            {
+              "bbox": [
+                99.4921875,
+                581.38330078125,
+                438.1472473144531,
+                597.99462890625
+              ],
+              "block_char_end": 57,
+              "block_char_start": 0,
+              "block_id": "p000007_b00005",
+              "char_end": 2268,
+              "char_start": 2211,
+              "page_index": 7,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_f312bc1ce3f790ac4458b49a",
+          "global_order": 33,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_3c218d9bc62678cc2593ecbf",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_3c218d9bc62678cc2593ecbf",
+          "previous_id": "para_3bd4bbea6c13882c16abfcc9",
+          "next_id": "para_2a444045b5cac38ce32e93f3",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                600.13330078125,
+                534.9688110351562,
+                702.99462890625
+              ],
+              "block_char_end": 480,
+              "block_char_start": 57,
+              "block_id": "p000007_b00005",
+              "char_end": 2691,
+              "char_start": 2268,
+              "page_index": 7,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            },
+            {
+              "bbox": [
+                76.9921875,
+                72.13330078125,
+                534.9646606445312,
+                157.74462890625
+              ],
+              "block_char_end": 334,
+              "block_char_start": 0,
+              "block_id": "p000008_b00000",
+              "char_end": 334,
+              "char_start": 0,
+              "page_index": 8,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_2a444045b5cac38ce32e93f3",
+          "global_order": 34,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_3c218d9bc62678cc2593ecbf",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_3c218d9bc62678cc2593ecbf",
+          "previous_id": "para_f312bc1ce3f790ac4458b49a",
+          "next_id": "para_e86fac59b1c9b271d9e283e1",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                159.88330078125,
+                534.9281616210938,
+                314.49462890625
+              ],
+              "block_char_end": 622,
+              "block_char_start": 0,
+              "block_id": "p000008_b00001",
+              "char_end": 957,
+              "char_start": 335,
+              "page_index": 8,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_e86fac59b1c9b271d9e283e1",
+          "global_order": 35,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_3c218d9bc62678cc2593ecbf",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_3c218d9bc62678cc2593ecbf",
+          "previous_id": "para_2a444045b5cac38ce32e93f3",
+          "next_id": "para_d692ff4f2bba3e3c01d77d01",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                316.63330078125,
+                534.9207153320312,
+                419.49462890625
+              ],
+              "block_char_end": 395,
+              "block_char_start": 0,
+              "block_id": "p000008_b00002",
+              "char_end": 1353,
+              "char_start": 958,
+              "page_index": 8,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_d692ff4f2bba3e3c01d77d01",
+          "global_order": 36,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_3c218d9bc62678cc2593ecbf",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_3c218d9bc62678cc2593ecbf",
+          "previous_id": "para_e86fac59b1c9b271d9e283e1",
+          "next_id": "para_1e526022445ee6f8dd70ada7",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                421.63330078125,
+                534.964599609375,
+                558.99462890625
+              ],
+              "block_char_end": 488,
+              "block_char_start": 0,
+              "block_id": "p000008_b00003",
+              "char_end": 1842,
+              "char_start": 1354,
+              "page_index": 8,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_1e526022445ee6f8dd70ada7",
+          "global_order": 37,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_3c218d9bc62678cc2593ecbf",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_3c218d9bc62678cc2593ecbf",
+          "previous_id": "para_d692ff4f2bba3e3c01d77d01",
+          "next_id": "para_24f99f5c1a47dd0cee57e7bb",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                561.13330078125,
+                534.9501342773438,
+                646.74462890625
+              ],
+              "block_char_end": 313,
+              "block_char_start": 0,
+              "block_id": "p000008_b00004",
+              "char_end": 2156,
+              "char_start": 1843,
+              "page_index": 8,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_24f99f5c1a47dd0cee57e7bb",
+          "global_order": 38,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_3c218d9bc62678cc2593ecbf",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_3c218d9bc62678cc2593ecbf",
+          "previous_id": "para_1e526022445ee6f8dd70ada7",
+          "next_id": "para_c9267fb643021b1026e9b6e8",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                648.88330078125,
+                534.9675903320312,
+                717.24462890625
+              ],
+              "block_char_end": 239,
+              "block_char_start": 0,
+              "block_id": "p000008_b00005",
+              "char_end": 2396,
+              "char_start": 2157,
+              "page_index": 8,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            },
+            {
+              "bbox": [
+                76.9921875,
+                72.13330078125,
+                535.0118408203125,
+                312.99462890625
+              ],
+              "block_char_end": 767,
+              "block_char_start": 0,
+              "block_id": "p000009_b00000",
+              "char_end": 767,
+              "char_start": 0,
+              "page_index": 9,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_c9267fb643021b1026e9b6e8",
+          "global_order": 39,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_3c218d9bc62678cc2593ecbf",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_3c218d9bc62678cc2593ecbf",
+          "previous_id": "para_24f99f5c1a47dd0cee57e7bb",
+          "next_id": "para_df83531c4c5612babdd49f4a",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                315.13330078125,
+                534.93505859375,
+                452.49462890625
+              ],
+              "block_char_end": 520,
+              "block_char_start": 0,
+              "block_id": "p000009_b00001",
+              "char_end": 1288,
+              "char_start": 768,
+              "page_index": 9,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_df83531c4c5612babdd49f4a",
+          "global_order": 40,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_3c218d9bc62678cc2593ecbf",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_3c218d9bc62678cc2593ecbf",
+          "previous_id": "para_c9267fb643021b1026e9b6e8",
+          "next_id": "para_b9b1b1436e4c916ade92dbdf",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                454.63330078125,
+                535.0249633789062,
+                591.99462890625
+              ],
+              "block_char_end": 515,
+              "block_char_start": 0,
+              "block_id": "p000009_b00002",
+              "char_end": 1804,
+              "char_start": 1289,
+              "page_index": 9,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_b9b1b1436e4c916ade92dbdf",
+          "global_order": 41,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_3c218d9bc62678cc2593ecbf",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_3c218d9bc62678cc2593ecbf",
+          "previous_id": "para_df83531c4c5612babdd49f4a",
+          "next_id": "para_b0185b8e6331748d7ebae568",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                594.13330078125,
+                534.9862670898438,
+                679.74462890625
+              ],
+              "block_char_end": 328,
+              "block_char_start": 0,
+              "block_id": "p000009_b00003",
+              "char_end": 2133,
+              "char_start": 1805,
+              "page_index": 9,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        }
+      ],
+      "block_quote_ids_membership_only": [
+        "para_9fadb7abe2268da24f99f6da",
+        "para_62857398ab09db0511502dc1"
+      ],
+      "next_boundary_only": {
+        "title": "Boa estória bem contada",
+        "node_id": "node_0e0eb60ba5619b74beb871f0",
+        "page_local": 11,
+        "page_index": 10,
+        "block_id": "p000010_b00000",
+        "bbox_pt": [
+          76.9921875,
+          72.56655883789062,
+          298.27569580078125,
+          96.09650421142578
+        ],
+        "existing_kind_not_reviewed": "subsection",
+        "existing_parent_id_not_changed": "node_3c218d9bc62678cc2593ecbf",
+        "classification_reviewed_or_approved": false
+      },
+      "scope_clarification": "O limite solicitado é o fim do intervalo de registros diretamente ligados por section_id ao alvo. Na estrutura existente, Boa estória bem contada é um nó filho: a relação ancestral da seção continua através dele. Não se encerra artificialmente essa ancestralidade nem se confirma a classificação do filho nesta tarefa.",
+      "scope_result": "Os 14 registros estão dentro do intervalo, sem atribuições intrusas ou sobreposição com o subtítulo seguinte; a navegação para o registro 42 preserva os vínculos existentes."
+    }
+  },
+  "checks": {
+    "execution": "Asserts locais desta tarefa, além da inspeção visual; sem reexecutar o pipeline, a suíte global ou outras revisões.",
+    "passed": 21,
+    "failed": 0,
+    "results": [
+      {
+        "test": "versao_e_pdf_correspondem_ao_alvo",
+        "result": "passed"
+      },
+      {
+        "test": "arquivos_correspondem_byte_a_byte_ao_zip_publicado",
+        "result": "passed"
+      },
+      {
+        "test": "titulo_unico_na_pagina_no_e_elemento_primario",
+        "result": "passed"
+      },
+      {
+        "test": "titulo_exato_pdf_bruto_estrutura_elemento",
+        "result": "passed"
+      },
+      {
+        "test": "tipografia_e_caixa_conferidas_diretamente_no_pdf",
+        "result": "passed"
+      },
+      {
+        "test": "limite_boa_estoria_corresponde_ao_pdf_sem_decidir_classificacao",
+        "result": "passed"
+      },
+      {
+        "test": "caixas_dos_14_registros_correspondem_a_linhas_reais_no_pdf",
+        "result": "passed"
+      },
+      {
+        "test": "source_spans_do_titulo_validos_e_iguais_no_elemento",
+        "result": "passed"
+      },
+      {
+        "test": "identificadores_no_e_elemento_preservados",
+        "result": "passed"
+      },
+      {
+        "test": "estilo_de_secao_e_posicao_distintos_do_capitulo_e_corpo",
+        "result": "passed"
+      },
+      {
+        "test": "cadeia_obra_capitulo_secao_niveis_validos_sem_ciclo",
+        "result": "passed"
+      },
+      {
+        "test": "escopo_direto_exato_14_registros_ordens_28_a_41",
+        "result": "passed"
+      },
+      {
+        "test": "duas_citacoes_incluidas_apenas_em_pertença_e_ordem",
+        "result": "passed"
+      },
+      {
+        "test": "ordem_visual_monotonica_dos_14_registros",
+        "result": "passed"
+      },
+      {
+        "test": "navegacao_previous_next_reciproca_incluindo_limites",
+        "result": "passed"
+      },
+      {
+        "test": "parent_chapter_section_validos_em_todos_os_14",
+        "result": "passed"
+      },
+      {
+        "test": "transicao_para_subtitulo_preserva_referencias_existentes",
+        "result": "passed"
+      },
+      {
+        "test": "fatias_de_caracteres_correspondem_ao_bruto",
+        "result": "passed"
+      },
+      {
+        "test": "source_spans_dos_registros_sem_sobreposicao",
+        "result": "passed"
+      },
+      {
+        "test": "gate_global_bloqueado_e_sem_certificacao",
+        "result": "passed"
+      },
+      {
+        "test": "pdf_bruto_historico_derivados_e_alertas_intactos",
+        "result": "passed"
+      }
+    ]
+  },
+  "changes": {
+    "corrections": [],
+    "before": {
+      "classification": "section",
+      "level": 3,
+      "parent_id": "node_0357e0c292c6ecffe3791f27",
+      "direct_record_count": 14
+    },
+    "after": {
+      "classification": "section",
+      "level": 3,
+      "parent_id": "node_0357e0c292c6ecffe3791f27",
+      "direct_record_count": 14
+    },
+    "corpus_files_modified": [],
+    "ids_changed": false,
+    "source_spans_changed": false,
+    "raw_or_pdf_changed": false,
+    "application": "Registro complementar somente. Não foram reescritos derivados, documentação ou relatório-base. A confirmação não foi aplicada automaticamente ao estado global."
+  },
+  "remaining_uncertainty": {
+    "target_identity_and_direct_membership_ambiguities": [],
+    "block_quote_classification_and_formatting": "Continuam pendentes de revisão própria; não aprovadas nesta tarefa.",
+    "next_subtitle_classification": "Continua pendente; usado apenas como limite.",
+    "other_11_pending_reviews": "Não executadas nem aprovadas nesta tarefa.",
+    "identity_scope": "Não se certifica uma cópia (2) não fornecida; a decisão se limita aos hashes da versão publicada identificada.",
+    "fidelity_limit": "Aprovação dos asserts e inspeção pontual não certificam fidelidade visual integral do corpus."
+  },
+  "global_approval": {
+    "status": "review_required",
+    "chunking_gate_allowed": false,
+    "fidelity_certified": false,
+    "human_approval_claimed": false,
+    "base_report_unchanged": true,
+    "prohibited_processing_executed": false,
+    "note": "Confirmado exclusivamente o alvo desta tarefa. As outras 11 revisões permanecem abertas e o relatório-base mantém suas pendências históricas."
+  }
+}
