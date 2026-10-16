@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "corpus-documental"
+version = "0.1.0"
+description = "Reconstrução documental auditável de capítulos em PDF"
+requires-python = ">=3.11"
+dependencies = ["PyMuPDF==1.26.7"]
+
+[project.optional-dependencies]
+test = ["pytest==8.4.2"]
+
+[project.scripts]
+corpus = "corpus_documental.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

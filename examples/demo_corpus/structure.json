@@ -1,0 +1,49 @@
+{
+  "corpus_version": "corpus_19af66ec645d5d25926ab423",
+  "document_id": "doc_6f54b0e793c246cd1cfbfc0e",
+  "nodes": [
+    {
+      "element_id": null,
+      "kind": "work",
+      "node_id": "doc_6f54b0e793c246cd1cfbfc0e",
+      "parent_id": null,
+      "title": "Capítulo sintético de demonstração"
+    },
+    {
+      "element_id": "elem_5d7713f11d4139af7dd61baa",
+      "evidence": {
+        "type": "explicit_text_marker"
+      },
+      "kind": "chapter",
+      "level": 2,
+      "node_id": "node_2fce2683aee03d70852c5748",
+      "parent_id": "doc_6f54b0e793c246cd1cfbfc0e",
+      "quality_status": "automated",
+      "title": "Capítulo 1 - Documento de teste"
+    },
+    {
+      "element_id": "elem_cec4e7a9739ee519c3e3e89e",
+      "evidence": {
+        "type": "explicit_text_marker"
+      },
+      "kind": "section",
+      "level": 3,
+      "node_id": "node_d96cf34b622a8d7769ed6d46",
+      "parent_id": "node_2fce2683aee03d70852c5748",
+      "quality_status": "automated",
+      "title": "1.1 Rastreabilidade"
+    },
+    {
+      "element_id": "elem_f363e54355f2b59347dc1843",
+      "evidence": {
+        "type": "explicit_text_marker"
+      },
+      "kind": "section",
+      "level": 3,
+      "node_id": "node_90757adc1cd12541a38c3a30",
+      "parent_id": "node_2fce2683aee03d70852c5748",
+      "quality_status": "automated",
+      "title": "Referências bibliográficas"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# Dependências diretas e transitivas do ambiente de validação Python 3.12.
+PyMuPDF==1.26.7
+pytest==8.4.2
+iniconfig==2.3.1
+packaging==26.3
+pluggy==1.6.0
+Pygments==2.21.0

@@ -1,0 +1,84 @@
+{
+  "chapter_id": "node_2fce2683aee03d70852c5748",
+  "classification": "paragraph",
+  "document_id": "doc_6f54b0e793c246cd1cfbfc0e",
+  "hierarchy": [
+    {
+      "kind": "work",
+      "node_id": "doc_6f54b0e793c246cd1cfbfc0e",
+      "title": "Capítulo sintético de demonstração"
+    },
+    {
+      "kind": "chapter",
+      "node_id": "node_2fce2683aee03d70852c5748",
+      "title": "Capítulo 1 - Documento de teste"
+    },
+    {
+      "kind": "section",
+      "node_id": "node_d96cf34b622a8d7769ed6d46",
+      "title": "1.1 Rastreabilidade"
+    }
+  ],
+  "next_id": "para_d9c978fb7cd84376a6db90c2",
+  "paragraph_global_order": 3,
+  "paragraph_id": "para_54a4b44e6a521e5d79887d7c",
+  "paragraph_local_order": 3,
+  "parent_id": "node_d96cf34b622a8d7769ed6d46",
+  "previous_id": "para_52241c5d452cf9f891b83cd5",
+  "quality_status": "review_required",
+  "section_id": "node_d96cf34b622a8d7769ed6d46",
+  "sentences": [
+    {
+      "char_end": 96,
+      "char_start": 0,
+      "order": 1,
+      "paragraph_id": "para_54a4b44e6a521e5d79887d7c",
+      "quality_status": "provisional_rule_based",
+      "sentence_id": "sent_66d50ef43a7eb7cb3ca295ac",
+      "text": "Este parágrafo atravessa a página e continua na página seguinte com referências às duas origens."
+    }
+  ],
+  "source_spans": [
+    {
+      "bbox": [
+        50.0,
+        668.1749877929688,
+        271.95794677734375,
+        683.2890014648438
+      ],
+      "block_char_end": 44,
+      "block_char_start": 0,
+      "block_id": "p000000_b00006",
+      "char_end": 242,
+      "char_start": 198,
+      "page_index": 0,
+      "pdf_page_label": null,
+      "printed_page_number": null
+    },
+    {
+      "bbox": [
+        50.0,
+        88.17500305175781,
+        308.01593017578125,
+        103.28900146484375
+      ],
+      "block_char_end": 51,
+      "block_char_start": 0,
+      "block_id": "p000001_b00002",
+      "char_end": 76,
+      "char_start": 25,
+      "page_index": 1,
+      "pdf_page_label": null,
+      "printed_page_number": null
+    }
+  ],
+  "text_clean": "Este parágrafo atravessa a página e continua na página seguinte com referências às duas origens.",
+  "text_raw": "Este parágrafo atravessa a página e continua\nna página seguinte com referências às duas origens.",
+  "transformations": [
+    {
+      "after": "Este parágrafo atravessa a página e continua na página seguinte com referências às duas origens.",
+      "before": "Este parágrafo atravessa a página e continua\nna página seguinte com referências às duas origens.",
+      "operation": "join_layout_lines"
+    }
+  ]
+}
