@@ -1,0 +1,263 @@
+{
+  "task_id": "REVISAO_001",
+  "target_id": "node_2698e965313687d1be33bd57",
+  "decision": "confirmed",
+  "reviewer_kind": "ai_assistant_visual_and_structural_review_not_human",
+  "record_version": 1,
+  "created_at": "2026-10-16T23:49:06.449283+00:00",
+  "evidence": {
+    "scope": "Revisão isolada do título, sua classificação e seu escopo. Não utiliza decisões anteriores como evidência. Não revisa o conteúdo dos parágrafos ou outras pendências.",
+    "source": {
+      "application_version": "0.2.0",
+      "corpus_version": "corpus_d43918f06609b65f21f89425",
+      "base_commit": "51e966de72af6cad2a688abf1cd99774551c1625",
+      "archive": "story-capitulo-1-revisao-documental-v0.2.0.zip",
+      "requested_to_examined_files": {
+        "story-capitulo-1.pdf": "original.pdf (bytes idênticos)",
+        "structure(2).json": "structure.json",
+        "pages_raw(2).jsonl": "pages_raw.jsonl",
+        "paragraphs(2).jsonl": "paragraphs.jsonl",
+        "validation_report(2).json": "validation_report.json",
+        "review_results.json": "review_results.json"
+      },
+      "identification_note": "Os nomes com (2) não estão disponíveis no workspace. Foram examinados os arquivos correspondentes sem sufixo, idênticos byte a byte ao pacote 0.2.0, contendo o target_id exato. A decisão se limita à versão/hash identificados; não atesta bytes de uma cópia local não fornecida.",
+      "sha256": {
+        "original.pdf": "dabd10538ffdc866c6fa24187ffb1b9f784f647a01d5286a9c6a91cd7015633d",
+        "metadata.json": "f0cd8e1be56eacbe189b15ca6f5267bfb37da1fc9022e11d62892515347158c9",
+        "structure.json": "4d24cc423c343e6886e0842c8b3b9953a75d947a31fcc23a95cc907e297f269c",
+        "pages_raw.jsonl": "64e0b2d3cc7adf6c53a663470080fecf2a03ab203c55d5ed08817a248de56811",
+        "paragraphs.jsonl": "a89f1e48e0bbc1f5ddfd4584792b6a87b67f340dafa8d00ea51a5ee60b0a1900",
+        "elements.jsonl": "7db9c696d5449ff8ccf1d3eb573657b8bcf6863ad83c5df1ee3b02c40e005631",
+        "validation_report.json": "794068fd3b258e5e39456b928e1aeed4c1c6c4cfe6cb72aff6d5eba099860547",
+        "review_results.json": "9dcee4443fc9551d5f468375ce225f3492779a619aa34aca782b475876fa4bb9"
+      }
+    },
+    "page_local": 1,
+    "page_index": 0,
+    "page_dimensions_pt": [
+      612,
+      792
+    ],
+    "elements": {
+      "title": {
+        "block_id": "p000000_b00002",
+        "element_id": "elem_f15721caf1b29b28936af66f",
+        "text": "O DECLÍNIO DA ESTÓRIA",
+        "bbox": [
+          76.9921875,
+          288.37799072265625,
+          323.4035949707031,
+          314.42901611328125
+        ],
+        "source_spans": [
+          {
+            "bbox": [
+              76.9921875,
+              288.37799072265625,
+              323.4035949707031,
+              314.42901611328125
+            ],
+            "block_char_end": 21,
+            "block_char_start": 0,
+            "block_id": "p000000_b00002",
+            "char_end": 45,
+            "char_start": 24,
+            "page_index": 0,
+            "pdf_page_label": null,
+            "printed_page_number": null
+          }
+        ],
+        "font": "CenturyGothic-Bold",
+        "size_pt": 21.247499465942383,
+        "font_flags": 20,
+        "bold": true,
+        "uppercase": true,
+        "alignment": "left_at_body_margin"
+      },
+      "chapter_comparison": {
+        "node_id": "node_0357e0c292c6ecffe3791f27",
+        "title": "O PROBLEMA DA ESTÓRIA",
+        "font": "UnderwoodChampion",
+        "size_pt": 27.494998931884766,
+        "font_flags": 4,
+        "alignment": "centered",
+        "chapter_number": "1",
+        "bbox": [
+          136.91015625,
+          175.35951232910156,
+          475.0882263183594,
+          206.0765838623047
+        ]
+      },
+      "body_start": {
+        "block_id": "p000000_b00003",
+        "text_start": "Imagine, em um dia inteiro",
+        "font": "LiberationSerif",
+        "size_pt": 15,
+        "bbox": [
+          76.9921875,
+          332.38330078125,
+          534.8531494140625,
+          521.49462890625
+        ]
+      }
+    },
+    "observations": [
+      "Página local 1 renderizada em 1,5× e examinada visualmente nesta tarefa.",
+      "Título em caixa alta, negrito e família sem serifa, alinhado à margem esquerda do corpo; abaixo da abertura numerada do capítulo e acima do primeiro parágrafo.",
+      "O capítulo tem fonte de máquina de escrever, maior e centralizada. A composição distingue o título de seção do título principal e do texto corrente.",
+      "Distância entre a caixa do capítulo e a caixa da seção: 82.301407 pt; entre a seção e o corpo: 17.954285 pt. Medidas entre bounding boxes, não entre contornos dos glifos.",
+      "Grafia, acentuação e ordem coincidem entre PDF, bloco bruto, elemento textual e nó.",
+      "Não há cabeçalho intermediário entre a abertura do capítulo e este título; section nível 3, filho direto do chapter nível 2, é coerente. Não há evidência de subsection.",
+      "O cabeçalho seguinte foi consultado exclusivamente como limite geométrico/textual no PDF e na estrutura; não recebeu decisão de revisão. Apenas a página local 1 foi aberta visualmente."
+    ],
+    "hierarchy": {
+      "work_id": "doc_68538e2dac8d252a47d272de",
+      "chapter_id": "node_0357e0c292c6ecffe3791f27",
+      "section_id": "node_2698e965313687d1be33bd57",
+      "level": 3
+    },
+    "paragraph_scope": {
+      "count": 14,
+      "global_orders": [
+        1,
+        14
+      ],
+      "first_paragraph_id": "para_a773889f5db211089fc62019",
+      "last_paragraph_id": "para_22250639d044baf648f46e90",
+      "paragraph_ids": [
+        "para_a773889f5db211089fc62019",
+        "para_74d1bd49f411b49f7dd09c0a",
+        "para_a67b30e151b8e5b4e92aadbc",
+        "para_81cb60f65a269edaf2e72807",
+        "para_426ae9a3d498c2e137d33841",
+        "para_4e71bff32e26285868637135",
+        "para_02580e4d0608db7331ec1ad1",
+        "para_2132df9c18928f71a0f20a40",
+        "para_31b298cdecb9413cc0240395",
+        "para_0234ed0db292146ce49e2ebc",
+        "para_e275623f9ab632fc32716913",
+        "para_70fc377ca9fd32a71b45f878",
+        "para_724d87e4a798b976943f0462",
+        "para_22250639d044baf648f46e90"
+      ],
+      "page_indexes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "next_boundary_only": {
+        "node_id": "node_6e1afe030552a2892149acd5",
+        "title": "A PERDA DO OFÍCIO",
+        "level_from_existing_structure": 3,
+        "page_local": 5,
+        "page_index": 4,
+        "block_id": "p000004_b00001",
+        "bbox": [
+          76.9921875,
+          212.6280059814453,
+          283.47186279296875,
+          238.67901611328125
+        ],
+        "neighbor_reviewed_or_approved": false
+      },
+      "boundary_result": "Os 14 parágrafos estão integralmente antes do próximo cabeçalho e vinculados ao alvo. O sucessor inicia depois desse limite, com sua própria seção; previous_id/next_id permanecem recíprocos."
+    }
+  },
+  "changes": {
+    "corrections": [],
+    "classification_before": "section",
+    "classification_after": "section",
+    "level_before": 3,
+    "level_after": 3,
+    "parent_id_before": "node_0357e0c292c6ecffe3791f27",
+    "parent_id_after": "node_0357e0c292c6ecffe3791f27",
+    "derived_corpus_files_modified": [],
+    "ids_or_source_spans_modified": false,
+    "decision_application": "Registro complementar somente. O snapshot 0.2.0 e o relatório-base não foram reescritos; a confirmação não foi aplicada por um mecanismo automático de aprovação.",
+    "audit_file": "review_decisions/REVISAO_001.json"
+  },
+  "checks": {
+    "execution": "Asserts direcionados executados nesta tarefa, sem executar pipeline, chunking ou suíte de outras revisões.",
+    "passed": 16,
+    "failed": 0,
+    "results": [
+      {
+        "name": "versao_0_2_0_e_fonte_identica",
+        "result": "passed"
+      },
+      {
+        "name": "dados_correspondem_ao_pacote_0_2_0",
+        "result": "passed"
+      },
+      {
+        "name": "titulo_unico_na_pagina_e_na_estrutura",
+        "result": "passed"
+      },
+      {
+        "name": "texto_exato_pdf_bruto_elemento_no",
+        "result": "passed"
+      },
+      {
+        "name": "bbox_fonte_peso_e_tamanho_conferidos_no_pdf",
+        "result": "passed"
+      },
+      {
+        "name": "limite_seguinte_confere_com_geometria_textual_do_pdf",
+        "result": "passed"
+      },
+      {
+        "name": "source_spans_validos_e_sem_alteracao",
+        "result": "passed"
+      },
+      {
+        "name": "section_nivel_3_subordinada_ao_capitulo",
+        "result": "passed"
+      },
+      {
+        "name": "composicao_visual_coerente",
+        "result": "passed"
+      },
+      {
+        "name": "ids_derivados_preservados",
+        "result": "passed"
+      },
+      {
+        "name": "escopo_exato_14_paragrafos_antes_do_limite_seguinte",
+        "result": "passed"
+      },
+      {
+        "name": "todos_os_paragrafos_da_secao_com_ancestrais_validos",
+        "result": "passed"
+      },
+      {
+        "name": "navegacao_e_transicao_sem_sobreposicao_de_escopo",
+        "result": "passed"
+      },
+      {
+        "name": "rastreabilidade_bruta_dos_paragrafos_da_secao",
+        "result": "passed"
+      },
+      {
+        "name": "gate_global_mantido_bloqueado",
+        "result": "passed"
+      },
+      {
+        "name": "pdf_bruto_derivados_e_alertas_existentes_intactos",
+        "result": "passed"
+      }
+    ],
+    "preservation": "Hashes de todos os arquivos existentes do corpus, inclusive PDF, bruto, histórico e relatório, permaneceram idênticos. Assim, nenhum outro parágrafo ou ancestral foi modificado.",
+    "global_status": "review_required",
+    "chunking_gate_allowed": false,
+    "other_13_pending_items": "Continuam abertos; não examinados nem aprovados nesta tarefa.",
+    "fidelity_certified": false
+  },
+  "remaining_uncertainty": {
+    "target_documentary_ambiguities": [],
+    "file_identity_caveat": "Não é possível certificar uma cópia chamada (2) que não foi disponibilizada. A identificação da decisão é pelo hash do snapshot 0.2.0 examinado.",
+    "outside_scope": "As outras 13 pendências continuam abertas. Não há aprovação humana nem aprovação global do corpus."
+  }
+}
