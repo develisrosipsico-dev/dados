@@ -12,6 +12,10 @@ O [relatório do capítulo real](docs/STORY_CAPITULO_1.md) registra as limitaç�
 O corpus em [`examples/demo_corpus`](examples/demo_corpus) é **sintético** e
 permanece disponível para demonstrar o fluxo sem depender do livro.
 
+O capítulo 1 também está disponível para download direto pelo GitHub:
+[PDF com as 18 páginas](story-capitulo-1.pdf) ou
+[ZIP contendo somente esse PDF](capitulo-1-story.zip).
+
 ## Clonar em outra máquina
 
 ```bash
