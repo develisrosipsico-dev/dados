@@ -1,0 +1,580 @@
+{
+  "task_id": "TAREFA_004",
+  "review_id": "tarefa-004-v1",
+  "record_version": 1,
+  "created_at_utc": "2026-10-17T00:06:43.243158+00:00",
+  "decision": "confirmed",
+  "reviewer_kind": "automated_assistant_visual_and_structural_review_not_human",
+  "unit": {
+    "node_id": "node_0e0eb60ba5619b74beb871f0",
+    "element_id": "elem_0600c893208341b1276f298f",
+    "title": "Boa estória bem contada",
+    "classification": "subsection",
+    "level": 4,
+    "parent_id": "node_3c218d9bc62678cc2593ecbf",
+    "base_quality_status": "review_required",
+    "page_local": 11,
+    "page_index": 10,
+    "block_id": "p000010_b00000",
+    "source_spans": [
+      {
+        "bbox": [
+          76.9921875,
+          72.56655883789062,
+          298.27569580078125,
+          96.09650421142578
+        ],
+        "block_char_end": 23,
+        "block_char_start": 0,
+        "block_id": "p000010_b00000",
+        "char_end": 23,
+        "char_start": 0,
+        "page_index": 10,
+        "pdf_page_label": null,
+        "printed_page_number": null
+      }
+    ]
+  },
+  "sources": {
+    "application_version": "0.2.0",
+    "corpus_version": "corpus_d43918f06609b65f21f89425",
+    "base_git_commit": "eb3a7c0e5b22d5cae2ac4dd894d0fde630fe4d44",
+    "published_package": "story-capitulo-1-revisao-documental-v0.2.0.zip",
+    "published_package_sha256": "3c40e59046f51875b7c12bdba26572ab222499d36fe2fa7f0262cda77a412481",
+    "file_sha256": {
+      "original.pdf": "dabd10538ffdc866c6fa24187ffb1b9f784f647a01d5286a9c6a91cd7015633d",
+      "metadata.json": "f0cd8e1be56eacbe189b15ca6f5267bfb37da1fc9022e11d62892515347158c9",
+      "structure.json": "4d24cc423c343e6886e0842c8b3b9953a75d947a31fcc23a95cc907e297f269c",
+      "pages_raw.jsonl": "64e0b2d3cc7adf6c53a663470080fecf2a03ab203c55d5ed08817a248de56811",
+      "paragraphs.jsonl": "a89f1e48e0bbc1f5ddfd4584792b6a87b67f340dafa8d00ea51a5ee60b0a1900",
+      "elements.jsonl": "7db9c696d5449ff8ccf1d3eb573657b8bcf6863ad83c5df1ee3b02c40e005631",
+      "validation_report.json": "794068fd3b258e5e39456b928e1aeed4c1c6c4cfe6cb72aff6d5eba099860547"
+    },
+    "request_text_sha256": "75a8ecb11c7affd58d40179c99970df46c8d9c5511a6a1f30c71b3f7481e21c4",
+    "substitution": {
+      "requested": "structure(2).json",
+      "examined": "structure.json",
+      "reason": "structure(2).json não está disponível. Utilizado structure.json do pacote publicado 0.2.0, com SHA-256 registrado e igualdade byte a byte conferida. original.pdf é idêntico a story-capitulo-1.pdf. A decisão se vincula a esses hashes."
+    }
+  },
+  "evidence": {
+    "visual_inspection_performed": true,
+    "render_scale": 1.5,
+    "page_dimensions_pt": [
+      612,
+      792
+    ],
+    "visual_scope": [
+      {
+        "page_local": 11,
+        "page_index": 10,
+        "region": "página inteira",
+        "purpose": "Identidade do título, itálico parcial, composição e fronteiras dos três primeiros parágrafos."
+      },
+      {
+        "page_local": 12,
+        "page_index": 11,
+        "clip_pt": [
+          65,
+          65,
+          545,
+          574.4295043945312
+        ],
+        "purpose": "Três parágrafos restantes e término antes de ESTÓRIA E VIDA; esse cabeçalho foi usado apenas como limite."
+      },
+      {
+        "page_local": 8,
+        "page_index": 7,
+        "clip_pt": [
+          65,
+          65,
+          365,
+          102
+        ],
+        "purpose": "Comparação exclusivamente visual com o estilo de seção superior; sem reaprovação."
+      }
+    ],
+    "typography": {
+      "font_names": [
+        "LiberationSerif-Bold",
+        "LiberationSerif-BoldItalic"
+      ],
+      "size_pt": 21.247499465942383,
+      "bold_throughout": true,
+      "italic_text_only": "bem",
+      "capitalization": "Somente a inicial de Boa em maiúscula; restante em minúsculas.",
+      "alignment": "left_at_body_margin",
+      "bbox_pt": [
+        76.9921875,
+        72.56655883789062,
+        298.27569580078125,
+        96.09650421142578
+      ],
+      "title_spans": [
+        {
+          "text": "Boa estória ",
+          "font": "LiberationSerif-Bold",
+          "size": 21.247499465942383,
+          "flags": 20,
+          "bbox": [
+            76.9921875,
+            72.56655883789062,
+            184.3849334716797,
+            96.09650421142578
+          ]
+        },
+        {
+          "text": "bem",
+          "font": "LiberationSerif-BoldItalic",
+          "size": 21.247499465942383,
+          "flags": 22,
+          "bbox": [
+            184.3828125,
+            72.56655883789062,
+            220.96646118164062,
+            96.09650421142578
+          ]
+        },
+        {
+          "text": " contada",
+          "font": "LiberationSerif-Bold",
+          "size": 21.247499465942383,
+          "flags": 20,
+          "bbox": [
+            220.95703125,
+            72.56655883789062,
+            298.27569580078125,
+            96.09650421142578
+          ]
+        }
+      ],
+      "gap_to_body_bbox_pt": 18.78728485107422,
+      "top_to_title_bbox_pt": 72.56655883789062,
+      "spacing_note": "Cabeçalho no topo da página; medidas entre caixas extraídas, não contornos de tinta.",
+      "comparison_with_section": {
+        "title": "O IMPERATIVO DA ESTÓRIA",
+        "font": "CenturyGothic-Bold",
+        "size_pt": 21.247499465942383,
+        "capitalization": "uppercase",
+        "alignment": "left_at_body_margin",
+        "classification_reviewed_or_approved_in_this_task": false
+      },
+      "interpretation_of_layout": "O tamanho é igual ao das seções, não menor. A família serifada, a caixa mista e o itálico parcial distinguem um cabeçalho subordinado do padrão sem serifa e em caixa alta das seções; o nível não foi deduzido somente do tamanho."
+    },
+    "text": {
+      "visible_pdf": "Boa estória bem contada",
+      "native_pdf": "Boa estória bem contada",
+      "raw_block": "Boa estória bem contada",
+      "structure_title": "Boa estória bem contada",
+      "element_clean": "Boa estória bem contada",
+      "exact_match": true,
+      "raw_block_range": [
+        0,
+        23
+      ],
+      "raw_page_range": [
+        0,
+        23
+      ],
+      "paragraph_transcription": "As linhas nativas do PDF foram comparadas individualmente com as linhas brutas dos seis parágrafos, inclusive acentos e pontuação. O texto limpo apenas reúne o espaço das quebras de layout.",
+      "literal_preservation_note": "Grafias literais como recompen-samo-nos permanecem como no PDF; não foi feita correção gramatical, lexical ou estilística."
+    },
+    "visual_boundary_observations": [
+      "O título antecede o parágrafo iniciado por Uma “boa estória” significa algo que vale a pena dizer.",
+      "Na página 11, os três parágrafos começam por Uma “boa estória”, O amor pela estória e Mas o amor por uma boa estória. O longo segundo parágrafo permanece contínuo; suas linhas internas não são novos parágrafos.",
+      "O terceiro parágrafo da página 11 termina em bem contada. A página 12 começa com outro parágrafo, Assim como um compositor, com recuo inicial próprio. Não há continuação de um único parágrafo através dessa passagem.",
+      "Na página 12, os dois parágrafos seguintes começam por Sem a perícia na arte e Qual é o ritmo do dia de um escritor.",
+      "O parágrafo 47 encerra-se em sua arte para criar harmonias de instinto e de ideias., antes do espaço e cabeçalho ESTÓRIA E VIDA. Não incorpora texto da unidade seguinte."
+    ],
+    "ancestry": {
+      "chain_work_to_unit": [
+        {
+          "node_id": "doc_68538e2dac8d252a47d272de",
+          "kind": "work",
+          "title": "Story — Capítulo 1 — O problema da estória",
+          "level": null,
+          "parent_id": null
+        },
+        {
+          "node_id": "node_0357e0c292c6ecffe3791f27",
+          "kind": "chapter",
+          "title": "O PROBLEMA DA ESTÓRIA",
+          "level": 2,
+          "parent_id": "doc_68538e2dac8d252a47d272de"
+        },
+        {
+          "node_id": "node_3c218d9bc62678cc2593ecbf",
+          "kind": "section",
+          "title": "O IMPERATIVO DA ESTÓRIA",
+          "level": 3,
+          "parent_id": "node_0357e0c292c6ecffe3791f27"
+        },
+        {
+          "node_id": "node_0e0eb60ba5619b74beb871f0",
+          "kind": "subsection",
+          "title": "Boa estória bem contada",
+          "level": 4,
+          "parent_id": "node_3c218d9bc62678cc2593ecbf"
+        }
+      ],
+      "direct_membership": "Os seis parágrafos apontam diretamente para a subseção por parent_id e section_id. Neste esquema, section_id identifica o nó mais próximo de tipo section ou subsection.",
+      "indirect_membership": "A seção O IMPERATIVO DA ESTÓRIA é ancestral dos seis parágrafos através da subseção, e não seu pai imediato. O capítulo permanece ancestral acima da seção.",
+      "cycles_detected": false
+    },
+    "paragraph_scope": {
+      "count": 6,
+      "global_orders": [
+        42,
+        47
+      ],
+      "page_distribution": {
+        "11": [
+          42,
+          43,
+          44
+        ],
+        "12": [
+          45,
+          46,
+          47
+        ]
+      },
+      "paragraphs": [
+        {
+          "paragraph_id": "para_b0185b8e6331748d7ebae568",
+          "global_order": 42,
+          "text_start": "Uma “boa estória” significa algo que vale a pena dizer e que o mundo queira ouvir. O que dizer você ",
+          "text_end": "seu mundo. Tudo isso… e, como Hallie e Whit Burnett revelaram em seu excelente livrinho, muito amor.",
+          "parent_id": "node_0e0eb60ba5619b74beb871f0",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_0e0eb60ba5619b74beb871f0",
+          "previous_id": "para_b9b1b1436e4c916ade92dbdf",
+          "next_id": "para_a9cfa16a957a5b9f7128f65e",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                114.8837890625,
+                534.9984130859375,
+                252.2451171875
+              ],
+              "block_char_end": 531,
+              "block_char_start": 0,
+              "block_id": "p000010_b00001",
+              "char_end": 555,
+              "char_start": 24,
+              "page_index": 10,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_a9cfa16a957a5b9f7128f65e",
+          "global_order": 43,
+          "text_start": "O amor pela estória – a crença de que sua visão pode ser expressa apenas através da estória, de que ",
+          "text_end": "e nunca duvida de que você seja, de fato, um escritor. Você deve amar escrever e suportar a solidão.",
+          "parent_id": "node_0e0eb60ba5619b74beb871f0",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_0e0eb60ba5619b74beb871f0",
+          "previous_id": "para_b0185b8e6331748d7ebae568",
+          "next_id": "para_9894e8be192fd39d2fe5ad91",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                254.3837890625,
+                535.0226440429688,
+                650.4951171875
+              ],
+              "block_char_end": 1601,
+              "block_char_start": 0,
+              "block_id": "p000010_b00002",
+              "char_end": 2157,
+              "char_start": 556,
+              "page_index": 10,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_9894e8be192fd39d2fe5ad91",
+          "global_order": 44,
+          "text_start": "Mas o amor por uma boa estória, com personagens extraordinários e um mundo dirigido por sua paixão, ",
+          "text_end": "o, coragem e dons criativos ainda não é o suficiente. Sua meta deve ser uma boa estória bem contada.",
+          "parent_id": "node_0e0eb60ba5619b74beb871f0",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_0e0eb60ba5619b74beb871f0",
+          "previous_id": "para_a9cfa16a957a5b9f7128f65e",
+          "next_id": "para_bc00e8494835e35f306c679f",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                652.6337890625,
+                534.9502563476562,
+                703.7451171875
+              ],
+              "block_char_end": 197,
+              "block_char_start": 0,
+              "block_id": "p000010_b00003",
+              "char_end": 2355,
+              "char_start": 2158,
+              "page_index": 10,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_bc00e8494835e35f306c679f",
+          "global_order": 45,
+          "text_start": "Assim como um compositor deve atingir excelência nos princípios da composição musical, você também p",
+          "text_end": "os esse envolvimento e, finalmente, recompen-samo-nos com uma experiência comovente e significativa.",
+          "parent_id": "node_0e0eb60ba5619b74beb871f0",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_0e0eb60ba5619b74beb871f0",
+          "previous_id": "para_9894e8be192fd39d2fe5ad91",
+          "next_id": "para_c2dd65b4c01a3aaa5810d5af",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                72.1337890625,
+                534.8115234375,
+                209.4951171875
+              ],
+              "block_char_end": 522,
+              "block_char_start": 0,
+              "block_id": "p000011_b00000",
+              "char_end": 522,
+              "char_start": 0,
+              "page_index": 11,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_c2dd65b4c01a3aaa5810d5af",
+          "global_order": 46,
+          "text_start": "Sem a perícia na arte, o melhor que um escritor pode fazer é apanhar a primeira ideia que vem na sua",
+          "text_end": " tarefa objetiva de executar a arte, o espontâneo emerge. A perícia na arte liberta o subconsciente.",
+          "parent_id": "node_0e0eb60ba5619b74beb871f0",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_0e0eb60ba5619b74beb871f0",
+          "previous_id": "para_bc00e8494835e35f306c679f",
+          "next_id": "para_ef9db915493d3386a04229c6",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                211.6337890625,
+                534.9544677734375,
+                331.7451171875
+              ],
+              "block_char_end": 511,
+              "block_char_start": 0,
+              "block_id": "p000011_b00001",
+              "char_end": 1034,
+              "char_start": 523,
+              "page_index": 11,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_ef9db915493d3386a04229c6",
+          "global_order": 47,
+          "text_start": "Qual é o ritmo do dia de um escritor? Primeiro, você entra no seu mundo imaginário. Enquanto os pers",
+          "text_end": "chos do impulso; ele voluntariamente exercita sua arte para criar harmonias de instinto e de ideias.",
+          "parent_id": "node_0e0eb60ba5619b74beb871f0",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_0e0eb60ba5619b74beb871f0",
+          "previous_id": "para_c2dd65b4c01a3aaa5810d5af",
+          "next_id": "para_423ae571c420ee31d608b6ff",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                333.8837890625,
+                534.847412109375,
+                505.7451171875
+              ],
+              "block_char_end": 713,
+              "block_char_start": 0,
+              "block_id": "p000011_b00002",
+              "char_end": 1748,
+              "char_start": 1035,
+              "page_index": 11,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        }
+      ],
+      "next_boundary_only": {
+        "title": "ESTÓRIA E VIDA",
+        "node_id": "node_c6e5dc0164367d465c9db04d",
+        "page_local": 12,
+        "page_index": 11,
+        "block_id": "p000011_b00003",
+        "bbox_pt": [
+          76.9921875,
+          543.3784790039062,
+          234.19692993164062,
+          569.4295043945312
+        ],
+        "classification_reviewed_or_approved": false
+      },
+      "last_paragraph_bottom_pt": 505.7451171875,
+      "gap_after_last_paragraph_to_boundary_pt": 37.63336181640625,
+      "omitted_or_incorporated_paragraphs_detected": false
+    }
+  },
+  "checks": {
+    "execution": "Asserts direcionados desta tarefa, complementares à inspeção visual; sem executar pipeline, suíte global ou outras revisões.",
+    "passed": 25,
+    "failed": 0,
+    "results": [
+      {
+        "test": "versao_0_2_0_e_pdf_original_correspondentes",
+        "result": "passed"
+      },
+      {
+        "test": "fontes_identicas_byte_a_byte_ao_pacote_publicado",
+        "result": "passed"
+      },
+      {
+        "test": "titulo_unico_na_pagina_na_estrutura_e_elemento_primario",
+        "result": "passed"
+      },
+      {
+        "test": "transcricao_do_titulo_exata_com_acentos_caixa_e_ordem",
+        "result": "passed"
+      },
+      {
+        "test": "fontes_tamanho_peso_e_italico_parcial_conferidos_no_pdf",
+        "result": "passed"
+      },
+      {
+        "test": "geometria_dos_seis_paragrafos_corresponde_as_linhas_do_pdf",
+        "result": "passed"
+      },
+      {
+        "test": "texto_bruto_dos_seis_paragrafos_exato_ao_pdf_incluindo_pontuacao",
+        "result": "passed"
+      },
+      {
+        "test": "cabecalho_final_corresponde_ao_pdf_somente_como_limite",
+        "result": "passed"
+      },
+      {
+        "test": "source_spans_do_titulo_validos_e_preservados",
+        "result": "passed"
+      },
+      {
+        "test": "identificadores_derivados_do_no_e_elemento_consistentes",
+        "result": "passed"
+      },
+      {
+        "test": "composicao_distingue_subsecao_da_secao_e_do_corpo",
+        "result": "passed"
+      },
+      {
+        "test": "cadeia_obra_capitulo_secao_subsecao_sem_ciclos",
+        "result": "passed"
+      },
+      {
+        "test": "exatamente_seis_paragrafos_ordens_42_a_47_sem_intrusos",
+        "result": "passed"
+      },
+      {
+        "test": "pertencimento_direto_a_subsecao_e_indireto_a_secao_distintos",
+        "result": "passed"
+      },
+      {
+        "test": "distribuicao_tres_paragrafos_em_cada_pagina_e_transicao_sem_fusao",
+        "result": "passed"
+      },
+      {
+        "test": "ordem_visual_dos_seis_paragrafos_monotonica",
+        "result": "passed"
+      },
+      {
+        "test": "previous_next_reciprocos_incluindo_vizinhos_41_e_48",
+        "result": "passed"
+      },
+      {
+        "test": "paragrafo_47_termina_antes_do_cabecalho_seguinte",
+        "result": "passed"
+      },
+      {
+        "test": "intervalos_de_caracteres_validos_e_texto_recuperavel",
+        "result": "passed"
+      },
+      {
+        "test": "fatias_dos_paragrafos_sem_sobreposicao",
+        "result": "passed"
+      },
+      {
+        "test": "cobertura_integral_dos_seis_blocos_do_corpo_sem_omissao",
+        "result": "passed"
+      },
+      {
+        "test": "texto_limpo_preserva_caracteres_e_pontuacao_apos_juncao_de_linhas",
+        "result": "passed"
+      },
+      {
+        "test": "gate_global_permanece_bloqueado_sem_certificacao",
+        "result": "passed"
+      },
+      {
+        "test": "pdf_bruto_historico_derivados_e_alertas_sem_alteracao",
+        "result": "passed"
+      },
+      {
+        "test": "nenhuma_revisao_anterior_modificada",
+        "result": "passed"
+      }
+    ]
+  },
+  "changes": {
+    "corrections": [],
+    "before": {
+      "classification": "subsection",
+      "level": 4,
+      "parent_id": "node_3c218d9bc62678cc2593ecbf",
+      "direct_paragraph_count": 6
+    },
+    "after": {
+      "classification": "subsection",
+      "level": 4,
+      "parent_id": "node_3c218d9bc62678cc2593ecbf",
+      "direct_paragraph_count": 6
+    },
+    "corpus_files_modified": [],
+    "ids_changed": false,
+    "source_spans_changed": false,
+    "pdf_or_raw_changed": false,
+    "prior_reviews_modified": false,
+    "application": "Registro complementar somente. Não foi necessária correção ou reescrita do corpus. A confirmação do alvo não foi aplicada automaticamente ao relatório-base."
+  },
+  "remaining_uncertainty": {
+    "target_classification_structure_and_scope_ambiguities": [],
+    "other_ten_pending_reviews": "Permanecem abertas, sem exame ou aprovação nesta tarefa. A seção superior serviu apenas de contexto/comparação e ESTÓRIA E VIDA apenas de limite.",
+    "file_identity_scope": "Não se atesta uma cópia (2) não fornecida; a decisão se limita ao snapshot 0.2.0 identificado por hash.",
+    "fidelity_limit": "Inspeção visual documental realizada por assistente automatizado, sem aprovação humana ou certificação integral do corpus."
+  },
+  "global_approval": {
+    "status": "review_required",
+    "chunking_gate_allowed": false,
+    "fidelity_certified": false,
+    "human_approval_claimed": false,
+    "base_report_unchanged": true,
+    "prohibited_processing_executed": false,
+    "note": "Confirmada exclusivamente esta subseção. As outras dez revisões permanecem abertas; o relatório-base conserva suas pendências históricas e o bloqueio global."
+  }
+}
