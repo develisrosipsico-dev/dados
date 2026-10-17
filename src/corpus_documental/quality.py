@@ -128,6 +128,17 @@ def assess_document(metadata, pages, structure, paragraphs, elements, events):
     drawings = {(p["page_index"], i): d for p in pages for i, d in enumerate(p.get("drawings", []))}
     classified = Counter()
     for element in elements:
+        if element["kind"] == "text_layer_render_mismatch":
+            mismatch = element.get("text_layer_render_mismatch", {})
+            if (element.get("classification_resolved_by") != "explicit_visual_text_layer_review"
+                    or mismatch.get("status") != "confirmed"
+                    or not mismatch.get("subtype")
+                    or mismatch.get("text_layer_value") != element.get("text_raw")
+                    or mismatch.get("included_in_reading_flow") is not False
+                    or mismatch.get("reviewer_kind") != "automated_assistant"
+                    or mismatch.get("human_reviewed") is not False
+                    or not element.get("source_spans")):
+                issue("text_layer_render_mismatch_provenance", element_id=element["element_id"])
         if element["kind"] in {"figure", "table"} and element.get("bbox") is not None:
             page = by_page.get(element.get("page_index"))
             if not page or clip_bbox(element["bbox"], page["width"], page["height"]) != list(element["bbox"]):
@@ -159,8 +170,9 @@ def assess_document(metadata, pages, structure, paragraphs, elements, events):
                 if not block or block["text_raw"][span["block_char_start"]:span["block_char_end"]] != element["text_raw"]:
                     issue("note_call_source", element_id=element["element_id"])
         pending_node = by_node.get(element.get("node_id"), {}).get("quality_status") == "review_required"
-        resolved_note = element.get("classification_resolved_by") == "unique_superscript_note_link"
-        if (element.get("quality_status") == "review_required" and not pending_node and not resolved_note
+        resolved_classification = element.get("classification_resolved_by") in {
+            "unique_superscript_note_link", "explicit_visual_text_layer_review"}
+        if (element.get("quality_status") == "review_required" and not pending_node and not resolved_classification
                 and element["kind"] not in {"block_quote", "note_call", "vector_graphic_candidate", "layout_artifact", "separator_rule"}):
             review.append({"code": "element_requires_review", "element_id": element["element_id"], "kind": element["kind"]})
     for key in drawings:
@@ -182,5 +194,6 @@ def assess_document(metadata, pages, structure, paragraphs, elements, events):
                         "endnotes": sum(e["kind"] == "endnote" for e in elements), "note_calls": calls,
                         "drawings": len(drawings), "classified_drawings": len(classified),
                         "layout_artifacts": sum(e["kind"] == "layout_artifact" for e in elements),
+                        "text_layer_render_mismatches": sum(e["kind"] == "text_layer_render_mismatch" for e in elements),
                         "single_word_paragraphs": sum(i["code"] == "single_word_paragraph" for i in review),
                         "blocking_documentary_errors": len(blockers), "pending_review_count": len(review)}}

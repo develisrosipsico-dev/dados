@@ -170,6 +170,29 @@ def test_editorial_amendment_stays_separate_from_documentary_text():
     assert len(amendment["source_refs"]) == 2
 
 
+def test_reviewed_text_layer_mismatch_requires_explicit_source_block(tmp_path):
+    source = tmp_path / "mismatch.pdf"
+    with pymupdf.open() as pdf:
+        page = pdf.new_page(width=612, height=792)
+        page.insert_text((50, 100), "Um parágrafo completo preservado no fluxo documental.", fontsize=11)
+        page.insert_text((300, 740), "Ó", fontsize=21)
+        pdf.save(source)
+    output = tmp_path / "reviewed-mismatch"
+    process(source, output, Config(
+        pages=(0,), reviewed_text_layer_mismatches=("p000000_b00001=clipped_text_object",)))
+    data = load_corpus(output)
+    mismatch = next(e for e in data["elements"] if e["kind"] == "text_layer_render_mismatch")
+    assert mismatch["text_raw"] == "Ó"
+    assert mismatch["text_layer_render_mismatch"]["subtype"] == "clipped_text_object"
+    assert mismatch["text_layer_render_mismatch"]["included_in_reading_flow"] is False
+    assert mismatch["quality_status"] == "automated"
+    assert not any(any(s["block_id"] == "p000000_b00001" for s in p["source_spans"])
+                   for p in data["paragraphs"])
+
+    with pytest.raises(ValueError, match="BLOCO=SUBTIPO"):
+        Config(pages=(0,), reviewed_text_layer_mismatches=("todos",)).validate(1)
+
+
 def test_gate_approved_only_when_implemented_checks_have_no_pending_cases(tmp_path, capsys):
     source = tmp_path/"simple.pdf"
     with pymupdf.open() as pdf:

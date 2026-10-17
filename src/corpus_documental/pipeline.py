@@ -83,6 +83,8 @@ def process(source, output, config, *, raw_pages_path=None):
             parent = node_map[parent]["parent_id"]
         if unit.get("text_ownership") in {"none", "derived", "reference"}:
             inherited = False
+        if unit.get("classification_resolved_by") == "explicit_visual_text_layer_review":
+            inherited = False
         unit["hierarchy_review_required"] = inherited
         if (warnings or inherited or
                 any(s["page_index"] in warning_pages for s in unit["source_spans"])):

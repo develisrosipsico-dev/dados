@@ -24,6 +24,7 @@ class Config:
     join_hyphens: bool = False
     reviewed_line_hyphens: tuple[str, ...] = ()
     editorial_amendments: tuple[str, ...] = ()
+    reviewed_text_layer_mismatches: tuple[str, ...] = ()
     merge_pages: bool = False
     document_id: str | None = None
     bibliographic_evidence: dict | None = None
@@ -46,6 +47,10 @@ class Config:
                 or any("=" not in item or not all(part.strip() for part in item.split("=", 1))
                        for item in self.editorial_amendments)):
             raise ValueError("Emendas editoriais devem usar a forma DOCUMENTAL=PROPOSTA.")
+        if (len(set(self.reviewed_text_layer_mismatches)) != len(self.reviewed_text_layer_mismatches)
+                or any(not re.fullmatch(r"p\d{6}_b\d{5}=[a-z][a-z0-9_]*", item)
+                       for item in self.reviewed_text_layer_mismatches)):
+            raise ValueError("Incompatibilidades visuais revisadas devem usar BLOCO=SUBTIPO.")
         if not re.fullmatch(r"[A-Za-z0-9_]+(?:\+[A-Za-z0-9_]+)*", self.ocr_language):
             raise ValueError("Idiomas OCR devem usar nomes como por ou por+eng.")
         if self.bibliographic_evidence is not None and not isinstance(self.bibliographic_evidence, dict):

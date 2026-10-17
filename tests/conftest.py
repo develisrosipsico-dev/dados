@@ -43,22 +43,24 @@ def book(tmp_path):
 
 @pytest.fixture(scope="session")
 def reviewed_story(tmp_path_factory):
-    """Regressão no PDF real a partir da versão obrigatória 0.2.1."""
+    """Regressão no PDF real a partir da versão obrigatória 0.2.2."""
     project = Path(__file__).resolve().parents[1]
     source = project/"story-capitulo-1.pdf"
     assert source.is_file(), "O PDF de regressão deve acompanhar o checkout."
     folder = tmp_path_factory.mktemp("story_incremental")
     previous = folder/"previous"
     previous.mkdir()
-    archive_root = "corpora/story-capitulo-1-revisao-documental-v0.2.1/"
-    with ZipFile(project/"story-capitulo-1-revisao-documental-v0.2.1.zip") as archive:
+    archive_root = "corpora/story-capitulo-1-revisao-documental-v0.2.2/"
+    with ZipFile(project/"story-capitulo-1-revisao-documental-v0.2.2.zip") as archive:
         for name in ("metadata.json", "structure.json", "pages_raw.jsonl", "paragraphs.jsonl", "elements.jsonl", "processing_log.jsonl", "validation_report.json"):
             (previous/name).write_bytes(archive.read(archive_root+name))
     context = json.loads((project/"examples/story_excerpt_context.json").read_text())
     output = folder/"revised"
     config = Config(pages=tuple(range(18)), merge_pages=True,
                     reviewed_line_hyphens=("revela-se", "pré-requisi-tos"),
-                    editorial_amendments=("pré-requisi-tos=pré-requisitos",), source_context=context)
+                    editorial_amendments=("pré-requisi-tos=pré-requisitos",),
+                    reviewed_text_layer_mismatches=("p000006_b00005=clipped_text_object",),
+                    source_context=context)
     report = process(source, output, config, raw_pages_path=previous/"pages_raw.jsonl")
     return {"source": source, "previous": previous, "output": output, "data": load_corpus(output),
             "config": config, "report": report}

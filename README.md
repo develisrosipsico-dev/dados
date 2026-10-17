@@ -4,21 +4,22 @@ Protótipo Python para processar **um capítulo explicitamente selecionado**, pr
 a extração física e produzir unidades documentais localizáveis no PDF original.
 Não utiliza modelos de linguagem, embeddings, índices de recuperação ou resumos.
 
-A revisão incremental **0.2.2** preserva as correções anteriores e reconstrói
-`pré-\nrequisi-tos` como `pré-requisi-tos`, removendo somente a quebra física.
-A grafia editorial `pré-requisitos` fica registrada separadamente como proposta
-não verificada e não altera o texto documental. São 72 parágrafos; **68 testes
-passaram**. O PDF e `pages_raw.jsonl` foram preservados byte a byte, com
-histórico, mapa de proveniência e linhagem explícita para os IDs da 0.2.1.
-Os registros auditáveis das [Tarefas 012](reviews/tarefa-012-v1.json) e
-[013](reviews/tarefa-013-v1.json) documentam evidências, mudanças e testes.
+A revisão incremental **0.2.3** preserva as correções anteriores e resolve o
+elemento marginal da página local 7 como `text_layer_render_mismatch`, subtipo
+`clipped_text_object`. A camada textual `Ó` foi preservada; o objeto está quase
+todo fora do recorte de renderização e aparece apenas como um pequeno traço.
+São 72 parágrafos; **70 testes passaram**. O PDF e `pages_raw.jsonl` foram
+preservados byte a byte, com histórico, mapas de proveniência e linhagem.
+Os registros auditáveis das [Tarefas 012](reviews/tarefa-012-v1.json),
+[013](reviews/tarefa-013-v1.json) e [014](reviews/tarefa-014-v1.json) documentam
+evidências, mudanças e testes.
 
-**Estado: `review_required`; futuro chunking bloqueado.** Há 13 pendências
+**Estado: `review_required`; futuro chunking bloqueado.** Há 12 pendências
 explícitas. Cobertura integral da extração não certifica fidelidade visual.
 O [relatório completo](docs/REVISAO_DOCUMENTAL_0_2.md) apresenta causas, funções
 alteradas, regressões, IDs, demonstração visual e limitações.
 
-Baixe pelo GitHub o [novo corpus, PDF e evidências em ZIP](story-capitulo-1-revisao-documental-v0.2.2.zip)
+Baixe pelo GitHub o [novo corpus, PDF e evidências em ZIP](story-capitulo-1-revisao-documental-v0.2.3.zip)
 ou o [PDF de 18 páginas](story-capitulo-1.pdf). O
 [ZIP anterior 0.1.1](story-capitulo-1-corpus-corrigido.zip) permanece como histórico
 e fixture de regressão. A referência às páginas 19–36 do livro completo fica em
@@ -46,8 +47,8 @@ Para abrir a revisão já processada, inclusive no macOS com a instalação exis
 ```bash
 git pull --ff-only
 source .venv/bin/activate
-unzip -n story-capitulo-1-revisao-documental-v0.2.2.zip -d Corpora
-corpus inspect Corpora/story-capitulo-1-revisao-documental-v0.2.2
+unzip -n story-capitulo-1-revisao-documental-v0.2.3.zip -d Corpora
+corpus inspect Corpora/story-capitulo-1-revisao-documental-v0.2.3
 ```
 
 Se ainda não houver ambiente Python no macOS, com Python 3.11+ instalado:
@@ -102,8 +103,8 @@ O serviço é somente leitura e escuta na interface de loopback. Encerre com Ctr
 Para inspecionar o capítulo já processado:
 
 ```bash
-corpus inspect Corpora/story-capitulo-1-revisao-documental-v0.2.2
-corpus paragraph Corpora/story-capitulo-1-revisao-documental-v0.2.2 para_c2292c144fe3cfe4cfb83fe2
+corpus inspect Corpora/story-capitulo-1-revisao-documental-v0.2.3
+corpus paragraph Corpora/story-capitulo-1-revisao-documental-v0.2.3 para_f58b94908b71d770fe6e0cb2
 ```
 
 O registro bibliográfico opcional aceita campos com evidências conferidas na fonte:
@@ -134,6 +135,8 @@ remove apenas a quebra depois do hífen e conserva a forma lexical autorizada.
 O argumento pode ser repetido e integra a identidade da versão do corpus.
 `--editorial-amendment 'pré-requisi-tos=pré-requisitos'` registra uma proposta
 editorial separada, com proveniência, sem aplicá-la a `text_clean`.
+`--reviewed-text-layer-mismatch 'p000006_b00005=clipped_text_object'` aplica uma
+decisão visual explícita somente ao bloco indicado e conserva seu texto bruto.
 Todas as mudanças registram o texto anterior e posterior. O diretório de saída
 deve ser novo; execuções não sobrescrevem corpora existentes.
 
@@ -228,6 +231,7 @@ acerto nem demonstram recuperação de caracteres que o PDF/OCR não forneceu.
 Configuração, fonte, hash do código Python, versão da aplicação, PyMuPDF e modelos OCR compõem
 a versão do corpus. IDs e artefatos são determinísticos sob essas condições;
 alterações de segmentação ou configuração geram nova versão. Não há estabilidade
-automática de IDs entre versões; esta entrega inclui `lineage.jsonl` por
-igualdade das origens para os 72 registros anteriores. A garantia testada de reprodução é na mesma
+automática de IDs entre versões; esta entrega inclui `lineage.jsonl` para os 72
+parágrafos e `element_lineage.jsonl` para o elemento reclassificado, por igualdade
+das origens. A garantia testada de reprodução é na mesma
 plataforma e toolchain; não foi demonstrada equivalência bit a bit entre sistemas.

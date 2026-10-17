@@ -156,6 +156,13 @@ Glifos curtos isolados podem ficar como `marginal_glyph_candidate` ou
 `short_text_candidate`, sem criar seções. Margens repetidas continuam presentes na extração e
 nos elementos, embora separadas do fluxo de parágrafos.
 
+Uma incompatibilidade visual-textual confirmada pode usar
+`kind = text_layer_render_mismatch`, mantendo `text_ownership = primary` para
+conservar a camada bruta. O objeto `text_layer_render_mismatch` registra subtipo,
+valor textual, exclusão do fluxo de leitura, escopo da decisão e natureza do
+revisor. A classificação exige um bloco explicitamente revisado; uma ocorrência
+isolada não cria regra automática global.
+
 ## Auditoria e validação
 
 `processing_log.jsonl` guarda eventos determinísticos com `event_id`, `code`,

@@ -62,12 +62,12 @@ def test_page_16_pre_requisitos_separates_layout_from_editorial_amendment(review
     first = paragraph["sentences"][0]
     assert first["text"] == paragraph["text_clean"][first["char_start"]:first["char_end"]]
 
-    previous = next(p for p in data["events"]
-                    if p["code"] == "raw_extraction_reused")
-    assert previous["previous_corpus_version"] == "corpus_022b45189da97ba52b27e7ef"
+    previous_metadata = __import__("json").loads(
+        (reviewed_story["previous"] / "metadata.json").read_text(encoding="utf-8"))
+    assert previous_metadata["previous_corpus_version"] == "corpus_022b45189da97ba52b27e7ef"
 
 
-def test_page_16_revision_preserves_every_other_clean_paragraph(reviewed_story):
+def test_page_16_revision_preserves_all_clean_paragraphs_from_0_2_2(reviewed_story):
     from corpus_documental.storage import read_jsonl
 
     current = reviewed_story["data"]["paragraphs"]
@@ -85,9 +85,56 @@ def test_page_16_revision_preserves_every_other_clean_paragraph(reviewed_story):
         assert paragraph["text_raw"] == before["text_raw"]
         if paragraph["text_clean"] != before["text_clean"]:
             changed.append((before, paragraph))
-    assert len(changed) == 1
-    assert changed[0][0]["paragraph_global_order"] == changed[0][1]["paragraph_global_order"] == 64
+    assert changed == []
     assert any("revela-se" in paragraph["text_clean"] for paragraph in current)
+
+
+def test_page_7_clipped_text_object_is_not_body_content(reviewed_story):
+    data = reviewed_story["data"]
+    element = next(e for e in data["elements"]
+                   if any(s["block_id"] == "p000006_b00005" for s in e.get("source_spans", [])))
+    assert element["kind"] == element["classification"] == "text_layer_render_mismatch"
+    assert element["text_raw"] == element["text_clean"] == "Ó"
+    assert element["text_ownership"] == "primary"
+    assert element["quality_status"] == "automated"
+    assert element["classification_resolved_by"] == "explicit_visual_text_layer_review"
+    assert element["text_layer_render_mismatch"] == {
+        "status": "confirmed",
+        "subtype": "clipped_text_object",
+        "text_layer_value": "Ó",
+        "included_in_reading_flow": False,
+        "decision_scope": "explicit_source_block",
+        "reviewer_kind": "automated_assistant",
+        "human_reviewed": False,
+    }
+    span, = element["source_spans"]
+    assert (span["page_index"], span["block_id"], span["block_char_start"], span["block_char_end"]) == (
+        6, "p000006_b00005", 0, 1)
+    assert (span["char_start"], span["char_end"]) == (2414, 2415)
+    assert not any(any(s["block_id"] == "p000006_b00005" for s in paragraph["source_spans"])
+                   for paragraph in data["paragraphs"])
+    owner = next(p for p in data["paragraphs"] if p["paragraph_global_order"] == 27)
+    assert owner["text_clean"].endswith("Não é pouca coisa.")
+    assert any(e["code"] == "text_layer_render_mismatch" and e.get("unit_id") == element["element_id"]
+               for e in data["events"])
+    assert not any(item.get("element_id") == element["element_id"]
+                   for item in reviewed_story["report"]["documentary_quality"]["review_items"])
+
+    from corpus_documental.storage import read_jsonl
+    previous_elements = read_jsonl(reviewed_story["previous"] / "elements.jsonl")
+    def source_key(item):
+        return tuple((s["page_index"], s["block_id"], s["block_char_start"], s["block_char_end"])
+                     for s in item.get("source_spans", []))
+    current_by_source = {source_key(item): item for item in data["elements"] if source_key(item)}
+    for before in previous_elements:
+        key = source_key(before)
+        if not key:
+            continue
+        after = current_by_source[key]
+        assert before.get("text_raw") == after.get("text_raw")
+        assert before.get("text_clean") == after.get("text_clean")
+        if key != ((6, "p000006_b00005", 0, 1),):
+            assert before["kind"] == after["kind"]
 
 
 def test_page_13_long_quotation_is_one_visual_unit(reviewed_story):

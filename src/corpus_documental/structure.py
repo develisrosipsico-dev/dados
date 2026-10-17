@@ -168,6 +168,7 @@ def build_structure(pages, metadata, version, config, audit):
                            and font_size(b) >= body_size * 1.25 and b["text_raw"].strip().isupper()
                            and len(b["text_raw"]) < 180)
     region, barrier = None, 0
+    reviewed_mismatches = dict(item.split("=", 1) for item in config.reviewed_text_layer_mismatches)
     for page in pages:
         ordered = reading_order(page, audit)
         hints = {**inferred_hints, **_outline_hints(page, outline)}
@@ -216,7 +217,10 @@ def build_structure(pages, metadata, version, config, audit):
                 if outline_hint and outline_hint["kind"] == "subsection" and not any(n["kind"] == "section" for n in stack):
                     outline_hint = None
                 style = (round(size, 1), tuple(sorted({s["font"] for l in segment.get("lines", []) for s in l["spans"]})))
-                if key in margins:
+                reviewed_mismatch = reviewed_mismatches.get(block["block_id"])
+                if reviewed_mismatch:
+                    kind = "text_layer_render_mismatch"
+                elif key in margins:
                     kind, uncertain = key[0], True
                 elif outline_hint:
                     if outline_hint.get("number_only"):
@@ -260,6 +264,22 @@ def build_structure(pages, metadata, version, config, audit):
                           "source_spans": spans, "transformations": transforms, "normalization_map": mapping,
                           "quality_status": "review_required" if uncertain or page["status"] != "ok" else "automated",
                           "classification": kind}
+                if reviewed_mismatch:
+                    record["classification_resolved_by"] = "explicit_visual_text_layer_review"
+                    record["text_layer_render_mismatch"] = {
+                        "status": "confirmed",
+                        "subtype": reviewed_mismatch,
+                        "text_layer_value": raw,
+                        "included_in_reading_flow": False,
+                        "decision_scope": "explicit_source_block",
+                        "reviewer_kind": "automated_assistant",
+                        "human_reviewed": False,
+                    }
+                    audit.add("text_layer_render_mismatch",
+                              "Incompatibilidade visual-textual confirmada por revisão documental explícita.",
+                              unit_id=identity, page_index=page["page_index"],
+                              block_id=block["block_id"], subtype=reviewed_mismatch,
+                              text_layer_value=raw)
                 amendments = editorial_amendments(clean, identity, mapping, spans, config.editorial_amendments)
                 if amendments:
                     record["editorial_amendments"] = amendments

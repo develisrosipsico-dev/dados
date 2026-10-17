@@ -46,6 +46,8 @@ def main(argv=None):
                      help="Preservar o hífen e remover a quebra de uma forma já revisada, ex.: revela-se")
     run.add_argument("--editorial-amendment", action="append", default=[], metavar="DOCUMENTAL=PROPOSTA",
                      help="Registrar proposta editorial separada do texto documental, sem aplicá-la")
+    run.add_argument("--reviewed-text-layer-mismatch", action="append", default=[], metavar="BLOCO=SUBTIPO",
+                     help="Classificar uma incompatibilidade visual-textual já revisada pelo bloco de origem")
     run.add_argument("--merge-pages", action="store_true", help="Autorizar junção heurística entre páginas; exige revisão")
     run.add_argument("--document-id", help="Identificador bibliográfico externo, se já verificado")
     run.add_argument("--bibliography", type=Path, help="JSON de metadados com trechos de evidência verificáveis no PDF")
@@ -71,6 +73,7 @@ def main(argv=None):
                             ocr_dpi=args.ocr_dpi, join_hyphens=args.join_hyphens,
                             reviewed_line_hyphens=tuple(args.reviewed_line_hyphen),
                             editorial_amendments=tuple(args.editorial_amendment),
+                            reviewed_text_layer_mismatches=tuple(args.reviewed_text_layer_mismatch),
                             merge_pages=args.merge_pages, document_id=args.document_id,
                             bibliographic_evidence=json.loads(args.bibliography.read_text(encoding="utf-8")) if args.bibliography else None,
                             source_context=json.loads(args.source_context.read_text(encoding="utf-8")) if args.source_context else None)

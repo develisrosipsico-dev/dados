@@ -1,0 +1,370 @@
+{
+  "task_id": "TAREFA_014",
+  "review_id": "tarefa-014-v1",
+  "record_version": 1,
+  "created_at_utc": "2026-10-17T04:06:18Z",
+  "decision": "corrected",
+  "reviewer_kind": "automated_assistant_visual_and_structural_review_not_human",
+  "target": {
+    "historical_0_2_0": {
+      "element_id": "elem_1e298fb4d4a0738c20b58d7a",
+      "review_code": "element_requires_review",
+      "classification": "marginal_glyph_candidate"
+    },
+    "base_0_2_2": {
+      "element_id": "elem_713fb856a40a460bec6394a6",
+      "event_id": "event_000081",
+      "classification": "marginal_glyph_candidate",
+      "parent_id": "node_f27092073c301f8e8e219f60",
+      "quality_status": "review_required"
+    },
+    "corrected_0_2_3": {
+      "element_id": "elem_bf954f8940fd112c8c3df255",
+      "event_id": "event_000081",
+      "classification": "text_layer_render_mismatch",
+      "subtype": "clipped_text_object",
+      "parent_id": "node_74a997edbbc24ce02939270a",
+      "parent_title": "A PERDA DO OFÍCIO",
+      "quality_status": "automated"
+    },
+    "page_local": 7,
+    "page_index": 6,
+    "block_id": "p000006_b00005",
+    "source_span": {
+      "page_index": 6,
+      "block_id": "p000006_b00005",
+      "block_char_start": 0,
+      "block_char_end": 1,
+      "char_start": 2414,
+      "char_end": 2415,
+      "bbox": [297.9184265136719, 718.8782348632812, 315.7663269042969, 744.9292602539062]
+    }
+  },
+  "versions": {
+    "historical_application_version": "0.2.0",
+    "base_application_version": "0.2.2",
+    "corrected_application_version": "0.2.3",
+    "base_corpus_version": "corpus_d0a65ff175869223b26ee04b",
+    "corrected_corpus_version": "corpus_9be43285a4ba3bc831b26b9e",
+    "base_git_commit": "4803d6234057cfebdc20598fee970b422a3e7a8f",
+    "corrected_implementation_sha256": "76ef87600557e7d4330deb9a6b9296592aa6cf0005b4e2d3c1cac4f21016b9ad",
+    "identity_note": "Os IDs mudaram porque versão, configuração e implementação integram a identidade. source_spans idênticos e element_lineage.jsonl vinculam o elemento."
+  },
+  "source_hashes": {
+    "base_original.pdf": "dabd10538ffdc866c6fa24187ffb1b9f784f647a01d5286a9c6a91cd7015633d",
+    "corrected_original.pdf": "dabd10538ffdc866c6fa24187ffb1b9f784f647a01d5286a9c6a91cd7015633d",
+    "base_pages_raw.jsonl": "64e0b2d3cc7adf6c53a663470080fecf2a03ab203c55d5ed08817a248de56811",
+    "corrected_pages_raw.jsonl": "64e0b2d3cc7adf6c53a663470080fecf2a03ab203c55d5ed08817a248de56811",
+    "base_metadata.json": "2def83b44f006c6f5191da6930aae44d95b80f3f41e3880bd7cc39fe89a586be",
+    "corrected_metadata.json": "3e1240b162c92c28bcf1bf096f3d7aa71d0014fd222d056fa5dd2255522414eb",
+    "base_structure.json": "d65d7469cdd993ffc41cee02d47540c5c54442c8acfa887e0a8e927a1c3cd17f",
+    "corrected_structure.json": "91f65c6c35aab47e8fb0d2cd4d790a9a952e86bead37d7af2625b490009b9fd5",
+    "base_paragraphs.jsonl": "4a27d1faa10cf9a4fa5ea03bc3167b4da54ea20d72f8a6e5ba16d552fd7386df",
+    "corrected_paragraphs.jsonl": "f25dfaa8385e18f0b252e266208448a0fdd31113b48e66f31bade79b2f357684",
+    "base_elements.jsonl": "c6d316fd67582fc3c5523e98043963672d168a3bbaea98bf88e5b0ecd7fcd3b4",
+    "corrected_elements.jsonl": "72f4494d0a875e33367e23da2bd0cef8844251570fe7b23fe99208b843b52f8a",
+    "base_processing_log.jsonl": "8696b7a34cd97771c4d93ebe656e5e1a1f0a54a3913b4457e7ec87b4d5c33613",
+    "corrected_processing_log.jsonl": "597c4ae844ed96595d6cbf98f465a0874d5a76f10f7a247e3a920ea6b6bb92cf",
+    "base_validation_report.json": "78d340a6695b5d81c99f04ef049e6155612d72a20525c166bbdf8f373d181390",
+    "corrected_validation_report.json": "00e43762321d573fceb07440f9231d6b6d3c3f0fdfd247edcd9b385011b1d7a7",
+    "corrected_lineage.jsonl": "8efb75d016cfa0734d91a4ad69f197098656dc3d0cd59717926cbf8010ff826e",
+    "corrected_element_lineage.jsonl": "20c5fd6a71678b736df4b3d5a99e450f67ffc273aadb7611ebef0e6efebc2223",
+    "story-capitulo-1-revisao-documental-v0.2.3.zip": "b74169858a1b98238851576a0c3811d465a85f9e7bf13d6c4119375d3ee2148a"
+  },
+  "evidence": {
+    "visual_inspection_performed": true,
+    "page": {
+      "page_local": 7,
+      "page_index": 6,
+      "dimensions_points": [612.0, 792.0],
+      "body_end": {
+        "text": "Não é pouca coisa.",
+        "bbox_bottom": 681.244873046875
+      },
+      "target_bbox": [297.9184265136719, 718.8782348632812, 315.7663269042969, 744.9292602539062],
+      "visual_description": "Pequeno traço escuro, quase horizontal, isolado no centro inferior; nenhuma letra Ó completa é visível.",
+      "body_relationship": "O alvo começa 37,63 pontos abaixo do último parágrafo e não toca a área narrativa.",
+      "nearby_graphics": "Nenhuma imagem; o único drawing é o fundo branco amplo da composição."
+    },
+    "text_layer": {
+      "extracted_text": "Ó",
+      "unicode": "U+00D3 LATIN CAPITAL LETTER O WITH ACUTE",
+      "font": "CenturyGothic-Bold",
+      "font_size_points": 21.247499465942383,
+      "flags": 20,
+      "origin": [297.9184265136719, 740.250244140625],
+      "synthetic_character": false,
+      "extraction_methods": [
+        "PyMuPDF 1.26.7 get_text(rawdict)",
+        "Poppler pdftotext -bbox-layout"
+      ],
+      "agreement": "Ambos extraem Ó na mesma região."
+    },
+    "pdf_objects": {
+      "page_xref": 37,
+      "content_stream_xref": 36,
+      "text_operator": "<00D0> Tj",
+      "font_resource": "F5",
+      "font_xref": 10,
+      "font_type": "Type0",
+      "encoding": "Identity-H",
+      "descendant_font_xref": 11,
+      "cid_to_gid_map": "Identity",
+      "content_code_hex": "00D0",
+      "content_code_decimal_and_gid": 208,
+      "to_unicode_xref": 14,
+      "to_unicode_mapping": "<00D0> <00D3>",
+      "embedded_glyph_name": "Oacute",
+      "embedded_glyph_components": ["O", "acute"]
+    },
+    "clipping_diagnosis": {
+      "status": "confirmed",
+      "outer_matrix": [0.23999999, 0.0, 0.0, -0.23999999, 0.0, 792.0],
+      "clip_operator": "300 300.00098 1950 2699.999 re W* n",
+      "visible_clip_in_page_coordinates": [72.0, 72.00024, 540.0, 719.99993],
+      "target_bbox_y": [718.8782348632812, 744.9292602539062],
+      "visible_height_points_approx": 1.1217,
+      "target_height_points_approx": 26.051,
+      "visible_fraction_approx": 0.043,
+      "finding": "O objeto textual estende-se abaixo do limite y≈720. Só a faixa superior do glifo composto é renderizada, formando o pequeno traço observado."
+    },
+    "renderer_comparison": {
+      "pymupdf": "Renderização integral e ampliação 6× mostram apenas o traço.",
+      "poppler": "pdftocairo a 300 dpi mostra o mesmo traço e nenhuma letra completa.",
+      "conclusion": "A divergência não é particular de um único extrator ou renderizador."
+    },
+    "context_comparison": {
+      "pages_checked_local": [5, 6, 7, 8, 9],
+      "all_excerpt_pages_bottom_text_search": "Somente a página local 7 possui bloco textual com y inicial maior que 700.",
+      "pagination_pattern_found": false,
+      "conclusion": "Não há recorrência suficiente para identificar o objeto como número de página, rodapé ou ornamento."
+    },
+    "documentary_interpretation": {
+      "linguistic_function": false,
+      "belongs_to_previous_paragraph": false,
+      "pagination_marker_confirmed": false,
+      "ornament_confirmed": false,
+      "reading_flow_role": false,
+      "classification": "text_layer_render_mismatch",
+      "subtype": "clipped_text_object",
+      "reason": "A camada textual é real e rastreável, mas a apresentação visível é apenas uma fração recortada do glifo, fora do corpo."
+    }
+  },
+  "reusable_mismatch_record": {
+    "category": "text_layer_render_mismatch",
+    "subtype": "clipped_text_object",
+    "status": "confirmed",
+    "corpus_version": "corpus_9be43285a4ba3bc831b26b9e",
+    "element_id": "elem_bf954f8940fd112c8c3df255",
+    "observable_pdf_features": "Objeto textual Type0/Identity-H abaixo do limite inferior de clipping; somente 4,3% de sua altura geométrica cruza a região visível.",
+    "textual_representation": "Ó (U+00D3)",
+    "visual_representation": "traço curto horizontal",
+    "extraction_strategy": "Comparação PyMuPDF/Poppler, inspeção do stream, ToUnicode, CID/GID e clipping.",
+    "confirmed_diagnosis": "Renderização parcial causada por clipping geométrico.",
+    "unconfirmed_hypothesis": "A função editorial pretendida e a razão de o objeto Ó ter sido posicionado nessa área não são determináveis pelo recorte.",
+    "decision_applied": "Preservar Ó no bruto e reclassificar o derivado fora do fluxo como text_layer_render_mismatch/clipped_text_object.",
+    "confidence": {
+      "visual_text_mismatch": "high",
+      "clipping_cause": "high",
+      "absence_from_narrative_flow": "high",
+      "original_editorial_function": "low"
+    },
+    "automation_policy": "single_reviewed_example_no_global_rule"
+  },
+  "changes": {
+    "before": {
+      "kind": "marginal_glyph_candidate",
+      "quality_status": "review_required",
+      "text_raw": "Ó",
+      "text_ownership": "primary"
+    },
+    "after": {
+      "kind": "text_layer_render_mismatch",
+      "subtype": "clipped_text_object",
+      "quality_status": "automated",
+      "classification_resolved_by": "explicit_visual_text_layer_review",
+      "text_raw": "Ó",
+      "text_ownership": "primary",
+      "included_in_reading_flow": false,
+      "reviewer_kind": "automated_assistant",
+      "human_reviewed": false
+    },
+    "code": [
+      "Adicionada configuração explícita BLOCO=SUBTIPO para incompatibilidades já revisadas.",
+      "Adicionada representação text_layer_render_mismatch com proveniência, escopo e natureza do revisor.",
+      "Adicionada validação bloqueante para registros de incompatibilidade incompletos.",
+      "Nenhuma regra visual global foi criada a partir deste caso único."
+    ],
+    "artifacts": [
+      "Criado o corpus 0.2.3 a partir do bruto da 0.2.2.",
+      "Criados lineage.jsonl para 72 parágrafos e element_lineage.jsonl para o elemento reclassificado.",
+      "Criado o pacote story-capitulo-1-revisao-documental-v0.2.3.zip sem sobrescrever a 0.2.2."
+    ],
+    "pdf_modified": false,
+    "pages_raw_modified": false,
+    "paragraphs_modified": false,
+    "other_reviews_reopened": false,
+    "bibliographic_reconciliation_executed": false,
+    "adaptive_learning_implemented": false,
+    "vector_or_retrieval_processing_executed": false
+  },
+  "provenance": {
+    "raw_page_text_range": [2414, 2415],
+    "raw_page_text_at_range": "Ó",
+    "block_text_range": [0, 1],
+    "block_text_at_range": "Ó",
+    "normalization_map_errors": [],
+    "normalization_map": {
+      "clean_range": [0, 1],
+      "text_raw_range": [0, 1],
+      "page_char_range": [2414, 2415],
+      "kind": "identity"
+    },
+    "source_span_unchanged": true,
+    "parent_exists": true,
+    "in_paragraphs": false,
+    "text_ownership": "primary",
+    "raw_coverage_preserved": true
+  },
+  "lineage": {
+    "paragraph_records": 72,
+    "paragraph_relation": "identical_source_spans",
+    "element": {
+      "previous_element_id": "elem_713fb856a40a460bec6394a6",
+      "current_element_id": "elem_bf954f8940fd112c8c3df255",
+      "relation": "identical_source_spans_reclassified"
+    }
+  },
+  "checks": [
+    {
+      "test": "current_element_identification",
+      "method": "Localizar na 0.2.2 por página, bloco, offsets e bbox.",
+      "result": "passed",
+      "evidence": "elem_713fb856a40a460bec6394a6 coincide em todos os campos físicos com a referência histórica.",
+      "limitations": "O ID histórico foi relacionado pelas origens, pois IDs mudam entre versões."
+    },
+    {
+      "test": "visual_inspection",
+      "method": "Examinar página inteira e ampliação 6× da região inferior central.",
+      "result": "passed",
+      "evidence": "Somente um traço curto é visível; o corpo termina em 'Não é pouca coisa.'.",
+      "limitations": "Inspeção automatizada, sem aprovação humana."
+    },
+    {
+      "test": "independent_renderers",
+      "method": "Renderizar com PyMuPDF e Poppler/pdftocairo.",
+      "result": "passed",
+      "evidence": "Ambos mostram o mesmo traço parcial.",
+      "limitations": "Foram usados dois mecanismos, não todos os visualizadores PDF existentes."
+    },
+    {
+      "test": "text_extraction",
+      "method": "Extrair com PyMuPDF rawdict e Poppler pdftotext -bbox-layout.",
+      "result": "passed",
+      "evidence": "Ambos retornam Ó; fonte CenturyGothic-Bold, 21,2475 pt, bbox coincidente.",
+      "limitations": "A extração textual descreve o mapeamento, não a parte efetivamente visível."
+    },
+    {
+      "test": "font_mapping",
+      "method": "Inspecionar stream, Type0, CIDToGIDMap, ToUnicode e fonte TrueType incorporada.",
+      "result": "passed",
+      "evidence": "Código 00D0 usa GID 208/Oacute e ToUnicode o mapeia para U+00D3.",
+      "limitations": "Não determina a intenção editorial de quem gerou o PDF."
+    },
+    {
+      "test": "clip_geometry",
+      "method": "Transformar a caixa de clipping para coordenadas da página e intersectá-la com a bbox textual.",
+      "result": "passed",
+      "evidence": "Limite inferior visível y≈720; alvo termina em y=744,93; apenas cerca de 1,12 pt de 26,05 pt permanece visível.",
+      "limitations": "Valores são arredondados na descrição; os valores integrais foram preservados nas evidências."
+    },
+    {
+      "test": "neighbor_context",
+      "method": "Comparar páginas locais 5–9 e buscar blocos y>700 nas 18 páginas.",
+      "result": "passed",
+      "evidence": "Nenhum outro bloco textual inferior comparável foi encontrado.",
+      "limitations": "O recorte não permite inferir padrões do livro integral."
+    },
+    {
+      "test": "paragraph_exclusion",
+      "method": "Verificar proprietários de source_spans e navegação dos parágrafos.",
+      "result": "passed",
+      "evidence": "O bloco não pertence a nenhum parágrafo; o parágrafo 27 termina em 'Não é pouca coisa.'.",
+      "limitations": "A página_reading_order conserva o bloco bruto como registro físico."
+    },
+    {
+      "test": "source_and_parent_integrity",
+      "method": "Validar normalization_map, source_span, text_ownership e parent_id.",
+      "result": "passed",
+      "evidence": "Ó possui mapa identidade completo; parent_id existe e corresponde à seção A PERDA DO OFÍCIO.",
+      "limitations": "A classificação da seção não foi reaberta nesta tarefa."
+    },
+    {
+      "test": "targeted_reclassification",
+      "method": "Processar somente o bloco explicitamente configurado e consultar elements.jsonl/log.",
+      "result": "passed",
+      "evidence": "kind=text_layer_render_mismatch, subtype=clipped_text_object e evento informativo event_000081.",
+      "limitations": "A regra não detecta automaticamente novos casos."
+    },
+    {
+      "test": "raw_preservation",
+      "method": "Comparar bytes e SHA-256 do PDF/pages_raw entre 0.2.2 e 0.2.3.",
+      "result": "passed",
+      "evidence": "Ambos os pares de hashes são idênticos; text_raw permanece Ó.",
+      "limitations": "A reclassificação existe apenas nos derivados."
+    },
+    {
+      "test": "other_page_and_paragraph_preservation",
+      "method": "Relacionar os 72 parágrafos por source_spans e comparar text_raw/text_clean.",
+      "result": "passed",
+      "evidence": "Todos os 72 textos brutos e normalizados coincidem com a 0.2.2; revela-se e pré-requisi-tos permanecem corrigidos.",
+      "limitations": "IDs mudaram pela identidade da versão."
+    },
+    {
+      "test": "lineage_integrity",
+      "method": "Conferir lineage.jsonl e element_lineage.jsonl contra os source_spans das duas versões.",
+      "result": "passed",
+      "evidence": "72 vínculos de parágrafo e um vínculo do elemento, todos com origens idênticas.",
+      "limitations": "A linhagem do elemento registra apenas o alvo desta revisão."
+    },
+    {
+      "test": "automated_suite",
+      "method": "Executar .venv/bin/python -m pytest -q.",
+      "result": "passed",
+      "evidence": "70 passed in 5.59s.",
+      "limitations": "Testes automatizados não substituem revisão humana."
+    },
+    {
+      "test": "corpus_validation_and_gate",
+      "method": "Executar corpus validate e corpus check-ready na 0.2.3.",
+      "result": "passed_expected_block",
+      "evidence": "raw_integrity=passed, errors=[], blockers=[], status=review_required, 12 pendências; check-ready exit 2 e gate false.",
+      "limitations": "As demais pendências não foram examinadas."
+    },
+    {
+      "test": "package_integrity",
+      "method": "Executar unzip -t no pacote 0.2.3.",
+      "result": "passed",
+      "evidence": "Nenhum erro; PDF, derivados, histórico e arquivos de linhagem estão presentes.",
+      "limitations": "SHA-256 não constitui assinatura digital."
+    }
+  ],
+  "remaining_uncertainty": {
+    "target_classification": [],
+    "technical_cause": "O clipping que causa a aparência parcial está confirmado.",
+    "editorial_function": "Não há evidência para decidir se o objeto pretendia paginação, ornamento ou outro componente; nenhuma dessas funções foi atribuída.",
+    "authoring_origin": "O motivo de existir um Oacute nessa posição não pode ser determinado pelo recorte.",
+    "other_reviews": "As 12 pendências restantes não foram examinadas.",
+    "task_015": "Reconciliação bibliográfica não iniciada.",
+    "fidelity_limit": "A decisão pontual não declara fidelidade integral do corpus."
+  },
+  "global_approval": {
+    "status": "review_required",
+    "chunking_gate_allowed": false,
+    "pending_review_count": 12,
+    "fidelity_certified": false,
+    "human_approval_claimed": false,
+    "prohibited_processing_executed": false,
+    "note": "Somente o elemento marginal da página local 7 foi resolvido. As demais pendências permanecem abertas."
+  }
+}
