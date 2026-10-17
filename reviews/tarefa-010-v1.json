@@ -1,0 +1,352 @@
+{
+  "task_id": "TAREFA_010",
+  "review_id": "tarefa-010-v1",
+  "record_version": 1,
+  "created_at_utc": "2026-10-17T03:16:16Z",
+  "decision": "confirmed",
+  "reviewer_kind": "automated_assistant_visual_and_structural_review_not_human",
+  "unit": {
+    "paragraph_id": "para_686c6e7b89ac2f0b6c309b09",
+    "quote_element_id": "quote_96117cf0a41512caf0691d62",
+    "element_id_discovered_by_paragraph_link": true,
+    "classification": "block_quote",
+    "paragraph_global_order": 49,
+    "paragraph_local_order": 2,
+    "page_local": [12, 13],
+    "page_index": [11, 12],
+    "block_id": ["p000011_b00005", "p000012_b00000"],
+    "parent_id": "node_c6e5dc0164367d465c9db04d",
+    "section_id": "node_c6e5dc0164367d465c9db04d",
+    "section_title": "ESTÓRIA E VIDA",
+    "chapter_id": "node_0357e0c292c6ecffe3791f27",
+    "chapter_title": "O PROBLEMA DA ESTÓRIA",
+    "base_quality_status": "review_required"
+  },
+  "sources": {
+    "application_version": "0.2.0",
+    "corpus_version": "corpus_d43918f06609b65f21f89425",
+    "base_git_commit": "ded3fd2b7cb1996e8122fdcfcaa69d2a670bab69",
+    "request_text_sha256": "adb96176918ff4eae771b71b383a67bb4c5cd8d6566826f41b9d6f494ba01efd",
+    "file_sha256": {
+      "original.pdf": "dabd10538ffdc866c6fa24187ffb1b9f784f647a01d5286a9c6a91cd7015633d",
+      "metadata.json": "f0cd8e1be56eacbe189b15ca6f5267bfb37da1fc9022e11d62892515347158c9",
+      "structure.json": "4d24cc423c343e6886e0842c8b3b9953a75d947a31fcc23a95cc907e297f269c",
+      "pages_raw.jsonl": "64e0b2d3cc7adf6c53a663470080fecf2a03ab203c55d5ed08817a248de56811",
+      "paragraphs.jsonl": "a89f1e48e0bbc1f5ddfd4584792b6a87b67f340dafa8d00ea51a5ee60b0a1900",
+      "elements.jsonl": "7db9c696d5449ff8ccf1d3eb573657b8bcf6863ad83c5df1ee3b02c40e005631",
+      "validation_report.json": "794068fd3b258e5e39456b928e1aeed4c1c6c4cfe6cb72aff6d5eba099860547",
+      "reviews/tarefa-008-v1.json": "960f7f20c099a206696d0f39010b5526d49a37b8d57402cd1b4580c5f224fbd4",
+      "reviews/tarefa-009-v1.json": "15f9be93ac6c35ea4c2b7918ba5975b38e0ce7ac59c897899052779582d04039"
+    },
+    "substitution": {
+      "requested_variants": "arquivos locais com sufixo (2), se disponíveis",
+      "examined": "cópias publicadas sem sufixo da versão 0.2.0",
+      "reason": "Não existem variantes (2) no workspace. A revisão foi vinculada às cópias publicadas por versão e SHA-256."
+    }
+  },
+  "evidence": {
+    "visual_inspection_performed": true,
+    "page_dimensions_pt": [612, 792],
+    "visual_scope": [
+      {
+        "page_local": 12,
+        "page_index": 11,
+        "region": "introdução imediata e início do bloco no rodapé",
+        "purpose": "validar limite inicial, destaque e primeiro segmento"
+      },
+      {
+        "page_local": 13,
+        "page_index": 12,
+        "region": "continuação no topo e parágrafo 50 como limite final",
+        "purpose": "validar continuidade, encerramento e separação da unidade seguinte"
+      }
+    ],
+    "excluded_visual_scope": {
+      "paragraph_global_order_51_reviewed": false,
+      "other_pending_units_reviewed": false
+    },
+    "layout": {
+      "font": "LiberationSerif-Italic",
+      "font_size_pt": 11.25,
+      "italic_ratio_recorded": 1.0,
+      "left_indent_pt": 20.25,
+      "right_indent_pt": 22.6536865234375,
+      "page_11_bbox_pt": [97.2421875, 638.7254638671875, 512.2991943359375, 714.9339599609375],
+      "page_12_bbox_pt": [97.2421875, 71.7254638671875, 512.4324340820312, 249.9339599609375],
+      "vertical_gap_before_pt": 17.4803466796875,
+      "vertical_gap_after_pt": 23.1998291015625,
+      "observations": "O primeiro segmento ocupa o rodapé e o segundo começa no topo da página seguinte com tamanho, família, itálico e recuos consistentes. Todas as palavras são itálicas; somente o ponto final usa a variante romana da mesma família. Não há cabeçalho, espaço de abertura ou mudança composicional no início da página 13."
+    },
+    "documentary_classification": {
+      "finding": "block_quote_confirmed_as_single_cross_page_visual_unit",
+      "function": "exemplo de roteiro hipotético apresentado pelo autor",
+      "external_bibliographic_attribution_claimed": false,
+      "invented_author_work_or_historical_source": false,
+      "limitation": "A classificação registra a forma documental destacada e não cria uma fonte bibliográfica."
+    },
+    "cross_page_continuity": {
+      "single_paragraph_id": "para_686c6e7b89ac2f0b6c309b09",
+      "single_quote_element_id": "quote_96117cf0a41512caf0691d62",
+      "segment_order": [
+        {"page_index": 11, "block_id": "p000011_b00005", "length": 508},
+        {"page_index": 12, "block_id": "p000012_b00000", "length": 1116}
+      ],
+      "visual_join": "esquecendo completamente que\nela está de dieta.",
+      "source_extent_sum": 1624,
+      "reconstructed_raw_length": 1625,
+      "length_difference": 1,
+      "join_separator": {
+        "text_raw_interval": [508, 509],
+        "character": "newline",
+        "normalization_map_kind": "composition_separator",
+        "source_refs": [],
+        "explanation": "O newline recompõe a quebra visual entre páginas. Não é atribuído a nenhum dos dois segmentos e torna a composição idêntica à sequência nativa do PDF, descontado apenas o newline terminal do segundo bloco."
+      },
+      "omitted_words": 0,
+      "duplicated_words": 0,
+      "inverted_segments": false,
+      "new_unit_signal_on_page_13": false
+    },
+    "boundaries": {
+      "previous": {
+        "paragraph_id": "para_423ae571c420ee31d608b6ff",
+        "global_order": 48,
+        "ending": "O primeiro é o roteiro ruim “estória pessoal”:",
+        "source_interval": [1764, 1897],
+        "next_id": "para_686c6e7b89ac2f0b6c309b09"
+      },
+      "target": {
+        "first_words": "Em um ambiente de escritório",
+        "last_words": "precisa de espaço."
+      },
+      "next": {
+        "paragraph_id": "para_b2213c420972075aec37186d",
+        "global_order": 50,
+        "beginning": "O segundo é o roteiro ruim “sucesso comercial garantido”:",
+        "source_interval": [1117, 1174],
+        "previous_id": "para_686c6e7b89ac2f0b6c309b09"
+      },
+      "finding": "A introdução termina antes do recuo do bloco; a unidade termina em 'precisa de espaço.' e o parágrafo 50 começa depois de um espaço vertical próprio. Não há omissão ou sobreposição."
+    },
+    "transcription": {
+      "raw_length": 1625,
+      "clean_length": 1625,
+      "raw_line_break_count": 19,
+      "source_layout_line_break_count": 18,
+      "composition_separator_count": 1,
+      "pdf_native_segment_lengths_with_terminal_newlines": [509, 1117],
+      "pdf_native_composition_matches_text_raw_after_final_terminal_newline_is_removed": true,
+      "finding": "Palavras, pontuação, acentuação, caixa, elipse, ordem e passagem entre páginas coincidem integralmente com o PDF e os dois blocos brutos."
+    },
+    "normalization": {
+      "operation": "join_layout_lines",
+      "normalized_source_run_count": 18,
+      "composition_separator_run_count": 1,
+      "replacement": "Cada um dos 19 newlines foi representado por um espaço na versão limpa.",
+      "characters_added_or_omitted_in_clean_text": 0,
+      "word_join_errors": 0,
+      "punctuation_changes": 0,
+      "map_validation_errors": []
+    },
+    "source_spans": [
+      {
+        "page_index": 11,
+        "block_id": "p000011_b00005",
+        "block_interval": [0, 508],
+        "page_interval": [1898, 2406],
+        "bbox_pt": [97.2421875, 638.7254638671875, 512.2991943359375, 714.9339599609375]
+      },
+      {
+        "page_index": 12,
+        "block_id": "p000012_b00000",
+        "block_interval": [0, 1116],
+        "page_interval": [0, 1116],
+        "bbox_pt": [97.2421875, 71.7254638671875, 512.4324340820312, 249.9339599609375]
+      }
+    ],
+    "relations": {
+      "paragraph_quote_element_link_bidirectional": true,
+      "paragraph_and_element_source_spans_equal": true,
+      "shared_parent_id": "node_c6e5dc0164367d465c9db04d",
+      "ancestry": [
+        "doc_68538e2dac8d252a47d272de",
+        "node_0357e0c292c6ecffe3791f27",
+        "node_c6e5dc0164367d465c9db04d",
+        "para_686c6e7b89ac2f0b6c309b09"
+      ],
+      "text_ownership": "reference",
+      "bibliographic_attribution_fields_present": false
+    }
+  },
+  "checks": [
+    {
+      "test": "identidade_do_corpus_e_fontes",
+      "method": "Conferir versão, commit-base e SHA-256 das fontes consultadas.",
+      "evidence": "Versão 0.2.0, corpus_d43918f06609b65f21f89425 e hashes registrados em sources.file_sha256.",
+      "result": "passed",
+      "limitations": "A decisão vale somente para os bytes identificados."
+    },
+    {
+      "test": "substituicao_das_variantes_2",
+      "method": "Procurar arquivos locais com sufixo (2) e registrar a fonte efetivamente usada.",
+      "evidence": "As variantes não estão disponíveis; foram usadas as cópias publicadas 0.2.0 verificadas por hash.",
+      "result": "passed",
+      "limitations": "Não se atesta identidade com cópias (2) não fornecidas."
+    },
+    {
+      "test": "inspecao_visual_das_duas_paginas",
+      "method": "Renderizar e examinar as páginas locais 12 e 13 do PDF original em 144 dpi.",
+      "evidence": "O destaque começa no rodapé da 12 e continua no topo da 13 sem marcador de nova unidade.",
+      "result": "passed",
+      "limitations": "Inspeção feita por assistente automatizado, sem aprovação humana."
+    },
+    {
+      "test": "tipografia_e_recuos",
+      "method": "Comparar visualmente e extrair os spans nativos nas duas páginas.",
+      "evidence": "11,25 pt, LiberationSerif-Italic, mesmos recuos e largura nas duas páginas; somente o ponto final está em romana.",
+      "result": "passed",
+      "limitations": "A razão 1,0 do corpus resume caracteres lexicais; o ponto romano não rompe o bloco."
+    },
+    {
+      "test": "classificacao_documental",
+      "method": "Avaliar a forma gráfica, o papel de exemplo e a ausência de fonte externa explícita.",
+      "evidence": "O trecho é um exemplo hipotético destacado, compatível com block_quote como tipo visual.",
+      "result": "passed",
+      "limitations": "Não se atribui a passagem a obra, autor ou documento externo."
+    },
+    {
+      "test": "unidade_documental_entre_paginas",
+      "method": "Comparar tipografia, recuos, fluxo sintático, IDs e ausência de abertura na página 13.",
+      "evidence": "Um paragraph_id e um quote_element_id abrangem os dois segmentos na ordem 11 -> 12; 'que' continua por 'ela está de dieta'.",
+      "result": "passed",
+      "limitations": "A conclusão se restringe a esses dois segmentos."
+    },
+    {
+      "test": "integridade_dos_segmentos",
+      "method": "Comparar cada source_span com seu block_id e intervalo em pages_raw.jsonl.",
+      "evidence": "O primeiro segmento tem 508 caracteres e o segundo 1116; ambos coincidem integralmente com os blocos indicados.",
+      "result": "passed",
+      "limitations": "Os newlines terminais do extrator PDF ficam fora dos intervalos brutos dos blocos."
+    },
+    {
+      "test": "separador_de_reconstrucao",
+      "method": "Recompor text_raw como segmento_1 + newline + segmento_2 e examinar o run correspondente.",
+      "evidence": "508 + 1 + 1116 = 1625; o intervalo 508:509 tem kind=composition_separator e source_refs vazio.",
+      "result": "passed",
+      "limitations": "O separador representa layout entre páginas e não um caractere pertencente a uma página."
+    },
+    {
+      "test": "correspondencia_com_pdf_nativo",
+      "method": "Extrair diretamente os dois blocos do PDF e comparar a concatenação após remover apenas o newline terminal final.",
+      "evidence": "Os blocos nativos têm 509 e 1117 caracteres; sua composição produz exatamente os 1625 caracteres de text_raw.",
+      "result": "passed",
+      "limitations": "Newlines terminais são comportamento do extrator e não conteúdo lexical."
+    },
+    {
+      "test": "fidelidade_textual",
+      "method": "Comparar integralmente texto bruto, PDF e fonte de página, incluindo pontuação, acentos, caixa e elipse.",
+      "evidence": "Nenhuma palavra ou sinal foi omitido, repetido, invertido ou acrescentado.",
+      "result": "passed",
+      "limitations": "Não foi feita correção editorial da redação."
+    },
+    {
+      "test": "join_layout_lines",
+      "method": "Comparar text_raw, transformação registrada e text_clean nas 19 quebras.",
+      "evidence": "Cada newline foi substituído por um espaço; texto limpo e bruto mantêm 1625 caracteres e a mesma sequência lexical.",
+      "result": "passed",
+      "limitations": "A forma limpa omite a informação visual de linha, preservada em text_raw e no mapa."
+    },
+    {
+      "test": "normalization_map",
+      "method": "Executar corpus_documental.provenance.validate_map e auditar runs de origem e composição.",
+      "evidence": "validate_map retornou []; há 18 runs normalized com origem e um composition_separator sem origem física.",
+      "result": "passed",
+      "limitations": "Consistência mecânica não certifica o corpus inteiro."
+    },
+    {
+      "test": "limite_inicial",
+      "method": "Comparar ordem 48, espaçamento, bbox, offsets e começo da ordem 49.",
+      "evidence": "A introdução termina em 1897; o bloco começa em 1898 com 'Em um ambiente de escritório' após 17,4803 pt de espaço.",
+      "result": "passed",
+      "limitations": "A estrutura global da seção não foi reavaliada."
+    },
+    {
+      "test": "limite_final",
+      "method": "Comparar fim do segundo span, espaçamento e início da ordem 50.",
+      "evidence": "O bloco termina em 1116 com 'precisa de espaço.'; a ordem 50 começa em 1117 após 23,1998 pt de espaço.",
+      "result": "passed",
+      "limitations": "A ordem 51 não foi aberta nem aprovada."
+    },
+    {
+      "test": "navegacao_reciproca",
+      "method": "Conferir previous_id e next_id das ordens 48, 49 e 50.",
+      "evidence": "48.next_id -> 49; 49.previous_id -> 48; 49.next_id -> 50; 50.previous_id -> 49.",
+      "result": "passed",
+      "limitations": "A cadeia fora dos vizinhos imediatos não foi revisada."
+    },
+    {
+      "test": "vinculo_paragrafo_elemento",
+      "method": "Localizar o elemento pelo paragraph_id e conferir relação inversa, parent_id e source_spans.",
+      "evidence": "Foi encontrado quote_96117cf0a41512caf0691d62; os vínculos são recíprocos e os dois source_spans coincidem.",
+      "result": "passed",
+      "limitations": "Nenhum outro elemento destacado foi validado."
+    },
+    {
+      "test": "ancestralidade",
+      "method": "Resolver parent_id em structure.json até a obra.",
+      "evidence": "Obra -> O PROBLEMA DA ESTÓRIA -> ESTÓRIA E VIDA -> bloco de ordem 49.",
+      "result": "passed",
+      "limitations": "Nenhum outro nó da hierarquia foi reavaliado."
+    },
+    {
+      "test": "preservacao_da_base_e_revisoes_anteriores",
+      "method": "Conferir estado Git e hashes antes de adicionar este registro.",
+      "evidence": "A árvore estava limpa e os hashes dos arquivos-base e das revisões 008/009 permanecem registrados.",
+      "result": "passed",
+      "limitations": "O único arquivo novo pretendido é reviews/tarefa-010-v1.json."
+    },
+    {
+      "test": "pendencias_e_gate_global",
+      "method": "Conferir validation_report.json sem processar as outras quatro revisões.",
+      "evidence": {"status": "review_required", "chunking_gate_allowed": false, "fidelity_certified": false},
+      "result": "passed",
+      "limitations": "A confirmação pontual não altera o estado global."
+    }
+  ],
+  "changes": {
+    "corrections": [],
+    "before": {
+      "classification": "block_quote",
+      "source_span_count": 2,
+      "paragraph_id_count": 1,
+      "quality_status": "review_required"
+    },
+    "after": {
+      "classification": "block_quote",
+      "source_span_count": 2,
+      "paragraph_id_count": 1,
+      "quality_status": "review_required"
+    },
+    "corpus_files_modified": [],
+    "review_record_added": "reviews/tarefa-010-v1.json",
+    "pdf_or_raw_changed": false,
+    "ids_links_or_text_changed": false,
+    "application": "Registro auditável complementar. A representação existente estava correta e não exigiu alteração na base."
+  },
+  "remaining_uncertainty": {
+    "target_ambiguities": [],
+    "external_attribution": "Não há evidência documental para atribuir o exemplo a fonte externa; essa origem não foi investigada.",
+    "other_four_pending_reviews": "Permanecem abertas, sem inspeção ou aprovação nesta tarefa.",
+    "task_011_target": "O quarto bloco destacado, ordem 51, não foi revisado.",
+    "fidelity_limit": "A confirmação pontual não certifica fidelidade integral do corpus nem equivale a aprovação humana."
+  },
+  "global_approval": {
+    "status": "review_required",
+    "chunking_gate_allowed": false,
+    "fidelity_certified": false,
+    "human_approval_claimed": false,
+    "base_report_unchanged": true,
+    "prohibited_processing_executed": false,
+    "note": "Confirmado exclusivamente o terceiro bloco destacado. As outras quatro revisões continuam abertas."
+  }
+}
