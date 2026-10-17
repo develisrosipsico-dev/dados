@@ -1,0 +1,643 @@
+{
+  "task_id": "TAREFA_006",
+  "review_id": "tarefa-006-v1",
+  "record_version": 1,
+  "created_at_utc": "2026-10-17T00:20:23.998098+00:00",
+  "decision": "confirmed",
+  "reviewer_kind": "automated_assistant_visual_and_structural_review_not_human",
+  "unit": {
+    "node_id": "node_b336e49012dedd8ae408cf0f",
+    "element_id": "elem_f4427412fb8d61851bc81702",
+    "title": "PODERES E TALENTOS",
+    "classification": "section",
+    "level": 3,
+    "parent_id": "node_0357e0c292c6ecffe3791f27",
+    "base_quality_status": "review_required",
+    "page_local": 15,
+    "page_index": 14,
+    "block_id": "p000014_b00004",
+    "source_spans": [
+      {
+        "bbox": [
+          76.9921875,
+          665.6279907226562,
+          288.58209228515625,
+          691.6790161132812
+        ],
+        "block_char_end": 18,
+        "block_char_start": 0,
+        "block_id": "p000014_b00004",
+        "char_end": 2179,
+        "char_start": 2161,
+        "page_index": 14,
+        "pdf_page_label": null,
+        "printed_page_number": null
+      }
+    ]
+  },
+  "sources": {
+    "application_version": "0.2.0",
+    "corpus_version": "corpus_d43918f06609b65f21f89425",
+    "base_git_commit": "96216d1af7bcfdf34b8fe4aad8025c99530dcfe6",
+    "published_package": "story-capitulo-1-revisao-documental-v0.2.0.zip",
+    "published_package_sha256": "3c40e59046f51875b7c12bdba26572ab222499d36fe2fa7f0262cda77a412481",
+    "file_sha256": {
+      "original.pdf": "dabd10538ffdc866c6fa24187ffb1b9f784f647a01d5286a9c6a91cd7015633d",
+      "metadata.json": "f0cd8e1be56eacbe189b15ca6f5267bfb37da1fc9022e11d62892515347158c9",
+      "structure.json": "4d24cc423c343e6886e0842c8b3b9953a75d947a31fcc23a95cc907e297f269c",
+      "pages_raw.jsonl": "64e0b2d3cc7adf6c53a663470080fecf2a03ab203c55d5ed08817a248de56811",
+      "paragraphs.jsonl": "a89f1e48e0bbc1f5ddfd4584792b6a87b67f340dafa8d00ea51a5ee60b0a1900",
+      "elements.jsonl": "7db9c696d5449ff8ccf1d3eb573657b8bcf6863ad83c5df1ee3b02c40e005631",
+      "validation_report.json": "794068fd3b258e5e39456b928e1aeed4c1c6c4cfe6cb72aff6d5eba099860547"
+    },
+    "request_text_sha256": "d5e0343968cf5c2d0b5b324adc5edeef1847e56e2b06d810a4dab65f7239a9df",
+    "request_extent_note": "O texto recebido termina no item 3 da lista da entrega, após Evidências. Os itens anteriores definem integralmente o alvo, os procedimentos, exclusões e a publicação exclusiva deste registro; a revisão ficou limitada a essas instruções expressas.",
+    "substitution": {
+      "requested": "structure(2).json",
+      "examined": "structure.json",
+      "reason": "Não há structure(2).json no workspace. Utilizado structure.json do pacote publicado 0.2.0, com SHA-256 registrado e igualdade byte a byte conferida. original.pdf é idêntico a story-capitulo-1.pdf."
+    }
+  },
+  "evidence": {
+    "visual_inspection_performed": true,
+    "render_scale": 1.5,
+    "page_dimensions_pt": [
+      612,
+      792
+    ],
+    "visual_scope": [
+      {
+        "page_local": 15,
+        "page_index": 14,
+        "region": "página inteira",
+        "purpose": "Título inferior e separação do conteúdo anterior, sem reabrir revisão da seção anterior."
+      },
+      {
+        "page_local": 16,
+        "page_index": 15,
+        "region": "página inteira",
+        "purpose": "Início do corpo e limites dos parágrafos 62–66; ocorrência de hifenização do 64 apenas preservada, sem resolução."
+      },
+      {
+        "page_local": 17,
+        "page_index": 16,
+        "clip_pt": [
+          65,
+          65,
+          545,
+          442.42901611328125
+        ],
+        "purpose": "Continuação do 66, parágrafo 67 e cabeçalho seguinte somente como limite."
+      },
+      {
+        "page_local": 12,
+        "page_index": 11,
+        "clip_pt": [
+          65,
+          537,
+          255,
+          575
+        ],
+        "purpose": "Comparação apenas de padrão visual de seção, sem reaprovação de outra unidade."
+      }
+    ],
+    "typography": {
+      "font": "CenturyGothic-Bold",
+      "size_pt": 21.247499465942383,
+      "font_flags": 20,
+      "bold": true,
+      "uppercase": true,
+      "alignment": "left_at_body_margin",
+      "bbox_pt": [
+        76.9921875,
+        665.6279907226562,
+        288.58209228515625,
+        691.6790161132812
+      ],
+      "gap_from_previous_body_bbox_pt": 37.63336181640625,
+      "remaining_page_height_after_title_bbox_pt": 100.32098388671875,
+      "body_starts_page_local": 16,
+      "body_first_bbox_pt": [
+        76.9921875,
+        72.13330078125,
+        534.9714965820312,
+        278.49462890625
+      ],
+      "spacing_note": "Não há corpo após o título na página 15; o corpo começa na página 16. Não foi inventada distância contínua entre caixas de páginas distintas. Medidas são entre bounding boxes.",
+      "comparison_style_only": {
+        "title": "ESTÓRIA E VIDA",
+        "font": "CenturyGothic-Bold",
+        "size_pt": 21.247499465942383,
+        "classification_reviewed_or_approved": false
+      }
+    },
+    "text": {
+      "visible_pdf": "PODERES E TALENTOS",
+      "native_pdf": "PODERES E TALENTOS",
+      "raw_block": "PODERES E TALENTOS",
+      "element_raw": "PODERES E TALENTOS",
+      "element_clean": "PODERES E TALENTOS",
+      "structure_title": "PODERES E TALENTOS",
+      "exact_match": true,
+      "raw_block_range": [
+        0,
+        18
+      ],
+      "raw_page_range": [
+        2161,
+        2179
+      ]
+    },
+    "observations": [
+      "O cabeçalho em caixa alta, negrito e fonte sem serifa ocupa linha própria na parte inferior da página 15. A separação anterior e o estilo são consistentes com abertura de seção.",
+      "A página 15 termina com o título; o texto começa no topo da página 16. Essa disposição existe no PDF e não constitui divergência de reconstrução.",
+      "CenturyGothic-Bold, 21,247499 pt, foi conferida diretamente no span nativo do PDF, além da inspeção visual.",
+      "O primeiro parágrafo tem alinhamento inicial à margem do corpo; os parágrafos seguintes apresentam recuo inicial. A continuação do 66 na página 17 volta à margem do corpo e o 67 recomeça com recuo próprio.",
+      "O final do 66 na página 16, e não, continua em pensa nem por um instante na página 17. O mesmo ID referencia integralmente os dois trechos, sem duplicação ou omissão detectada na passagem.",
+      "O parágrafo 67 termina antes de O CONHECIMENTO DA ARTE MAXIMIZA O TALENTO. Esse título não recebeu revisão ou aprovação.",
+      "A hifenização do parágrafo 64 permanece literal e pendente; nenhuma aprovação de normalização decorre desta decisão estrutural."
+    ],
+    "ancestry": {
+      "chain_work_to_unit": [
+        {
+          "node_id": "doc_68538e2dac8d252a47d272de",
+          "kind": "work",
+          "title": "Story — Capítulo 1 — O problema da estória",
+          "level": null,
+          "parent_id": null
+        },
+        {
+          "node_id": "node_0357e0c292c6ecffe3791f27",
+          "kind": "chapter",
+          "title": "O PROBLEMA DA ESTÓRIA",
+          "level": 2,
+          "parent_id": "doc_68538e2dac8d252a47d272de"
+        },
+        {
+          "node_id": "node_b336e49012dedd8ae408cf0f",
+          "kind": "section",
+          "title": "PODERES E TALENTOS",
+          "level": 3,
+          "parent_id": "node_0357e0c292c6ecffe3791f27"
+        }
+      ],
+      "previous_section_is_ancestor": false,
+      "cycles_detected": false
+    },
+    "paragraph_scope": {
+      "count": 6,
+      "global_orders": [
+        62,
+        67
+      ],
+      "page_indexes": [
+        15,
+        16
+      ],
+      "paragraphs": [
+        {
+          "paragraph_id": "para_fe5c9345b7efe365fea204f5",
+          "global_order": 62,
+          "text_start": "Apesar de os autores de retratos e espetáculo serem fracos em estória, eles podem ser abençoados com",
+          "text_end": " dons invejáveis, mas, como um bom casamento, um complementa o outro. Sozinhos, eles se enfraquecem.",
+          "parent_id": "node_b336e49012dedd8ae408cf0f",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_b336e49012dedd8ae408cf0f",
+          "previous_id": "para_96ec9180d90c7281f353986b",
+          "next_id": "para_ff8e9a78c2e0dc580375da53",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                72.13330078125,
+                534.9714965820312,
+                278.49462890625
+              ],
+              "block_char_end": 834,
+              "block_char_start": 0,
+              "block_id": "p000015_b00000",
+              "char_end": 834,
+              "char_start": 0,
+              "page_index": 15,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ],
+          "first_line_x_pt": 76.9921875
+        },
+        {
+          "paragraph_id": "para_ff8e9a78c2e0dc580375da53",
+          "global_order": 63,
+          "text_start": "Em um extremo da realidade está o fato puro; no outro, a imaginação pura. Unindo esse dois polos est",
+          "text_end": "os comover, para expressar sua visão de como e por que seres humanos fazem as coisas que eles fazem.",
+          "parent_id": "node_b336e49012dedd8ae408cf0f",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_b336e49012dedd8ae408cf0f",
+          "previous_id": "para_fe5c9345b7efe365fea204f5",
+          "next_id": "para_e8a04dd4bb3175102d71fe8f",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                280.63330078125,
+                535.0274658203125,
+                435.24462890625
+              ],
+              "block_char_end": 643,
+              "block_char_start": 0,
+              "block_id": "p000015_b00001",
+              "char_end": 1478,
+              "char_start": 835,
+              "page_index": 15,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ],
+          "first_line_x_pt": 99.4921875
+        },
+        {
+          "paragraph_id": "para_e8a04dd4bb3175102d71fe8f",
+          "global_order": 64,
+          "text_start": "Por último, não apenas os poderes sensoriais e imaginativos são pré- requisi-tos para a criatividade",
+          "text_end": "s, porém, não são necessariamente conectados. Uma montanha de um não significa ter um grão do outro.",
+          "parent_id": "node_b336e49012dedd8ae408cf0f",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_b336e49012dedd8ae408cf0f",
+          "previous_id": "para_ff8e9a78c2e0dc580375da53",
+          "next_id": "para_96e14cfa89a7e8b0cfb04c72",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                437.38330078125,
+                534.7041625976562,
+                505.74462890625
+              ],
+              "block_char_end": 278,
+              "block_char_start": 0,
+              "block_id": "p000015_b00002",
+              "char_end": 1757,
+              "char_start": 1479,
+              "page_index": 15,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ],
+          "first_line_x_pt": 99.4921875
+        },
+        {
+          "paragraph_id": "para_96e14cfa89a7e8b0cfb04c72",
+          "global_order": 65,
+          "text_start": "O primeiro é o talento literário – a conversão criativa da linguagem comum em uma forma mais forte e",
+          "text_end": "ar em algo extraordinário. Eles escrevem graciosamente, alguns magnificamente, no sentido literário.",
+          "parent_id": "node_b336e49012dedd8ae408cf0f",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_b336e49012dedd8ae408cf0f",
+          "previous_id": "para_e8a04dd4bb3175102d71fe8f",
+          "next_id": "para_61af2b4388417531a5d3bac9",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                507.88330078125,
+                534.685302734375,
+                627.99462890625
+              ],
+              "block_char_end": 476,
+              "block_char_start": 0,
+              "block_id": "p000015_b00003",
+              "char_end": 2234,
+              "char_start": 1758,
+              "page_index": 15,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ],
+          "first_line_x_pt": 99.4921875
+        },
+        {
+          "paragraph_id": "para_61af2b4388417531a5d3bac9",
+          "global_order": 66,
+          "text_start": "O segundo é o talento para estória – a conversão criativa da vida em si em uma experiência mais pode",
+          "text_end": " de qualidade vez ou outra, mas perfeição e prolificidade não fluem do espontâneo e do não ensinado.",
+          "parent_id": "node_b336e49012dedd8ae408cf0f",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_b336e49012dedd8ae408cf0f",
+          "previous_id": "para_96e14cfa89a7e8b0cfb04c72",
+          "next_id": "para_c65e4f152ff9574b12cf7b1c",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                630.13330078125,
+                534.8431396484375,
+                715.74462890625
+              ],
+              "block_char_end": 355,
+              "block_char_start": 0,
+              "block_id": "p000015_b00004",
+              "char_end": 2590,
+              "char_start": 2235,
+              "page_index": 15,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            },
+            {
+              "bbox": [
+                76.9921875,
+                72.13330078125,
+                535.0006713867188,
+                140.49462890625
+              ],
+              "block_char_end": 235,
+              "block_char_start": 0,
+              "block_id": "p000016_b00000",
+              "char_end": 235,
+              "char_start": 0,
+              "page_index": 16,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ],
+          "first_line_x_pt": 99.4921875
+        },
+        {
+          "paragraph_id": "para_c65e4f152ff9574b12cf7b1c",
+          "global_order": 67,
+          "text_start": "Talento literário e talento para a estória não são apenas completamente diferentes, são também indep",
+          "text_end": " A matéria-prima do talento literário são as palavras; a do talento para a estória é a própria vida.",
+          "parent_id": "node_b336e49012dedd8ae408cf0f",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_b336e49012dedd8ae408cf0f",
+          "previous_id": "para_61af2b4388417531a5d3bac9",
+          "next_id": "para_66ef8804ded1fe6dd65c0d1a",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                142.63330078125,
+                535.0106811523438,
+                348.99462890625
+              ],
+              "block_char_end": 861,
+              "block_char_start": 0,
+              "block_id": "p000016_b00001",
+              "char_end": 1097,
+              "char_start": 236,
+              "page_index": 16,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ],
+          "first_line_x_pt": 99.4921875
+        }
+      ],
+      "paragraph_66_continuation": {
+        "paragraph_id": "para_61af2b4388417531a5d3bac9",
+        "pages_local": [
+          16,
+          17
+        ],
+        "first_part_end": "raro. Que escritor, apenas\ninstintivamente, cria estórias brilhantemente contadas ano após ano e não",
+        "second_part_start": "pensa nem por um instante sobre como ele fez o que fez ou se ele poderia\nfazê-lo melhor? Genialidade",
+        "continuation_first_line_x_pt": 76.9921875,
+        "integral_raw_reconstruction_matches": true
+      },
+      "next_boundary_only": {
+        "title": "O CONHECIMENTO DA ARTE MAXIMIZA O TALENTO",
+        "node_id": "node_8e6704a148cca3f0b9dbd2d0",
+        "page_local": 17,
+        "page_index": 16,
+        "block_id": "p000016_b00002",
+        "bbox_pt": [
+          76.9921875,
+          386.62799072265625,
+          498.4329833984375,
+          437.42901611328125
+        ],
+        "classification_reviewed_or_approved": false,
+        "reserved_task": "TAREFA_007"
+      },
+      "last_paragraph_bottom_pt": 348.99462890625,
+      "gap_to_next_boundary_pt": 37.63336181640625,
+      "scope_result": "Os seis IDs e ordens coincidem com o escopo recebido; todos os sete blocos de origem estão cobertos sem sobreposição. Não há registros atribuídos a seções vizinhas dentro do intervalo."
+    }
+  },
+  "checks": {
+    "execution": "Asserts locais direcionados e inspeção visual, sem executar pipeline, suíte global, interpretação conceitual ou outras revisões. Cada teste registra método e resultado.",
+    "passed": 31,
+    "failed": 0,
+    "results": [
+      {
+        "test": "versao_e_fonte_pdf_identificadas",
+        "method": "Comparar versão da aplicação/corpus e SHA-256 do original.pdf, PDF de entrada e metadata.",
+        "result": "passed"
+      },
+      {
+        "test": "fontes_identicas_ao_pacote_publicado",
+        "method": "Comparar os bytes dos sete arquivos examinados com as entradas correspondentes do ZIP publicado 0.2.0.",
+        "result": "passed"
+      },
+      {
+        "test": "titulo_unico",
+        "method": "Contar o título na página nativa, nos nós e nos elementos com posse primária.",
+        "result": "passed"
+      },
+      {
+        "test": "transcricao_exata_do_titulo",
+        "method": "Comparar caracteres do PDF nativo, bloco bruto, elemento bruto/limpo e título do nó; inspeção visual complementar.",
+        "result": "passed"
+      },
+      {
+        "test": "tipografia_e_caixa_do_titulo_conferidas_no_pdf",
+        "method": "Comparar bbox, fonte, tamanho e flags do span nativo com o bruto; conferir bit de negrito.",
+        "result": "passed"
+      },
+      {
+        "test": "titulo_sem_corpo_na_mesma_pagina",
+        "method": "Verificar que nenhuma linha nativa textual sucede a caixa do título na página local 15 e que o primeiro parágrafo tem origem na página local 16.",
+        "result": "passed"
+      },
+      {
+        "test": "proximo_cabecalho_identificado_somente_como_limite",
+        "method": "Conferir as duas linhas nativas contidas na caixa do cabeçalho seguinte, sem decisão sobre tipo ou nível.",
+        "result": "passed"
+      },
+      {
+        "test": "posicoes_dos_seis_paragrafos_correspondem_ao_pdf",
+        "method": "Comparar a caixa de cada origem com a união das linhas brutas e conferir essas caixas de linha no PDF nativo (tolerância 0,001 pt).",
+        "result": "passed"
+      },
+      {
+        "test": "intervalos_do_titulo_validos",
+        "method": "Conferir página/bloco, limites de caracteres, correspondência exata das fatias e igualdade das origens no nó e elemento.",
+        "result": "passed"
+      },
+      {
+        "test": "ids_do_no_e_elemento_consistentes",
+        "method": "Recalcular IDs a partir da versão, das fatias físicas e do elemento, sem modificar identificadores.",
+        "result": "passed"
+      },
+      {
+        "test": "estilo_de_secao_e_separacao_anterior_coerentes",
+        "method": "Comparar fonte, tamanho, peso e margem com referência de seção; verificar caixa alta e espaço após o parágrafo anterior.",
+        "result": "passed"
+      },
+      {
+        "test": "hierarquia_nivel_3_valida_sem_ciclos",
+        "method": "Percorrer parent_id até a obra com conjunto de nós visitados; conferir tipos, níveis, pai esperado e relação do elemento.",
+        "result": "passed"
+      },
+      {
+        "test": "sem_atribuicao_ancestral_a_estoria_e_vida",
+        "method": "Verificar que o nó da seção anterior não integra a cadeia do alvo nem é seu pai.",
+        "result": "passed"
+      },
+      {
+        "test": "seis_paragrafos_exatos_ordens_62_a_67",
+        "method": "Comparar IDs recebidos e ordens com todos os parágrafos cujo início fica geometricamente entre os dois cabeçalhos.",
+        "result": "passed"
+      },
+      {
+        "test": "integridade_individual_paragrafo_62",
+        "method": "Conferir ID único, pai/seção/capítulo/obra, cadeia de ancestrais, navegação recíproca, todas as origens dentro do intervalo e recuperação exata do bruto por fatias.",
+        "result": "passed"
+      },
+      {
+        "test": "integridade_individual_paragrafo_63",
+        "method": "Conferir ID único, pai/seção/capítulo/obra, cadeia de ancestrais, navegação recíproca, todas as origens dentro do intervalo e recuperação exata do bruto por fatias.",
+        "result": "passed"
+      },
+      {
+        "test": "integridade_individual_paragrafo_64",
+        "method": "Conferir ID único, pai/seção/capítulo/obra, cadeia de ancestrais, navegação recíproca, todas as origens dentro do intervalo e recuperação exata do bruto por fatias.",
+        "result": "passed"
+      },
+      {
+        "test": "integridade_individual_paragrafo_65",
+        "method": "Conferir ID único, pai/seção/capítulo/obra, cadeia de ancestrais, navegação recíproca, todas as origens dentro do intervalo e recuperação exata do bruto por fatias.",
+        "result": "passed"
+      },
+      {
+        "test": "integridade_individual_paragrafo_66",
+        "method": "Conferir ID único, pai/seção/capítulo/obra, cadeia de ancestrais, navegação recíproca, todas as origens dentro do intervalo e recuperação exata do bruto por fatias.",
+        "result": "passed"
+      },
+      {
+        "test": "integridade_individual_paragrafo_67",
+        "method": "Conferir ID único, pai/seção/capítulo/obra, cadeia de ancestrais, navegação recíproca, todas as origens dentro do intervalo e recuperação exata do bruto por fatias.",
+        "result": "passed"
+      },
+      {
+        "test": "ordem_visual_monotonica",
+        "method": "Comparar lexicograficamente página/y/x dos primeiros trechos e ordem das páginas de cada origem.",
+        "result": "passed"
+      },
+      {
+        "test": "paragrafo_66_continua_entre_paginas_16_e_17",
+        "method": "Verificar duas origens contíguas em páginas 15/16 zero-based, encaixe literal no limite e mesmo ID/pai; inspeção visual complementar.",
+        "result": "passed"
+      },
+      {
+        "test": "recuos_e_separacoes_dos_paragrafos_coerentes",
+        "method": "Conferir primeiro parágrafo sem recuo no início da seção, recuo inicial dos demais e alinhamento sem recuo na continuação do 66; comparar caixas adjacentes.",
+        "result": "passed"
+      },
+      {
+        "test": "origens_sem_sobreposicao_ou_duplicacao",
+        "method": "Comparar todos os pares de intervalos no mesmo bloco/página para excluir interseção de caracteres.",
+        "result": "passed"
+      },
+      {
+        "test": "cobertura_dos_sete_blocos_de_origem_sem_omissao",
+        "method": "Comparar os blocos textuais do intervalo com as sete origens dos seis parágrafos e exigir posse integral de cada bloco.",
+        "result": "passed"
+      },
+      {
+        "test": "navegacao_nos_limites_61_e_68_correta",
+        "method": "Conferir os vizinhos externos, seus vínculos recíprocos já testados e a mudança de seção somente após o cabeçalho limite.",
+        "result": "passed"
+      },
+      {
+        "test": "paragrafo_67_termina_antes_do_proximo_titulo",
+        "method": "Comparar fim da caixa e fim do intervalo bruto do 67 com início do cabeçalho seguinte, sem revisão desse cabeçalho.",
+        "result": "passed"
+      },
+      {
+        "test": "hifenizacao_do_64_permanece_aberta_e_inalterada",
+        "method": "Conferir somente a preservação literal da ocorrência no bruto/limpo e a existência de review_item correspondente; sem resolver ou aprovar a normalização.",
+        "result": "passed"
+      },
+      {
+        "test": "estado_global_mantido_review_required_e_gate_fechado",
+        "method": "Conferir status, chunking_gate.allowed e ausência de certificação no relatório-base.",
+        "result": "passed"
+      },
+      {
+        "test": "arquivos_base_historico_e_demais_pendencias_preservados",
+        "method": "Recalcular e comparar SHA-256 de todos os arquivos preexistentes do corpus, incluindo bruto, PDF, histórico, log e relatório.",
+        "result": "passed"
+      },
+      {
+        "test": "revisoes_anteriores_preservadas",
+        "method": "Recalcular e comparar SHA-256 de todos os registros preexistentes em reviews e review_decisions.",
+        "result": "passed"
+      }
+    ]
+  },
+  "changes": {
+    "corrections": [],
+    "before": {
+      "classification": "section",
+      "level": 3,
+      "parent_id": "node_0357e0c292c6ecffe3791f27",
+      "paragraph_count": 6
+    },
+    "after": {
+      "classification": "section",
+      "level": 3,
+      "parent_id": "node_0357e0c292c6ecffe3791f27",
+      "paragraph_count": 6
+    },
+    "corpus_files_modified": [],
+    "ids_changed": false,
+    "source_spans_changed": false,
+    "pdf_or_raw_changed": false,
+    "prior_reviews_modified": false,
+    "application": "Registro complementar somente. Não foi necessária reconstrução ou reescrita dos arquivos-base; a confirmação estrutural não foi aplicada automaticamente ao relatório global."
+  },
+  "remaining_uncertainty": {
+    "target_structural_ambiguities": [],
+    "hyphenation_exclusion": {
+      "paragraph_id": "para_e8a04dd4bb3175102d71fe8f",
+      "global_order": 64,
+      "existing_raw_expression": "pré-\nrequisi-tos",
+      "existing_clean_expression": "pré- requisi-tos",
+      "reserved_task": "TAREFA_013",
+      "status": "review_required",
+      "review_items": [
+        {
+          "code": "hyphenation_candidate",
+          "event_id": "event_000189",
+          "unit_id": "para_e8a04dd4bb3175102d71fe8f"
+        }
+      ],
+      "corrected": false,
+      "normalization_approved": false,
+      "effect_on_current_decision": "Não afeta a classificação, o escopo ou as fronteiras da seção. A decisão confirmed limita-se à estrutura documental."
+    },
+    "next_heading": "Permanece reservado à Tarefa 007; usado somente como limite.",
+    "other_pending_reviews": "As outras oito revisões permanecem abertas e não foram executadas nesta tarefa.",
+    "identity_scope": "A decisão se limita ao snapshot publicado 0.2.0 e aos hashes registrados, sem atestar cópias locais não fornecidas.",
+    "fidelity_limit": "Não há aprovação humana nem certificação de fidelidade integral ou de toda a normalização dos parágrafos."
+  },
+  "global_approval": {
+    "status": "review_required",
+    "chunking_gate_allowed": false,
+    "fidelity_certified": false,
+    "human_approval_claimed": false,
+    "base_report_unchanged": true,
+    "prohibited_processing_executed": false,
+    "note": "Confirmada exclusivamente a estrutura da seção PODERES E TALENTOS e de seus seis parágrafos. As demais pendências e registros de revisões anteriores permanecem intactos."
+  }
+}
