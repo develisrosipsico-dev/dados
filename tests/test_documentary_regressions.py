@@ -26,6 +26,20 @@ def test_page_3_same_baseline_is_one_ordered_visual_paragraph(reviewed_story):
     assert_derived_id(found[0], data)
 
 
+def test_page_3_revela_se_preserves_lexical_hyphen(reviewed_story):
+    data = reviewed_story["data"]
+    paragraph = next(p for p in data["paragraphs"] if "revela-\nse" in p["text_raw"])
+    assert paragraph["text_clean"].count("revela-se") == 1
+    assert "revela- se" not in paragraph["text_clean"]
+    change = next(c for c in paragraph["transformations"]
+                  if c["operation"] == "join_reviewed_hyphen_layout")
+    start = paragraph["text_raw"].index("revela-\nse") + len("revela-")
+    assert change["deleted_text_raw_ranges"] == [[start, start+1]]
+    assert paragraph["text_raw"][start:start+1] == "\n"
+    assert not any(e["code"] == "hyphenation_candidate" and e.get("unit_id") == paragraph["paragraph_id"]
+                   for e in data["events"])
+
+
 def test_page_13_long_quotation_is_one_visual_unit(reviewed_story):
     data = reviewed_story["data"]
     relevant = [p for p in data["paragraphs"] if any(s["page_index"] == 12 for s in p["source_spans"])]

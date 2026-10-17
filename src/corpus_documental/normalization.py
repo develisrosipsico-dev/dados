@@ -41,6 +41,18 @@ def normalize_document(raw, config, audit, unit_id, source_spans=(), word_eviden
     if text != unicodedata.normalize("NFC", text):
         edits("unicode_nfc_cluster", [(0, len(text), unicodedata.normalize("NFC", text))])
     edits("reuse_existing_line_boundary_space", [(m.start(), m.end(), "") for m in re.finditer(r"(?<=[ \t])\n(?=\S)", text)])
+    reviewed_forms = {form.casefold() for form in config.reviewed_line_hyphens}
+    reviewed = []
+    for match in re.finditer(r"([\wÀ-ÿ]+)-[ \t]*\n+(\w+)", text):
+        prefix = re.search(r"[\w-]+$", text[:match.start()+len(match[1])])
+        retained = (prefix[0] if prefix else match[1])+"-"+match[2]
+        if retained.casefold() in reviewed_forms:
+            reviewed.append((match.start()+len(match[1])+1, match.end()-len(match[2]), ""))
+            audit.add("reviewed_hyphen_preserved",
+                      "Quebra visual removida em forma revisada; hífen lexical preservado.",
+                      unit_id=unit_id, candidate=match[0], reviewed_form=retained)
+    edits("join_reviewed_hyphen_layout", reviewed)
+
     safe, lexical, evidence = [], [], {w.casefold() for w in word_evidence}
     for match in re.finditer(r"([\wÀ-ÿ]+)-[ \t]*\n+(\w+)", text):
         joined = match[1]+match[2]

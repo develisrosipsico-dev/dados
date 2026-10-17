@@ -22,6 +22,7 @@ class Config:
     ocr_language: str = "por"
     ocr_dpi: int = 300
     join_hyphens: bool = False
+    reviewed_line_hyphens: tuple[str, ...] = ()
     merge_pages: bool = False
     document_id: str | None = None
     bibliographic_evidence: dict | None = None
@@ -36,6 +37,10 @@ class Config:
             raise ValueError("OCR deve ser auto, never ou always.")
         if self.ocr_dpi < 72:
             raise ValueError("Resolução de OCR deve ser >= 72 dpi.")
+        if (len(set(self.reviewed_line_hyphens)) != len(self.reviewed_line_hyphens)
+                or any(not re.fullmatch(r"[\wÀ-ÿ]+(?:-[\wÀ-ÿ]+)+", form)
+                       for form in self.reviewed_line_hyphens)):
+            raise ValueError("Hifenizações revisadas devem ser formas únicas como revela-se.")
         if not re.fullmatch(r"[A-Za-z0-9_]+(?:\+[A-Za-z0-9_]+)*", self.ocr_language):
             raise ValueError("Idiomas OCR devem usar nomes como por ou por+eng.")
         if self.bibliographic_evidence is not None and not isinstance(self.bibliographic_evidence, dict):

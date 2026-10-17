@@ -4,17 +4,19 @@ Protótipo Python para processar **um capítulo explicitamente selecionado**, pr
 a extração física e produzir unidades documentais localizáveis no PDF original.
 Não utiliza modelos de linguagem, embeddings, índices de recuperação ou resumos.
 
-A revisão incremental **0.2.0** corrige a ordem e as fronteiras das páginas 3, 8
-e 13 do capítulo, reconstrói a hierarquia e diferencia citações, notas e gráficos.
-São 72 parágrafos; **63 testes passaram**. O PDF e `pages_raw.jsonl` foram
-preservados byte a byte, com histórico e mapa da proveniência.
+A revisão incremental **0.2.1** preserva as correções documentais da 0.2.0 e
+corrige a normalização de `revela-\nse` para `revela-se`, sem alterar o texto
+bruto. São 72 parágrafos; **65 testes passaram**. O PDF e `pages_raw.jsonl`
+foram preservados byte a byte, com histórico e mapa da proveniência.
+O [registro auditável da correção](reviews/tarefa-012-v1.json) documenta a
+evidência visual, a mudança, os hashes e os testes direcionados.
 
-**Estado: `review_required`; futuro chunking bloqueado.** Há 14 pendências
+**Estado: `review_required`; futuro chunking bloqueado.** Há 13 pendências
 explícitas. Cobertura integral da extração não certifica fidelidade visual.
 O [relatório completo](docs/REVISAO_DOCUMENTAL_0_2.md) apresenta causas, funções
 alteradas, regressões, IDs, demonstração visual e limitações.
 
-Baixe pelo GitHub o [novo corpus, PDF e evidências em ZIP](story-capitulo-1-revisao-documental-v0.2.0.zip)
+Baixe pelo GitHub o [novo corpus, PDF e evidências em ZIP](story-capitulo-1-revisao-documental-v0.2.1.zip)
 ou o [PDF de 18 páginas](story-capitulo-1.pdf). O
 [ZIP anterior 0.1.1](story-capitulo-1-corpus-corrigido.zip) permanece como histórico
 e fixture de regressão. A referência às páginas 19–36 do livro completo fica em
@@ -42,8 +44,8 @@ Para abrir a revisão já processada, inclusive no macOS com a instalação exis
 ```bash
 git pull --ff-only
 source .venv/bin/activate
-unzip -n story-capitulo-1-revisao-documental-v0.2.0.zip -d Corpora
-corpus inspect Corpora/story-capitulo-1-revisao-documental-v0.2.0
+unzip -n story-capitulo-1-revisao-documental-v0.2.1.zip -d Corpora
+corpus inspect Corpora/story-capitulo-1-revisao-documental-v0.2.1
 ```
 
 Se ainda não houver ambiente Python no macOS, com Python 3.11+ instalado:
@@ -98,8 +100,8 @@ O serviço é somente leitura e escuta na interface de loopback. Encerre com Ctr
 Para inspecionar o capítulo já processado:
 
 ```bash
-corpus inspect Corpora/story-capitulo-1-revisao-documental-v0.2.0
-corpus paragraph Corpora/story-capitulo-1-revisao-documental-v0.2.0 para_0a7b2d7830743a84b0bbda13
+corpus inspect Corpora/story-capitulo-1-revisao-documental-v0.2.1
+corpus paragraph Corpora/story-capitulo-1-revisao-documental-v0.2.1 para_7a4532fb517da39e27092937
 ```
 
 O registro bibliográfico opcional aceita campos com evidências conferidas na fonte:
@@ -125,6 +127,9 @@ hierárquico, tipografia e alinhamento compatíveis, ausência de pontuação te
 e continuação iniciada em minúscula. As evidências e ambiguidades ficam registradas.
 `--join-hyphens` só remove um hífen com corroboração literal no bruto e mantém
 essa alteração sob revisão; candidatos sem evidência são preservados.
+`--reviewed-line-hyphen revela-se` registra uma decisão documental pontual:
+remove apenas a quebra depois do hífen e conserva a forma lexical autorizada.
+O argumento pode ser repetido e integra a identidade da versão do corpus.
 Todas as mudanças registram o texto anterior e posterior. O diretório de saída
 deve ser novo; execuções não sobrescrevem corpora existentes.
 

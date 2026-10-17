@@ -1,0 +1,256 @@
+{
+  "task_id": "TAREFA_012",
+  "review_id": "tarefa-012-v1",
+  "record_version": 1,
+  "created_at_utc": "2026-10-17T03:39:40Z",
+  "decision": "corrected",
+  "reviewer_kind": "automated_assistant_visual_and_structural_review_not_human",
+  "target": {
+    "base_paragraph_id": "para_2132df9c18928f71a0f20a40",
+    "corrected_paragraph_id": "para_7a4532fb517da39e27092937",
+    "paragraph_global_order": 8,
+    "base_event_id": "event_000029",
+    "base_event_code": "hyphenation_candidate",
+    "section_id_base": "node_2698e965313687d1be33bd57",
+    "section_id_corrected": "node_03b0f22a84eca6efe3488558",
+    "section_title": "O DECLÍNIO DA ESTÓRIA",
+    "page_local": 3,
+    "page_index": 2,
+    "block_id": "p000002_b00002",
+    "source_span": {
+      "page_index": 2,
+      "block_id": "p000002_b00002",
+      "block_char_start": 0,
+      "block_char_end": 880,
+      "char_start": 859,
+      "char_end": 1739,
+      "bbox": [76.9921875, 299.38330078125, 535.0230102539062, 522.99462890625]
+    }
+  },
+  "versions": {
+    "base_application_version": "0.2.0",
+    "corrected_application_version": "0.2.1",
+    "base_corpus_version": "corpus_d43918f06609b65f21f89425",
+    "corrected_corpus_version": "corpus_022b45189da97ba52b27e7ef",
+    "base_git_commit": "a4c88d65e03c4984695e3b508af493f1b2abf2c7",
+    "identity_note": "A versão do corpus mudou porque implementação e versão da aplicação integram sua identidade. O vínculo entre IDs é estabelecido pelo source_span idêntico e pelo histórico preservado."
+  },
+  "source_hashes": {
+    "base_original.pdf": "dabd10538ffdc866c6fa24187ffb1b9f784f647a01d5286a9c6a91cd7015633d",
+    "corrected_original.pdf": "dabd10538ffdc866c6fa24187ffb1b9f784f647a01d5286a9c6a91cd7015633d",
+    "base_pages_raw.jsonl": "64e0b2d3cc7adf6c53a663470080fecf2a03ab203c55d5ed08817a248de56811",
+    "corrected_pages_raw.jsonl": "64e0b2d3cc7adf6c53a663470080fecf2a03ab203c55d5ed08817a248de56811",
+    "base_metadata.json": "f0cd8e1be56eacbe189b15ca6f5267bfb37da1fc9022e11d62892515347158c9",
+    "corrected_metadata.json": "a19b1246ae773cdc29fa02c9ff84689d0142bad336f37c0ea524faaebb2cea3b",
+    "base_structure.json": "4d24cc423c343e6886e0842c8b3b9953a75d947a31fcc23a95cc907e297f269c",
+    "corrected_structure.json": "4a3a5e0f4750591ca7452e4e0def5f3783dbbd00307b1c88482d57f8d92d50c2",
+    "base_paragraphs.jsonl": "a89f1e48e0bbc1f5ddfd4584792b6a87b67f340dafa8d00ea51a5ee60b0a1900",
+    "corrected_paragraphs.jsonl": "93cec6307e8f4811b1c77b86bebd0f124a40c14eff374443005756092b7b961c",
+    "base_elements.jsonl": "7db9c696d5449ff8ccf1d3eb573657b8bcf6863ad83c5df1ee3b02c40e005631",
+    "corrected_elements.jsonl": "0b93108b90b36fc2bcb006733fc62ae0fe52738f51cebccf28ba990c79185aed",
+    "base_processing_log.jsonl": "4c4767719135f7e73fc748d353b52243f91ae3b6a89c9a4a17042901b2812209",
+    "corrected_processing_log.jsonl": "6c6e52c3dbdb72d57e6bc5f3bfb4bbca9ab75824096422b72788557c4baeba3b",
+    "base_validation_report.json": "794068fd3b258e5e39456b928e1aeed4c1c6c4cfe6cb72aff6d5eba099860547",
+    "corrected_validation_report.json": "f987f79ab7c03dc7b547a1a751aa7edbe4802813a2d02e7bd8205cabc5ac8ab0",
+    "story-capitulo-1-revisao-documental-v0.2.1.zip": "0314cf91ca66cb697196aa1437aca4b92023b40f9291f6e88a08b443ec13c45a",
+    "normalization.py": "f1f750c0cee17720716703fa3af7d4d379d16078537fd3f0db78aca4aeeda675",
+    "models.py": "8a1a455aff7f370b4afbb634a78c7a5bf5cfd5ec536051ae7b9000ad55cab738",
+    "cli.py": "628d15fa4aa600dfabe4eecd24ad90e022e3164513fba897b2def45930b0a42c",
+    "conftest.py": "290cedbd9a94dcf5f00283c0a09732746ad3fab1088c77aed8b8c13250d6edec",
+    "test_documentary_synthetic.py": "fba3f13716171faa599c01f0bc59090c0acdf3b0a183b962883458b765e8729a",
+    "test_documentary_regressions.py": "0c771dfd9b8e21902d789dcf79433aa626828fc3c86d6c2b24642e0bff4649a6"
+  },
+  "evidence": {
+    "visual_inspection_performed": true,
+    "pdf_page": {
+      "page_local": 3,
+      "page_index": 2,
+      "first_line": {
+        "text_end": "O efeito final revela-",
+        "bbox": [76.9921875, 402.88330078125, 534.4470825195312, 419.49462890625],
+        "baseline_y": 416.25,
+        "font": "LiberationSerif",
+        "size_pt": 15.0
+      },
+      "next_line": {
+        "text_start": "se grotesco.",
+        "bbox": [76.9921875, 420.13330078125, 534.4255981445312, 436.74462890625],
+        "baseline_y": 433.5,
+        "font": "LiberationSerif",
+        "size_pt": 15.0
+      },
+      "finding": "A quebra ocorre entre duas linhas consecutivas do mesmo parágrafo, com tipografia e margem idênticas. O hífen é visível ao final da primeira linha e integra a construção pronominal 'revela-se'."
+    },
+    "before": {
+      "text_raw_fragment": "revela-\nse grotesco.",
+      "text_clean_fragment": "revela- se grotesco.",
+      "event": {
+        "event_id": "event_000029",
+        "code": "hyphenation_candidate",
+        "severity": "warning",
+        "applied": false
+      }
+    },
+    "after": {
+      "text_raw_fragment": "revela-\nse grotesco.",
+      "text_clean_fragment": "revela-se grotesco.",
+      "transformation": {
+        "operation": "join_reviewed_hyphen_layout",
+        "deleted_text_raw_ranges": [[499, 500]],
+        "deleted_character": "newline",
+        "hyphen_raw_index": 498,
+        "hyphen_preserved": true
+      },
+      "events": [
+        {
+          "event_id": "event_000029",
+          "code": "reviewed_hyphen_preserved",
+          "severity": "info",
+          "candidate": "revela-\nse",
+          "reviewed_form": "revela-se"
+        },
+        {
+          "event_id": "event_000030",
+          "code": "normalization",
+          "message": "join_reviewed_hyphen_layout",
+          "deleted_text_raw_ranges": [[499, 500]]
+        }
+      ]
+    },
+    "root_cause": {
+      "module": "src/corpus_documental/normalization.py",
+      "function": "normalize_document",
+      "description": "O normalizador excluía clíticos da remoção corroborada de hífen, mas não possuía uma operação para aplicar uma decisão documental explícita que removesse somente a quebra visual e preservasse o hífen lexical. A operação genérica join_layout_lines convertia o newline remanescente em espaço."
+    },
+    "correction_scope": {
+      "rule": "Remover o espaço e o newline somente quando a forma completa estiver na configuração reviewed_line_hyphens, conservando o hífen.",
+      "reviewed_line_hyphens": ["revela-se"],
+      "matches_in_base_pages_raw": 1,
+      "matched_occurrence": "revela-\nse",
+      "other_paragraph_text_changes": 0
+    },
+    "provenance": {
+      "normalization_map_errors": [],
+      "clean_text_coverage_complete": true,
+      "raw_gap_for_deleted_layout_character": [499, 500],
+      "characters_before_and_after_gap_have_source_refs": true,
+      "source_page_char_for_deleted_newline": 1358,
+      "pdf_and_raw_unchanged": true,
+      "history_preserved": true
+    }
+  },
+  "changes": {
+    "code": [
+      "Adicionada configuração explícita e validada reviewed_line_hyphens.",
+      "Adicionada transformação auditável join_reviewed_hyphen_layout, aplicada somente à forma autorizada revela-se.",
+      "Mantida a regra conservadora para candidatos não revisados, inclusive sufixos que apenas parecem clíticos."
+    ],
+    "tests": [
+      "Teste sintético de revela-\\nse, intervalo excluído, evento, mapa de proveniência e contraprova ambígua anali-\\nse.",
+      "Regressão no PDF real para text_raw, text_clean, transformação e ausência do alerta antigo."
+    ],
+    "artifacts": [
+      "Criado corpora/story-capitulo-1-revisao-documental-v0.2.1 por reuso byte a byte do bruto 0.2.0.",
+      "Atualizada a versão da aplicação para 0.2.1.",
+      "Mantida integralmente a versão-base 0.2.0."
+    ],
+    "base_files_modified": false,
+    "pdf_modified": false,
+    "pages_raw_modified": false,
+    "other_reviews_reopened": false
+  },
+  "checks": [
+    {
+      "test": "inspecao_visual",
+      "method": "Renderizar e examinar a página local 3 e extrair as duas linhas nativas do PDF.",
+      "result": "passed",
+      "evidence": "'revela-' encerra a linha y=416,25 e 'se grotesco.' inicia a linha seguinte y=433,5, com mesma fonte, tamanho e margem.",
+      "limitations": "Inspeção automatizada; não equivale a aprovação humana."
+    },
+    {
+      "test": "preservacao_do_bruto",
+      "method": "Comparar SHA-256 de original.pdf e pages_raw.jsonl entre 0.2.0 e 0.2.1.",
+      "result": "passed",
+      "evidence": "Os pares de hashes são idênticos; text_raw mantém literalmente 'revela-\\nse'.",
+      "limitations": "A correção existe somente nos derivados normalizados."
+    },
+    {
+      "test": "resultado_normalizado",
+      "method": "Localizar a ocorrência no parágrafo derivado e comparar antes/depois.",
+      "result": "passed",
+      "evidence": "'revela- se' foi substituído por uma única ocorrência de 'revela-se'; 'revelase' não foi produzido.",
+      "limitations": "Somente esta ocorrência foi revisada documentalmente."
+    },
+    {
+      "test": "transformacao_auditavel",
+      "method": "Conferir operação, before, after e deleted_text_raw_ranges.",
+      "result": "passed",
+      "evidence": "join_reviewed_hyphen_layout exclui apenas [499,500), que contém newline, e mantém o hífen no índice 498.",
+      "limitations": "A regra não decide outros tipos de hifenização ambígua."
+    },
+    {
+      "test": "normalization_map",
+      "method": "Executar corpus_documental.provenance.validate_map no parágrafo corrigido e auditar o salto bruto.",
+      "result": "passed",
+      "evidence": "Validador retornou []; cobertura limpa completa e único novo gap em [499,500).",
+      "limitations": "Validação mecânica não certifica fidelidade global."
+    },
+    {
+      "test": "escopo_da_correcao",
+      "method": "Relacionar parágrafos das duas versões por source_spans e comparar text_raw, text_clean e classificação.",
+      "result": "passed",
+      "evidence": "72 text_raw idênticos; somente o parágrafo do bloco p000002_b00002 mudou em text_clean; todas as demais classificações e transcrições limpas coincidem.",
+      "limitations": "Metadados e IDs mudam por política de identidade da nova versão."
+    },
+    {
+      "test": "teste_sintetico",
+      "method": "Executar caso unitário isolado com 'O efeito final revela-\\nse grotesco.'.",
+      "result": "passed",
+      "evidence": "Saída 'O efeito final revela-se grotesco.', evento informativo e proveniência correta; sem autorização, 'anali-\\nse' permanece ambíguo.",
+      "limitations": "A correção exige uma forma completa explicitamente revisada; não infere todas as regras do português."
+    },
+    {
+      "test": "regressao_pdf_real",
+      "method": "Executar teste no PDF Story e localizar o parágrafo pela forma bruta.",
+      "result": "passed",
+      "evidence": "A forma limpa, o intervalo removido e a ausência de hyphenation_candidate no alvo foram confirmados.",
+      "limitations": "Restrito à ocorrência indicada."
+    },
+    {
+      "test": "suite_completa",
+      "method": "Executar .venv/bin/python -m pytest -q.",
+      "result": "passed",
+      "evidence": "65 passed in 6.35s.",
+      "limitations": "Testes automatizados não substituem inspeção visual."
+    },
+    {
+      "test": "validacao_do_corpus_corrigido",
+      "method": "Gerar a saída pela pipeline com raw-pages reutilizado e executar os validadores durante o processamento.",
+      "result": "passed",
+      "evidence": "raw_integrity=passed, checks.errors=[], documentary_quality.blockers=[] e pending_review_count=13.",
+      "limitations": "As pendências não examinadas mantêm o estado global review_required."
+    },
+    {
+      "test": "estado_global_e_gate",
+      "method": "Conferir validation_report.json da versão 0.2.1.",
+      "result": "passed",
+      "evidence": {"status": "review_required", "chunking_gate_allowed": false, "fidelity_certified": false},
+      "limitations": "A correção desta ocorrência não aprova o corpus inteiro."
+    }
+  ],
+  "remaining_uncertainty": {
+    "target": [],
+    "other_hyphenation_candidate": "A ocorrência pré-/requisi-tos permanece pendente e não foi examinada.",
+    "tasks_013_014": "Permanecem abertas e não foram executadas.",
+    "identity": "IDs determinísticos mudaram na versão 0.2.1; o vínculo auditável usa source_spans e o histórico completo da 0.2.0.",
+    "fidelity_limit": "A correção pontual não declara fidelidade integral nem aprovação humana."
+  },
+  "global_approval": {
+    "status": "review_required",
+    "chunking_gate_allowed": false,
+    "fidelity_certified": false,
+    "human_approval_claimed": false,
+    "prohibited_processing_executed": false,
+    "note": "Somente a hifenização revela-se foi corrigida. As demais pendências permanecem abertas."
+  }
+}

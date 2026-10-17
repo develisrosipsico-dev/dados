@@ -127,6 +127,26 @@ def test_hyphen_requires_corroboration_and_preserves_compound():
     assert any(e["code"] == "hyphenation_candidate" and not e["applied"] for e in audit.events)
 
 
+def test_enclitic_line_break_preserves_lexical_hyphen_and_provenance():
+    raw = "O efeito final revela-\nse grotesco."
+    audit = Audit()
+    clean, changes, normalization_map = normalize_document(
+        raw, Config(pages=(0,), reviewed_line_hyphens=("revela-se",)), audit, "para_revela_se")
+
+    assert raw == "O efeito final revela-\nse grotesco."
+    assert clean == "O efeito final revela-se grotesco."
+    assert [change["operation"] for change in changes] == ["join_reviewed_hyphen_layout"]
+    assert changes[0]["deleted_text_raw_ranges"] == [[22, 23]]
+    assert any(event["code"] == "reviewed_hyphen_preserved" for event in audit.events)
+    assert not any(event["code"] == "hyphenation_candidate" for event in audit.events)
+    assert normalization_map[-1]["text_raw_start"] == 23
+    assert normalization_map[-1]["text_raw_end"] == len(raw)
+
+    ambiguous, _, _ = normalize_document("A palavra anali-\nse permanece ambígua.",
+                                         Config(pages=(0,)), Audit(), "ambigua")
+    assert ambiguous == "A palavra anali- se permanece ambígua."
+
+
 def test_gate_approved_only_when_implemented_checks_have_no_pending_cases(tmp_path, capsys):
     source = tmp_path/"simple.pdf"
     with pymupdf.open() as pdf:

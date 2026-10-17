@@ -55,7 +55,8 @@ def reviewed_story(tmp_path_factory):
             (previous/name).write_bytes(archive.read("story-capitulo-1-corrigido/"+name))
     context = json.loads((project/"examples/story_excerpt_context.json").read_text())
     output = folder/"revised"
-    config = Config(pages=tuple(range(18)), merge_pages=True, source_context=context)
+    config = Config(pages=tuple(range(18)), merge_pages=True,
+                    reviewed_line_hyphens=("revela-se",), source_context=context)
     report = process(source, output, config, raw_pages_path=previous/"pages_raw.jsonl")
     return {"source": source, "previous": previous, "output": output, "data": load_corpus(output),
             "config": config, "report": report}
