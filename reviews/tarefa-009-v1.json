@@ -1,0 +1,280 @@
+{
+  "task_id": "TAREFA_009",
+  "review_id": "tarefa-009-v1",
+  "record_version": 1,
+  "created_at_utc": "2026-10-17T03:02:21Z",
+  "decision": "confirmed",
+  "reviewer_kind": "automated_assistant_visual_and_structural_review_not_human",
+  "unit": {
+    "paragraph_id": "para_62857398ab09db0511502dc1",
+    "quote_element_id": "quote_0abe5705646495f8acbd66ca",
+    "classification": "block_quote",
+    "paragraph_global_order": 31,
+    "paragraph_local_order": 4,
+    "page_local": 8,
+    "page_index": 7,
+    "block_id": "p000007_b00004",
+    "parent_id": "node_3c218d9bc62678cc2593ecbf",
+    "section_id": "node_3c218d9bc62678cc2593ecbf",
+    "section_title": "O IMPERATIVO DA ESTÓRIA",
+    "chapter_id": "node_0357e0c292c6ecffe3791f27",
+    "chapter_title": "O PROBLEMA DA ESTÓRIA",
+    "base_quality_status": "review_required"
+  },
+  "sources": {
+    "application_version": "0.2.0",
+    "corpus_version": "corpus_d43918f06609b65f21f89425",
+    "base_git_commit": "e3e15e57ebbe88b4207c1c210522adcc8b0df880",
+    "request_text_sha256": "3a2389ee2a5b8d71e5c1129ef30c22a7433f41c32fef502108c912396f67dcd4",
+    "file_sha256": {
+      "original.pdf": "dabd10538ffdc866c6fa24187ffb1b9f784f647a01d5286a9c6a91cd7015633d",
+      "metadata.json": "f0cd8e1be56eacbe189b15ca6f5267bfb37da1fc9022e11d62892515347158c9",
+      "structure.json": "4d24cc423c343e6886e0842c8b3b9953a75d947a31fcc23a95cc907e297f269c",
+      "pages_raw.jsonl": "64e0b2d3cc7adf6c53a663470080fecf2a03ab203c55d5ed08817a248de56811",
+      "paragraphs.jsonl": "a89f1e48e0bbc1f5ddfd4584792b6a87b67f340dafa8d00ea51a5ee60b0a1900",
+      "elements.jsonl": "7db9c696d5449ff8ccf1d3eb573657b8bcf6863ad83c5df1ee3b02c40e005631",
+      "validation_report.json": "794068fd3b258e5e39456b928e1aeed4c1c6c4cfe6cb72aff6d5eba099860547",
+      "reviews/tarefa-008-v1.json": "960f7f20c099a206696d0f39010b5526d49a37b8d57402cd1b4580c5f224fbd4"
+    }
+  },
+  "evidence": {
+    "visual_inspection_performed": true,
+    "page_dimensions_pt": [612, 792],
+    "visual_scope": {
+      "page_local": 8,
+      "page_index": 7,
+      "region": "segundo bloco destacado e limites imediatos dos parágrafos 30 e 32",
+      "first_block_reopened": false,
+      "other_pending_units_inspected": false
+    },
+    "layout": {
+      "bbox_pt": [97.2421875, 423.4749755859375, 512.43408203125, 563.4334716796875],
+      "line_count": 11,
+      "font": "LiberationSerif-Italic",
+      "font_size_pt": 11.25,
+      "italic_ratio": 0.9988864142538976,
+      "left_indent_pt": 20.25,
+      "right_indent_pt": 22.518798828125,
+      "vertical_gap_before_pt": 16.7303466796875,
+      "vertical_gap_after_pt": 17.9498291015625,
+      "observations": "As onze linhas compõem uma unidade contínua, menor que o corpo, recuada dos dois lados, quase integralmente itálica e separada verticalmente dos parágrafos correntes. Apenas o ponto final de PASSE ADIANTE usa LiberationSerif romana; ele integra a mesma linha e o mesmo bloco. Não existe divisão visual interna."
+    },
+    "documentary_classification": {
+      "finding": "block_quote_confirmed_as_visual_documentary_type",
+      "function": "exemplo de relatório de análise de roteiro inserido na argumentação",
+      "external_bibliographic_attribution_claimed": false,
+      "invented_author_or_source": false,
+      "limitation": "A classificação registra a apresentação tipográfica; não afirma proveniência externa nem acrescenta interpretação semântica."
+    },
+    "boundaries": {
+      "previous": {
+        "paragraph_id": "para_1ab5ab6d7272df619c1e8baa",
+        "global_order": 30,
+        "text": "Mas eu nunca escrevi esse relatório.",
+        "source_interval": [1265, 1301],
+        "next_id": "para_62857398ab09db0511502dc1"
+      },
+      "target": {
+        "source_interval": [1302, 2210],
+        "first_words": "Ótima estória!",
+        "last_words": "PASSE ADIANTE."
+      },
+      "next": {
+        "paragraph_id": "para_3bd4bbea6c13882c16abfcc9",
+        "global_order": 32,
+        "source_interval": [2211, 2268],
+        "text": "Se escrevesse esse relatório, teria perdido meu emprego.",
+        "previous_id": "para_62857398ab09db0511502dc1"
+      },
+      "finding": "Os intervalos semiabertos são ordenados e não se sobrepõem. Os caracteres 1301 e 2210 são separadores de layout da página e não pertencem ao bloco."
+    },
+    "transcription": {
+      "raw_length": 908,
+      "clean_length": 908,
+      "raw_line_break_count": 10,
+      "pdf_native_extraction_length_with_terminal_layout_newline": 909,
+      "pdf_native_extraction_matches_text_raw_after_terminal_newline_is_removed": true,
+      "raw_matches_page_block": true,
+      "raw_matches_page_source_interval": true,
+      "finding": "Todos os caracteres textuais, palavras, acentos, caixa e pontuação coincidem. O newline terminal do extrator PDF fica fora do intervalo documental."
+    },
+    "normalization": {
+      "operation": "join_layout_lines",
+      "normalized_run_count": 10,
+      "raw_newline_positions": [86, 172, 251, 339, 426, 516, 597, 683, 771, 862],
+      "replacement": "Cada quebra visual foi substituída por um espaço de mesmo comprimento.",
+      "characters_added_or_omitted": 0,
+      "word_join_errors": 0,
+      "provenance_finding": "Os dez runs normalized apontam individualmente para os dez newlines brutos; os runs identity cobrem os demais 898 caracteres."
+    },
+    "source_span": {
+      "page_index": 7,
+      "block_id": "p000007_b00004",
+      "block_interval": [0, 908],
+      "page_interval": [1302, 2210],
+      "bbox_pt": [97.2421875, 423.4749755859375, 512.43408203125, 563.4334716796875],
+      "interval_convention": "half_open",
+      "geometry_matches_pdf_native_block": true
+    },
+    "relations": {
+      "paragraph_quote_element_link_bidirectional": true,
+      "paragraph_and_element_source_spans_equal": true,
+      "shared_parent_id": "node_3c218d9bc62678cc2593ecbf",
+      "ancestry": [
+        "doc_68538e2dac8d252a47d272de",
+        "node_0357e0c292c6ecffe3791f27",
+        "node_3c218d9bc62678cc2593ecbf",
+        "para_62857398ab09db0511502dc1"
+      ],
+      "text_ownership": "reference",
+      "bibliographic_attribution_fields_present": false
+    }
+  },
+  "checks": [
+    {
+      "test": "identidade_do_corpus_e_fontes",
+      "method": "Conferir versão, commit-base e SHA-256 dos arquivos consultados.",
+      "evidence": "Versão 0.2.0 e corpus_d43918f06609b65f21f89425; hashes registrados em sources.file_sha256.",
+      "result": "passed",
+      "limitations": "A decisão se vincula exclusivamente a esses bytes."
+    },
+    {
+      "test": "inspecao_visual_efetiva",
+      "method": "Renderizar e examinar a página local 8 do PDF original em 144 dpi.",
+      "evidence": "Unidade contínua de onze linhas entre os parágrafos 30 e 32, com recuos e espaços próprios.",
+      "result": "passed",
+      "limitations": "Inspeção feita por assistente automatizado, sem aprovação humana."
+    },
+    {
+      "test": "propriedades_tipograficas",
+      "method": "Comparar a imagem com spans extraídos diretamente do PDF.",
+      "evidence": "11,25 pt; LiberationSerif-Italic; razão itálica 0,998886; recuos 20,25/22,5188 pt; bbox idêntica à hipótese.",
+      "result": "passed",
+      "limitations": "O ponto final usa a variante romana, sem mudar a unidade documental."
+    },
+    {
+      "test": "classificacao_block_quote",
+      "method": "Avaliar composição, função no fluxo e ausência de divisão interna.",
+      "evidence": "O trecho é um exemplo destacado introduzido pelo parágrafo 30 e visualmente separado do 32.",
+      "result": "passed",
+      "limitations": "block_quote descreve forma documental, não autoria externa."
+    },
+    {
+      "test": "correspondencia_pdf_text_raw",
+      "method": "Extrair o bloco nativo do PDF e comparar, caractere a caractere, após excluir somente o newline terminal do extrator.",
+      "evidence": "908 de 908 caracteres coincidem; início e fim correspondem aos identificadores fornecidos.",
+      "result": "passed",
+      "limitations": "O newline terminal é uma marca de layout do extrator, fora do source_span."
+    },
+    {
+      "test": "texto_bruto_igual_ao_bloco_e_intervalo_da_pagina",
+      "method": "Comparar paragraph.text_raw, block.text_raw e pages_raw[7].text_raw[1302:2210].",
+      "evidence": "As três representações têm 908 caracteres e são idênticas.",
+      "result": "passed",
+      "limitations": "Teste restrito ao intervalo alvo."
+    },
+    {
+      "test": "join_layout_lines",
+      "method": "Comparar text_raw, transformação registrada e text_clean em cada uma das dez quebras.",
+      "evidence": "Cada newline foi substituído por um espaço; comprimento permaneceu 908; nenhuma palavra foi unida, adicionada ou omitida.",
+      "result": "passed",
+      "limitations": "Não foram feitas correções editoriais de gramática ou estilo."
+    },
+    {
+      "test": "normalization_map",
+      "method": "Executar corpus_documental.provenance.validate_map e auditar os dez runs normalizados.",
+      "evidence": "validate_map retornou []; os runs cobrem 0:908 na versão limpa e apontam para 0:908 no bruto.",
+      "result": "passed",
+      "limitations": "Validação comprova rastreabilidade mecânica, não qualidade global do corpus."
+    },
+    {
+      "test": "offsets_e_source_span",
+      "method": "Verificar página, bloco, intervalos semiabertos, comprimento e bbox contra PDF e pages_raw.",
+      "evidence": "block[0:908], page[1302:2210], comprimento 908, página 7 e bbox [97.2422,423.4750,512.4341,563.4335] são consistentes.",
+      "result": "passed",
+      "limitations": "Coordenadas referem-se ao sistema PyMuPDF não rotacionado em pontos."
+    },
+    {
+      "test": "limites_com_ordens_30_e_32",
+      "method": "Comparar texto, bbox e intervalos dos três registros sem reavaliar a classificação dos vizinhos.",
+      "evidence": "30 termina em 1301 e y=406,7446; alvo inicia em 1302 e y=423,4750, termina em 2210 e y=563,4335; 32 inicia em 2211 e y=581,3833.",
+      "result": "passed",
+      "limitations": "Vizinhos examinados somente como fronteiras."
+    },
+    {
+      "test": "navegacao_reciproca",
+      "method": "Conferir previous_id/next_id entre as ordens 30, 31 e 32.",
+      "evidence": "30.next_id -> 31; 31.previous_id -> 30; 31.next_id -> 32; 32.previous_id -> 31.",
+      "result": "passed",
+      "limitations": "Não foi percorrida a cadeia fora dos vizinhos imediatos."
+    },
+    {
+      "test": "associacao_paragrafo_elemento",
+      "method": "Conferir os dois sentidos da relação, source_spans, parent_id e composição.",
+      "evidence": "paragraph.quote_element_id e element.paragraph_id são recíprocos; source_spans, parent_id e composition_evidence coincidem.",
+      "result": "passed",
+      "limitations": "Somente o elemento quote_0abe5705646495f8acbd66ca foi validado."
+    },
+    {
+      "test": "ancestralidade",
+      "method": "Resolver parent_id no structure.json até a obra.",
+      "evidence": "Obra -> capítulo O PROBLEMA DA ESTÓRIA -> seção O IMPERATIVO DA ESTÓRIA -> parágrafo 31.",
+      "result": "passed",
+      "limitations": "Nenhum outro nó hierárquico foi revisado."
+    },
+    {
+      "test": "ausencia_de_atribuicao_bibliografica_inventada",
+      "method": "Inspecionar o PDF e os campos do elemento para autoria, obra ou fonte externa.",
+      "evidence": "O texto funciona como exemplo; o elemento não contém atribuição bibliográfica e o registro de revisão não acrescenta uma.",
+      "result": "passed",
+      "limitations": "Não se investigou uma possível origem externa além da evidência documental fornecida."
+    },
+    {
+      "test": "preservacao_da_base_e_revisoes_anteriores",
+      "method": "Conferir estado Git e hashes dos arquivos-base e da revisão 008 antes da inclusão deste registro.",
+      "evidence": "Árvore estava limpa; os hashes permanecem os registrados em sources.file_sha256.",
+      "result": "passed",
+      "limitations": "O novo arquivo de revisão é a única mudança pretendida."
+    },
+    {
+      "test": "pendencias_e_gate_global",
+      "method": "Conferir validation_report.json e manter seu estado sem reavaliar outras unidades.",
+      "evidence": {"status": "review_required", "chunking_gate_allowed": false, "fidelity_certified": false},
+      "result": "passed",
+      "limitations": "A confirmação pontual não altera a aprovação global."
+    }
+  ],
+  "changes": {
+    "corrections": [],
+    "before": {
+      "classification": "block_quote",
+      "parent_id": "node_3c218d9bc62678cc2593ecbf",
+      "quality_status": "review_required"
+    },
+    "after": {
+      "classification": "block_quote",
+      "parent_id": "node_3c218d9bc62678cc2593ecbf",
+      "quality_status": "review_required"
+    },
+    "corpus_files_modified": [],
+    "review_record_added": "reviews/tarefa-009-v1.json",
+    "pdf_or_raw_changed": false,
+    "ids_links_or_text_changed": false,
+    "application": "Registro auditável complementar. A unidade estava correta e não exigiu correção da base."
+  },
+  "remaining_uncertainty": {
+    "target_ambiguities": [],
+    "external_attribution": "Não há evidência documental para atribuir o exemplo a uma fonte externa; essa origem não foi investigada.",
+    "other_pending_reviews": "Permanecem abertas, sem inspeção ou aprovação nesta tarefa.",
+    "fidelity_limit": "A confirmação do alvo não certifica fidelidade integral do corpus nem equivale a aprovação humana."
+  },
+  "global_approval": {
+    "status": "review_required",
+    "chunking_gate_allowed": false,
+    "fidelity_certified": false,
+    "human_approval_claimed": false,
+    "base_report_unchanged": true,
+    "prohibited_processing_executed": false,
+    "note": "Confirmado exclusivamente o segundo bloco destacado. As demais pendências continuam abertas."
+  }
+}
