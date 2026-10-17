@@ -1,0 +1,352 @@
+{
+  "task_id": "TAREFA_011",
+  "review_id": "tarefa-011-v1",
+  "record_version": 1,
+  "created_at_utc": "2026-10-17T03:22:43Z",
+  "decision": "confirmed",
+  "reviewer_kind": "automated_assistant_visual_and_structural_review_not_human",
+  "unit": {
+    "paragraph_id": "para_0a7b2d7830743a84b0bbda13",
+    "quote_element_id": "quote_06ea4de781e4d98e1819dc53",
+    "element_id_discovered_by_paragraph_link": true,
+    "classification": "block_quote",
+    "paragraph_global_order": 51,
+    "paragraph_local_order": 4,
+    "page_local": 13,
+    "page_index": 12,
+    "block_id": "p000012_b00002",
+    "parent_id": "node_c6e5dc0164367d465c9db04d",
+    "section_id": "node_c6e5dc0164367d465c9db04d",
+    "section_title": "ESTÓRIA E VIDA",
+    "chapter_id": "node_0357e0c292c6ecffe3791f27",
+    "chapter_title": "O PROBLEMA DA ESTÓRIA",
+    "base_quality_status": "review_required"
+  },
+  "sources": {
+    "application_version": "0.2.0",
+    "corpus_version": "corpus_d43918f06609b65f21f89425",
+    "base_git_commit": "65c43a2ff0725ace5533a0d937b76d8a54228301",
+    "request_text_sha256": "5b33a2c81bb5d01245be22069a3417bfbbe38ebfea7d58c0c5c48b9ee696328c",
+    "file_sha256": {
+      "original.pdf": "dabd10538ffdc866c6fa24187ffb1b9f784f647a01d5286a9c6a91cd7015633d",
+      "metadata.json": "f0cd8e1be56eacbe189b15ca6f5267bfb37da1fc9022e11d62892515347158c9",
+      "structure.json": "4d24cc423c343e6886e0842c8b3b9953a75d947a31fcc23a95cc907e297f269c",
+      "pages_raw.jsonl": "64e0b2d3cc7adf6c53a663470080fecf2a03ab203c55d5ed08817a248de56811",
+      "paragraphs.jsonl": "a89f1e48e0bbc1f5ddfd4584792b6a87b67f340dafa8d00ea51a5ee60b0a1900",
+      "elements.jsonl": "7db9c696d5449ff8ccf1d3eb573657b8bcf6863ad83c5df1ee3b02c40e005631",
+      "validation_report.json": "794068fd3b258e5e39456b928e1aeed4c1c6c4cfe6cb72aff6d5eba099860547",
+      "reviews/tarefa-010-v1.json": "d4538cc94b82d0bd1467bc36a0af1272d1924b7c7417ca8305bcdc00f8fa30d2"
+    },
+    "substitution": {
+      "requested_variants": "arquivos locais com sufixo (2), se disponíveis",
+      "examined": "cópias publicadas sem sufixo da versão 0.2.0",
+      "reason": "Não existem variantes (2) no workspace; as cópias publicadas foram identificadas por versão e SHA-256."
+    }
+  },
+  "evidence": {
+    "visual_inspection_performed": true,
+    "page_dimensions_pt": [612, 792],
+    "visual_scope": {
+      "page_local": 13,
+      "page_index": 12,
+      "region": "quarto bloco destacado, sua introdução imediata e o início do parágrafo seguinte",
+      "other_quotes_reviewed": false,
+      "tasks_012_013_014_reviewed": false
+    },
+    "layout": {
+      "bbox_pt": [97.2421875, 307.2254638671875, 512.4931030273438, 485.4339599609375],
+      "font": "LiberationSerif-Italic",
+      "font_size_pt": 11.25,
+      "italic_ratio": 0.9990958408679927,
+      "left_indent_pt": 20.25,
+      "right_indent_pt": 22.45977783203125,
+      "vertical_gap_before_pt": 17.4803466796875,
+      "vertical_gap_after_pt": 23.1998291015625,
+      "observations": "O trecho forma uma única unidade menor, recuada, predominantemente itálica e separada verticalmente dos parágrafos vizinhos. Todas as palavras estão em itálico; somente o ponto final usa a variante romana. Não há subdivisão visual interna."
+    },
+    "documentary_classification": {
+      "finding": "block_quote_confirmed_as_visual_documentary_type",
+      "function": "exemplo hipotético de roteiro de ação comercial apresentado pelo autor",
+      "external_bibliographic_attribution_claimed": false,
+      "invented_author_title_publication_date_or_reference": false,
+      "limitation": "A decisão descreve propriedades documentais observáveis e não cria interpretação bibliográfica."
+    },
+    "reading_order_priority_case": {
+      "pdf_baseline_y_pt": 330.00048828125,
+      "visual_fragments": [
+        {"text": "pega ", "x_start_pt": 97.2421875, "x_end_pt": 121.9246826171875},
+        {"text": "acidentalmente ", "x_start_pt": 147.7979736328125, "x_end_pt": 219.3479766845703},
+        {"text": "aquela-coisa-que-vai-acabar-com-a-civilização-como-nós-", "x_start_pt": 245.21044921875, "x_end_pt": 511.77996826171875}
+      ],
+      "next_visual_line": {
+        "text_start": "conhecemos.",
+        "baseline_y_pt": 342.75048828125,
+        "x_start_pt": 97.2421875
+      },
+      "visual_order_rule": "mesmo baseline: x crescente; depois baseline y seguinte",
+      "confirmed_sequence": "pega acidentalmente aquela-coisa-que-vai-acabar-com-a-civilização-como-nós-conhecemos.",
+      "all_fragments_inside_same_pdf_block": true,
+      "isolated_word_paragraph_records": 0,
+      "words_omitted": 0,
+      "words_duplicated": 0
+    },
+    "transformations": [
+      {
+        "operation": "reuse_existing_line_boundary_space",
+        "deleted_text_raw_ranges": [[88, 89], [104, 105]],
+        "deleted_characters": ["newline", "newline"],
+        "preceding_characters": ["space", "space"],
+        "result_fragment": "pega acidentalmente aquela-coisa",
+        "result_separator_count_between_words": 1,
+        "finding": "Os espaços finais já presentes após 'pega' e 'acidentalmente' são preservados; somente os newlines artificiais do extrator são removidos."
+      },
+      {
+        "operation": "join_corroborated_hyphen_layout",
+        "deleted_text_raw_ranges": [[160, 161]],
+        "deleted_character": "newline",
+        "preceding_character": "hyphen",
+        "result_fragment": "como-nós-conhecemos",
+        "hyphen_preserved": true,
+        "corroboration": "A mesma expressão composta aparece sem quebra em outras duas posições do bloco visual, uma com inicial maiúscula e outra minúscula.",
+        "finding": "Apenas o newline de diagramação é removido; o hífen lexical permanece."
+      },
+      {
+        "operation": "join_layout_lines",
+        "remaining_layout_newlines_replaced_by_spaces": 12,
+        "finding": "As demais quebras visuais viram espaços sem alteração lexical, de pontuação, acentuação ou caixa."
+      }
+    ],
+    "lengths_and_fidelity": {
+      "text_raw_length": 1121,
+      "text_clean_length": 1118,
+      "difference": 3,
+      "raw_newline_count": 15,
+      "deleted_newline_count": 3,
+      "normalized_newline_count": 12,
+      "pdf_native_length_with_terminal_layout_newline": 1122,
+      "pdf_native_matches_text_raw_after_terminal_newline_is_removed": true,
+      "raw_matches_page_block": true,
+      "raw_matches_page_source_interval": true,
+      "finding": "A redução de três caracteres corresponde exatamente aos newlines 88, 104 e 160; nenhum caractere lexical foi removido."
+    },
+    "normalization_map": {
+      "validator_errors": [],
+      "clean_coverage": [0, 1118],
+      "source_order_monotonic": true,
+      "incompatible_overlaps": 0,
+      "normalized_runs_with_source": 12,
+      "deleted_raw_gaps": [[88, 89], [104, 105], [160, 161]],
+      "deleted_gaps_recorded_in_transformations": true,
+      "nearby_characters_retain_source_refs": true,
+      "hyphen_raw_position": 159,
+      "hyphen_preserved_in_clean_text": true,
+      "finding": "O mapa cobre todo text_clean; os saltos no bruto correspondem somente às três exclusões registradas e todos os caracteres preservados apontam ao source_span."
+    },
+    "source_span": {
+      "page_index": 12,
+      "block_id": "p000012_b00002",
+      "block_interval": [0, 1121],
+      "page_interval": [1175, 2296],
+      "interval_convention": "half_open",
+      "bbox_pt": [97.2421875, 307.2254638671875, 512.4931030273438, 485.4339599609375],
+      "contains_only_target_block": true,
+      "geometry_matches_pdf_native_block": true
+    },
+    "boundaries": {
+      "previous": {
+        "paragraph_id": "para_b2213c420972075aec37186d",
+        "global_order": 50,
+        "text": "O segundo é o roteiro ruim “sucesso comercial garantido”:",
+        "source_interval": [1117, 1174],
+        "next_id": "para_0a7b2d7830743a84b0bbda13"
+      },
+      "target": {
+        "source_interval": [1175, 2296],
+        "first_words": "Em uma confusão na hora de pegar a bagagem, no aeroporto",
+        "last_words": "e, portanto, salva a humanidade."
+      },
+      "next": {
+        "paragraph_id": "para_7bf1c6e360f2c179fffe8037",
+        "global_order": 52,
+        "beginning": "A “estória pessoal” é um retrato subestruturado...",
+        "source_interval": [2297, 2936],
+        "previous_id": "para_0a7b2d7830743a84b0bbda13"
+      },
+      "finding": "Os intervalos são ordenados, não se sobrepõem e têm separadores de layout entre unidades; não há fusão nem fragmentação documental."
+    },
+    "relations": {
+      "paragraph_quote_element_link_bidirectional": true,
+      "paragraph_and_element_source_spans_equal": true,
+      "shared_parent_id": "node_c6e5dc0164367d465c9db04d",
+      "ancestry": [
+        "doc_68538e2dac8d252a47d272de",
+        "node_0357e0c292c6ecffe3791f27",
+        "node_c6e5dc0164367d465c9db04d",
+        "para_0a7b2d7830743a84b0bbda13"
+      ],
+      "text_ownership": "reference",
+      "bibliographic_attribution_fields_present": false
+    }
+  },
+  "checks": [
+    {
+      "test": "identidade_das_fontes_e_versao",
+      "method": "Conferir versão, commit-base, substituição das variantes (2) e SHA-256 das fontes.",
+      "evidence": "Versão 0.2.0, corpus_d43918f06609b65f21f89425 e hashes registrados em sources.file_sha256.",
+      "result": "passed",
+      "limitations": "A decisão vale apenas para os bytes identificados; cópias (2) não fornecidas não foram atestadas."
+    },
+    {
+      "test": "correspondencia_visual_do_bloco",
+      "method": "Renderizar e examinar a página local 13 em 144 dpi e comparar a bbox nativa.",
+      "evidence": "Unidade contínua em [97,2422,307,2255,512,4931,485,4340], recuada e separada dos vizinhos.",
+      "result": "passed",
+      "limitations": "Inspeção automatizada; não constitui aprovação humana."
+    },
+    {
+      "test": "classificacao_block_quote",
+      "method": "Avaliar tipografia, recuos, espaçamento e função documental observável.",
+      "evidence": "Fonte 11,25 pt predominantemente itálica e composição distinta do corpo confirmam o tipo visual block_quote.",
+      "result": "passed",
+      "limitations": "A classificação não implica citação externa."
+    },
+    {
+      "test": "integridade_do_inicio_e_fim",
+      "method": "Comparar PDF, text_raw e source_span nas extremidades.",
+      "evidence": "Começa em 'Em uma confusão...' e termina em 'e, portanto, salva a humanidade.'.",
+      "result": "passed",
+      "limitations": "Somente os limites da ordem 51 foram aprovados."
+    },
+    {
+      "test": "ordem_de_leitura_da_expressao_fragmentada",
+      "method": "Inspecionar baseline e coordenadas x de cada fragmento diretamente no PDF.",
+      "evidence": "No baseline y=330,0005, x cresce 97,2422 -> 147,7980 -> 245,2104; a linha seguinte inicia 'conhecemos.' em y=342,7505.",
+      "result": "passed",
+      "limitations": "A regra foi aplicada somente à região problemática."
+    },
+    {
+      "test": "espacos_entre_pega_acidentalmente_e_aquela",
+      "method": "Examinar caracteres brutos 83:105 e o resultado da primeira transformação.",
+      "evidence": "Há espaço após 'pega' no índice 87 e após 'acidentalmente' no 103; remover newlines 88 e 104 deixa exatamente um espaço em cada fronteira.",
+      "result": "passed",
+      "limitations": "Não se alterou a justificação gráfica ampla vista no PDF."
+    },
+    {
+      "test": "hifenizacao_composta",
+      "method": "Comparar 'nós-\\nconhecemos' no PDF/bruto com ocorrências não quebradas no próprio bloco.",
+      "evidence": "O newline 160 é de layout; o hífen no 159 pertence à expressão e foi preservado.",
+      "result": "passed",
+      "limitations": "A conclusão é específica desta expressão e não estabelece regra geral de hifenização."
+    },
+    {
+      "test": "tres_transformacoes",
+      "method": "Validar nomes, entradas, saídas, intervalos excluídos e encadeamento das três operações.",
+      "evidence": "raw -> reuse_existing_line_boundary_space -> join_corroborated_hyphen_layout -> join_layout_lines -> clean é uma cadeia exata.",
+      "result": "passed",
+      "limitations": "Nenhuma correção estilística ou gramatical foi aplicada."
+    },
+    {
+      "test": "diferenca_de_comprimentos",
+      "method": "Contar caracteres e relacionar a diferença aos intervalos excluídos.",
+      "evidence": "1121 - 1118 = 3, exatamente os newlines [88,89), [104,105) e [160,161).",
+      "result": "passed",
+      "limitations": "As doze outras quebras viram espaços e não mudam o comprimento."
+    },
+    {
+      "test": "integridade_do_normalization_map",
+      "method": "Executar corpus_documental.provenance.validate_map e auditar cobertura, ordem, sobreposição e saltos brutos.",
+      "evidence": "Validador retornou []; clean 0:1118 está coberto, a origem é monotônica e os únicos gaps são as três exclusões registradas.",
+      "result": "passed",
+      "limitations": "Consistência mecânica não certifica o restante do corpus."
+    },
+    {
+      "test": "rastreabilidade_dos_caracteres",
+      "method": "Inspecionar source_refs antes e depois de cada exclusão e na expressão hifenizada.",
+      "evidence": "Todos os caracteres preservados apontam para p000012_b00002; o hífen aponta ao raw 159 e 'conhecemos' retoma no 161.",
+      "result": "passed",
+      "limitations": "Caracteres excluídos são documentados nas transformations, não como caracteres limpos."
+    },
+    {
+      "test": "source_span",
+      "method": "Comparar bloco, página, offsets, comprimento e bbox com pages_raw e PDF.",
+      "evidence": "page 12, p000012_b00002, block[0:1121], page[1175:2296] e bbox coincidem integralmente.",
+      "result": "passed",
+      "limitations": "Coordenadas usam pontos PyMuPDF não rotacionados."
+    },
+    {
+      "test": "vinculo_paragrafo_elemento",
+      "method": "Localizar o elemento pelo paragraph_id e conferir relação inversa, parent_id e source_spans.",
+      "evidence": "Foi encontrado quote_06ea4de781e4d98e1819dc53; vínculos e source_spans são recíprocos.",
+      "result": "passed",
+      "limitations": "Nenhuma outra citação foi revisada."
+    },
+    {
+      "test": "navegacao_documental",
+      "method": "Conferir previous_id/next_id e intervalos das ordens 50, 51 e 52.",
+      "evidence": "50 <-> 51 <-> 52 é recíproco; intervalos [1117,1174), [1175,2296), [2297,2936) não se sobrepõem.",
+      "result": "passed",
+      "limitations": "Os vizinhos foram usados apenas para fronteiras."
+    },
+    {
+      "test": "ancestralidade_hierarquica",
+      "method": "Resolver parent_id e IDs de capítulo/seção no structure.json.",
+      "evidence": "Obra -> O PROBLEMA DA ESTÓRIA -> ESTÓRIA E VIDA -> bloco de ordem 51.",
+      "result": "passed",
+      "limitations": "Nenhum outro nó hierárquico foi reavaliado."
+    },
+    {
+      "test": "ausencia_de_atribuicao_bibliografica",
+      "method": "Inspecionar PDF, parágrafo e elemento em busca de autoria, título ou fonte externa explícita.",
+      "evidence": "O trecho é apresentado como exemplo hipotético e nenhum dado bibliográfico externo foi criado.",
+      "result": "passed",
+      "limitations": "Não se investigou origem externa além da evidência documental fornecida."
+    },
+    {
+      "test": "preservacao_dos_arquivos_base",
+      "method": "Conferir estado Git e hashes antes de adicionar o registro de revisão.",
+      "evidence": "Árvore limpa; PDF, bruto, derivados e Tarefa 010 mantêm os hashes registrados.",
+      "result": "passed",
+      "limitations": "O único arquivo novo pretendido é reviews/tarefa-011-v1.json."
+    },
+    {
+      "test": "preservacao_das_pendencias",
+      "method": "Conferir validation_report.json e evitar as Tarefas 012, 013 e 014.",
+      "evidence": {"status": "review_required", "chunking_gate_allowed": false, "fidelity_certified": false},
+      "result": "passed",
+      "limitations": "A confirmação pontual não altera o estado global."
+    }
+  ],
+  "changes": {
+    "corrections": [],
+    "before": {
+      "classification": "block_quote",
+      "paragraph_count_for_target": 1,
+      "quality_status": "review_required"
+    },
+    "after": {
+      "classification": "block_quote",
+      "paragraph_count_for_target": 1,
+      "quality_status": "review_required"
+    },
+    "corpus_files_modified": [],
+    "review_record_added": "reviews/tarefa-011-v1.json",
+    "pdf_or_raw_changed": false,
+    "ids_links_or_text_changed": false,
+    "application": "Registro auditável complementar. A correção preexistente da versão 0.2.0 foi confirmada e não exigiu alteração na base."
+  },
+  "remaining_uncertainty": {
+    "target_ambiguities": [],
+    "external_attribution": "Não há evidência documental para atribuir o exemplo a fonte externa; essa origem não foi investigada.",
+    "tasks_012_013_014": "Permanecem abertas, sem inspeção ou aprovação nesta tarefa.",
+    "fidelity_limit": "A confirmação pontual não certifica fidelidade integral do corpus nem equivale a aprovação humana."
+  },
+  "global_approval": {
+    "status": "review_required",
+    "chunking_gate_allowed": false,
+    "fidelity_certified": false,
+    "human_approval_claimed": false,
+    "base_report_unchanged": true,
+    "prohibited_processing_executed": false,
+    "note": "Confirmado exclusivamente o quarto bloco destacado. As Tarefas 012, 013 e 014 continuam abertas."
+  }
+}
