@@ -1,0 +1,143 @@
+{
+  "task_id": "TAREFA_008",
+  "review_id": "tarefa-008-v1",
+  "record_version": 1,
+  "created_at_utc": "2026-10-17T00:30:17Z",
+  "decision": "confirmed",
+  "reviewer_kind": "automated_assistant_visual_and_structural_review_not_human",
+  "unit": {
+    "paragraph_id": "para_9fadb7abe2268da24f99f6da",
+    "quote_element_id": "quote_ee502fbb62e1d2d013058fd1",
+    "classification": "block_quote",
+    "paragraph_global_order": 29,
+    "paragraph_local_order": 2,
+    "page_local": 8,
+    "page_index": 7,
+    "block_id": "p000007_b00002",
+    "parent_id": "node_3c218d9bc62678cc2593ecbf",
+    "section_title": "O IMPERATIVO DA ESTÓRIA",
+    "chapter_id": "node_0357e0c292c6ecffe3791f27",
+    "base_quality_status": "review_required"
+  },
+  "sources": {
+    "application_version": "0.2.0",
+    "corpus_version": "corpus_d43918f06609b65f21f89425",
+    "base_git_commit": "1d2a616bec38050f15c26bfc265ce49efe936a13",
+    "request_text_sha256": "f173ec48b6f10d73816904e1fe5a387c32eab2e1b69f52bfbb4c10d4ed108692",
+    "file_sha256": {
+      "original.pdf": "dabd10538ffdc866c6fa24187ffb1b9f784f647a01d5286a9c6a91cd7015633d",
+      "metadata.json": "f0cd8e1be56eacbe189b15ca6f5267bfb37da1fc9022e11d62892515347158c9",
+      "structure.json": "4d24cc423c343e6886e0842c8b3b9953a75d947a31fcc23a95cc907e297f269c",
+      "pages_raw.jsonl": "64e0b2d3cc7adf6c53a663470080fecf2a03ab203c55d5ed08817a248de56811",
+      "paragraphs.jsonl": "a89f1e48e0bbc1f5ddfd4584792b6a87b67f340dafa8d00ea51a5ee60b0a1900",
+      "elements.jsonl": "7db9c696d5449ff8ccf1d3eb573657b8bcf6863ad83c5df1ee3b02c40e005631",
+      "validation_report.json": "794068fd3b258e5e39456b928e1aeed4c1c6c4cfe6cb72aff6d5eba099860547"
+    }
+  },
+  "evidence": {
+    "visual_inspection_performed": true,
+    "page_dimensions_pt": [612, 792],
+    "visual_scope": {
+      "page_local": 8,
+      "page_index": 7,
+      "region": "bloco p000007_b00002 e limites imediatos de ordens 28 e 30",
+      "other_pending_quote_inspected": false
+    },
+    "layout": {
+      "bbox_pt": [97.2421875, 252.4749755859375, 512.5144653320312, 366.9334716796875],
+      "font": "LiberationSerif-Italic",
+      "font_size_pt": 11.25,
+      "italic_ratio": 0.9986666666666667,
+      "left_indent_pt": 20.25,
+      "right_indent_pt": 22.43841552734375,
+      "vertical_gap_before_pt": 17.4803466796875,
+      "vertical_gap_after_pt": 23.1998291015625,
+      "observations": "Nove linhas formam uma unidade visual contínua, menor, recuada em ambos os lados e quase integralmente itálica. O ponto final após PASSE ADIANTE usa a variante romana da mesma família; isso não rompe a unidade. Há espaço vertical antes e depois do bloco."
+    },
+    "documentary_semantics": {
+      "finding": "block_quote_confirmed_as_visual_documentary_type",
+      "scope": "A classificação descreve a composição destacada no documento.",
+      "external_source_attribution_claimed": false,
+      "invented_attribution": false,
+      "reason": "O trecho é apresentado como exemplo de relatório após a introdução terminada por dois-pontos; o PDF e os metadados não fornecem autoria externa ou referência bibliográfica para este bloco."
+    },
+    "boundaries": {
+      "previous": {
+        "paragraph_id": "para_e6844048d18f8dd141ab7fae",
+        "global_order": 28,
+        "ending": "O relatório que escrevi centenas de vezes era mais ou menos assim:",
+        "next_id": "para_9fadb7abe2268da24f99f6da"
+      },
+      "next": {
+        "paragraph_id": "para_1ab5ab6d7272df619c1e8baa",
+        "global_order": 30,
+        "text": "Mas eu nunca escrevi esse relatório.",
+        "previous_id": "para_9fadb7abe2268da24f99f6da"
+      },
+      "finding": "O início, o fim e a navegação delimitam exatamente um bloco destacado."
+    },
+    "transcription": {
+      "raw_length": 758,
+      "clean_length": 757,
+      "raw_start": "Boa descrição, diálogos apresentáveis.",
+      "raw_end": "PASSE ADIANTE.",
+      "line_break_case_raw": "mal-\ncontados",
+      "line_break_case_clean": "mal-contados",
+      "finding": "Texto bruto idêntico ao bloco e ao intervalo da página; ordem, grafia, acentuação, pontuação e caixa preservadas."
+    },
+    "normalization": {
+      "operation": "join_corroborated_hyphen_layout",
+      "deleted_text_raw_range": [680, 681],
+      "deleted_character": "newline",
+      "hyphen_preserved": true,
+      "corroboration": "A mesma forma lexical 'mal-contados' ocorre sem quebra de linha na página de índice 13 do texto bruto.",
+      "provenance_effect": "O mapa registra o salto do intervalo bruto 680:681 e realinha os caracteres seguintes a 681:758; nenhum caractere lexical foi apagado."
+    },
+    "relations": {
+      "paragraph_quote_element_link_bidirectional": true,
+      "shared_parent_id": "node_3c218d9bc62678cc2593ecbf",
+      "shared_source_span": true,
+      "text_ownership": "reference",
+      "attribution_fields_present": false
+    }
+  },
+  "checks": [
+    {"test": "inspecao_visual_do_alvo", "result": "passed", "evidence": "Bloco único, recuado, menor, predominantemente itálico e separado verticalmente do corpo."},
+    {"test": "classificacao_documental_sem_atribuicao_externa", "result": "passed", "evidence": "block_quote é compatível com a composição; nenhuma autoria ou fonte externa foi inferida."},
+    {"test": "texto_bruto_igual_ao_bloco", "result": "passed", "evidence": "758 de 758 caracteres coincidem com p000007_b00002."},
+    {"test": "source_span_igual_ao_texto_bruto_da_pagina", "result": "passed", "evidence": "pages_raw[7].text_raw[506:1264] coincide integralmente com text_raw."},
+    {"test": "normalization_map", "result": "passed", "evidence": "corpus_documental.provenance.validate_map retornou lista vazia."},
+    {"test": "hifenizacao_mal_contados", "result": "passed", "evidence": "Apenas a quebra de linha 680:681 foi removida; o hífen lexical foi preservado e a forma foi corroborada no bruto."},
+    {"test": "limites_e_ordem", "result": "passed", "evidence": "Ordens 28 -> 29 -> 30 e intervalos 24:505, 506:1264, 1265:1301 são consecutivos e não se sobrepõem."},
+    {"test": "previous_id_next_id", "result": "passed", "evidence": "As referências entre os três registros são recíprocas."},
+    {"test": "vinculo_paragrafo_elemento", "result": "passed", "evidence": "paragraph.quote_element_id e element.paragraph_id apontam um para o outro; parent_id e source_spans coincidem."},
+    {"test": "hierarquia_do_alvo", "result": "passed", "evidence": "O parágrafo e o elemento pertencem à seção node_3c218d9bc62678cc2593ecbf e ao capítulo node_0357e0c292c6ecffe3791f27."},
+    {"test": "preservacao_dos_arquivos_base", "result": "passed", "evidence": "Nenhum arquivo do corpus 0.2.0, PDF, dado bruto ou revisão anterior foi modificado."},
+    {"test": "estado_global_e_gate", "result": "passed", "evidence": {"status": "review_required", "chunking_gate_allowed": false, "fidelity_certified": false}}
+  ],
+  "changes": {
+    "corrections": [],
+    "before": {"classification": "block_quote", "parent_id": "node_3c218d9bc62678cc2593ecbf", "quality_status": "review_required"},
+    "after": {"classification": "block_quote", "parent_id": "node_3c218d9bc62678cc2593ecbf", "quality_status": "review_required"},
+    "corpus_files_modified": [],
+    "review_record_added": "reviews/tarefa-008-v1.json",
+    "pdf_or_raw_changed": false,
+    "ids_or_links_changed": false,
+    "application": "Registro auditável complementar; a unidade estava correta e não exigiu alteração na base."
+  },
+  "remaining_uncertainty": {
+    "target_ambiguities": [],
+    "external_attribution": "Não há evidência documental para atribuir o texto a fonte externa; a decisão limita-se ao tipo visual e estrutural.",
+    "other_six_pending_reviews": "Permanecem abertas e não foram inspecionadas nem aprovadas nesta tarefa.",
+    "fidelity_limit": "Revisão feita por assistente automatizado; a confirmação pontual não certifica fidelidade integral nem equivale a aprovação humana."
+  },
+  "global_approval": {
+    "status": "review_required",
+    "chunking_gate_allowed": false,
+    "fidelity_certified": false,
+    "human_approval_claimed": false,
+    "base_report_unchanged": true,
+    "prohibited_processing_executed": false,
+    "note": "Somente o primeiro bloco destacado foi confirmado. As outras seis pendências continuam abertas."
+  }
+}
