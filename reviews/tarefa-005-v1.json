@@ -1,0 +1,840 @@
+{
+  "task_id": "TAREFA_005",
+  "review_id": "tarefa-005-v1",
+  "record_version": 1,
+  "created_at_utc": "2026-10-17T00:14:44.264850+00:00",
+  "decision": "confirmed",
+  "reviewer_kind": "automated_assistant_visual_and_structural_review_not_human",
+  "unit": {
+    "node_id": "node_c6e5dc0164367d465c9db04d",
+    "element_id": "elem_5d0c9ee9d970f1d464c45687",
+    "title": "ESTÓRIA E VIDA",
+    "classification": "section",
+    "level": 3,
+    "parent_id": "node_0357e0c292c6ecffe3791f27",
+    "base_quality_status": "review_required",
+    "page_local": 12,
+    "page_index": 11,
+    "block_id": "p000011_b00003",
+    "source_spans": [
+      {
+        "bbox": [
+          76.9921875,
+          543.3784790039062,
+          234.19692993164062,
+          569.4295043945312
+        ],
+        "block_char_end": 14,
+        "block_char_start": 0,
+        "block_id": "p000011_b00003",
+        "char_end": 1763,
+        "char_start": 1749,
+        "page_index": 11,
+        "pdf_page_label": null,
+        "printed_page_number": null
+      }
+    ]
+  },
+  "sources": {
+    "application_version": "0.2.0",
+    "corpus_version": "corpus_d43918f06609b65f21f89425",
+    "base_git_commit": "0424656ed1966a337cb5e9fc60da0fdf32643f00",
+    "published_package": "story-capitulo-1-revisao-documental-v0.2.0.zip",
+    "published_package_sha256": "3c40e59046f51875b7c12bdba26572ab222499d36fe2fa7f0262cda77a412481",
+    "file_sha256": {
+      "original.pdf": "dabd10538ffdc866c6fa24187ffb1b9f784f647a01d5286a9c6a91cd7015633d",
+      "metadata.json": "f0cd8e1be56eacbe189b15ca6f5267bfb37da1fc9022e11d62892515347158c9",
+      "structure.json": "4d24cc423c343e6886e0842c8b3b9953a75d947a31fcc23a95cc907e297f269c",
+      "pages_raw.jsonl": "64e0b2d3cc7adf6c53a663470080fecf2a03ab203c55d5ed08817a248de56811",
+      "paragraphs.jsonl": "a89f1e48e0bbc1f5ddfd4584792b6a87b67f340dafa8d00ea51a5ee60b0a1900",
+      "elements.jsonl": "7db9c696d5449ff8ccf1d3eb573657b8bcf6863ad83c5df1ee3b02c40e005631",
+      "validation_report.json": "794068fd3b258e5e39456b928e1aeed4c1c6c4cfe6cb72aff6d5eba099860547"
+    },
+    "request_text_sha256": "9c64c4294107324f1c82da0b95f0df8f102882a3d480bc5ff2ec998ecef21c66",
+    "substitution": {
+      "requested": "structure(2).json",
+      "examined": "structure.json",
+      "reason": "structure(2).json indisponível no workspace. Utilizado structure.json da versão publicada 0.2.0, após conferir SHA-256 e igualdade byte a byte com o ZIP. original.pdf é idêntico a story-capitulo-1.pdf. A decisão se vincula a esses hashes."
+    }
+  },
+  "evidence": {
+    "visual_inspection_performed": true,
+    "render_scale": 1.5,
+    "page_dimensions_pt": [
+      612,
+      792
+    ],
+    "visual_scope": [
+      {
+        "page_local": 12,
+        "page_index": 11,
+        "region": "página inteira",
+        "purpose": "Identidade, posição e separação do título; início da seção. Conteúdo anterior usado somente como contexto de posição."
+      },
+      {
+        "page_local": 8,
+        "page_index": 7,
+        "clip_pt": [
+          65,
+          65,
+          365,
+          102
+        ],
+        "purpose": "Comparação exclusivamente visual do padrão de seção, sem nova decisão sobre outra unidade."
+      },
+      {
+        "page_local": 13,
+        "page_index": 12,
+        "clip_pt": [
+          65,
+          65,
+          545,
+          722
+        ],
+        "purpose": "Pertença e ordem dos registros; citações observadas apenas por posição externa, sem revisão interna."
+      },
+      {
+        "page_local": 14,
+        "page_index": 13,
+        "clip_pt": [
+          65,
+          65,
+          545,
+          722
+        ],
+        "purpose": "Continuação do registro 53 e sequência dos registros comuns."
+      },
+      {
+        "page_local": 15,
+        "page_index": 14,
+        "clip_pt": [
+          65,
+          65,
+          545,
+          697
+        ],
+        "purpose": "Registros finais e término antes de PODERES E TALENTOS; esse cabeçalho não foi aprovado."
+      }
+    ],
+    "typography": {
+      "font": "CenturyGothic-Bold",
+      "size_pt": 21.247499465942383,
+      "font_flags": 20,
+      "bold": true,
+      "uppercase": true,
+      "alignment": "left_at_body_margin",
+      "bbox_pt": [
+        76.9921875,
+        543.3784790039062,
+        234.19692993164062,
+        569.4295043945312
+      ],
+      "gap_after_previous_body_bbox_pt": 37.63336181640625,
+      "gap_to_section_body_bbox_pt": 17.95428466796875,
+      "body_font": "LiberationSerif",
+      "body_size_pt": 15,
+      "measurement_note": "Distâncias entre caixas extraídas, não contornos de tinta.",
+      "comparison_section_only": {
+        "title": "O IMPERATIVO DA ESTÓRIA",
+        "font": "CenturyGothic-Bold",
+        "size_pt": 21.247499465942383,
+        "classification_reviewed_or_approved_in_this_task": false
+      }
+    },
+    "text": {
+      "visible_pdf": "ESTÓRIA E VIDA",
+      "native_pdf": "ESTÓRIA E VIDA",
+      "raw_block": "ESTÓRIA E VIDA",
+      "element_raw": "ESTÓRIA E VIDA",
+      "element_clean": "ESTÓRIA E VIDA",
+      "structure_title": "ESTÓRIA E VIDA",
+      "exact_match": true,
+      "raw_block_range": [
+        0,
+        14
+      ],
+      "raw_page_range": [
+        1749,
+        1763
+      ]
+    },
+    "observations": [
+      "Título em linha própria, caixa alta e negrito sem serifa, alinhado à esquerda e separado dos parágrafos anterior e posterior.",
+      "CenturyGothic-Bold, 21,247499 pt, foi conferida diretamente na camada nativa do PDF, além da inspeção visual. A apresentação coincide com o padrão de seção comparado.",
+      "O cabeçalho em caixa alta retoma o padrão de seção de nível 3. Seu pai é o capítulo, e a subseção anterior não integra sua cadeia ancestral.",
+      "O registro 48 segue o título e começa por Ao longo dos anos, observei dois típicos e persistentes tipos de roteiros fracassados.",
+      "O registro comum 53 continua da página local 13 para a 14 com o mesmo ID e duas origens físicas; não há novo cabeçalho no ponto de passagem.",
+      "O registro 61 começa por Da mesma maneira, roteiristas de espetáculos precisam entender que abstrações são neutras. e termina antes de PODERES E TALENTOS.",
+      "As citações 49 e 51 foram consideradas somente para pertencimento e posição na sequência. Não houve aprovação de fonte, recuo, segmentação interna ou fidelidade visual integral dessas unidades."
+    ],
+    "ancestry": {
+      "chain_work_to_unit": [
+        {
+          "node_id": "doc_68538e2dac8d252a47d272de",
+          "kind": "work",
+          "title": "Story — Capítulo 1 — O problema da estória",
+          "level": null,
+          "parent_id": null
+        },
+        {
+          "node_id": "node_0357e0c292c6ecffe3791f27",
+          "kind": "chapter",
+          "title": "O PROBLEMA DA ESTÓRIA",
+          "level": 2,
+          "parent_id": "doc_68538e2dac8d252a47d272de"
+        },
+        {
+          "node_id": "node_c6e5dc0164367d465c9db04d",
+          "kind": "section",
+          "title": "ESTÓRIA E VIDA",
+          "level": 3,
+          "parent_id": "node_0357e0c292c6ecffe3791f27"
+        }
+      ],
+      "previous_subsection_is_ancestor": false,
+      "previous_section_is_ancestor": false,
+      "cycles_detected": false
+    },
+    "record_scope": {
+      "count": 14,
+      "global_orders": [
+        48,
+        61
+      ],
+      "page_indexes": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "first_text_start": "Ao longo dos anos, observei dois típicos e persistentes tipos de roteiros fracassados. O primeiro é o roteiro ruim “estória pessoal”:",
+      "last_text_start": "Da mesma maneira, roteiristas de espetáculos precisam entender que abstrações são neutras. Por abstrações eu quero dizer estratégi",
+      "last_text_end": "ntas. A estética do filme é o meio de expressar o conteúdo vivo da estória, mas nunca devem tornar-se um fim em si.",
+      "records": [
+        {
+          "paragraph_id": "para_423ae571c420ee31d608b6ff",
+          "global_order": 48,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_c6e5dc0164367d465c9db04d",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_c6e5dc0164367d465c9db04d",
+          "previous_id": "para_ef9db915493d3386a04229c6",
+          "next_id": "para_686c6e7b89ac2f0b6c309b09",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                587.3837890625,
+                534.438232421875,
+                621.2451171875
+              ],
+              "block_char_end": 133,
+              "block_char_start": 0,
+              "block_id": "p000011_b00004",
+              "char_end": 1897,
+              "char_start": 1764,
+              "page_index": 11,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_686c6e7b89ac2f0b6c309b09",
+          "global_order": 49,
+          "existing_classification": "block_quote",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_c6e5dc0164367d465c9db04d",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_c6e5dc0164367d465c9db04d",
+          "previous_id": "para_423ae571c420ee31d608b6ff",
+          "next_id": "para_b2213c420972075aec37186d",
+          "source_spans": [
+            {
+              "bbox": [
+                97.2421875,
+                638.7254638671875,
+                512.2991943359375,
+                714.9339599609375
+              ],
+              "block_char_end": 508,
+              "block_char_start": 0,
+              "block_id": "p000011_b00005",
+              "char_end": 2406,
+              "char_start": 1898,
+              "page_index": 11,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            },
+            {
+              "bbox": [
+                97.2421875,
+                71.7254638671875,
+                512.4324340820312,
+                249.9339599609375
+              ],
+              "block_char_end": 1116,
+              "block_char_start": 0,
+              "block_id": "p000012_b00000",
+              "char_end": 1116,
+              "char_start": 0,
+              "page_index": 12,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_b2213c420972075aec37186d",
+          "global_order": 50,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_c6e5dc0164367d465c9db04d",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_c6e5dc0164367d465c9db04d",
+          "previous_id": "para_686c6e7b89ac2f0b6c309b09",
+          "next_id": "para_0a7b2d7830743a84b0bbda13",
+          "source_spans": [
+            {
+              "bbox": [
+                99.4921875,
+                273.1337890625,
+                451.917236328125,
+                289.7451171875
+              ],
+              "block_char_end": 57,
+              "block_char_start": 0,
+              "block_id": "p000012_b00001",
+              "char_end": 1174,
+              "char_start": 1117,
+              "page_index": 12,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_0a7b2d7830743a84b0bbda13",
+          "global_order": 51,
+          "existing_classification": "block_quote",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_c6e5dc0164367d465c9db04d",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_c6e5dc0164367d465c9db04d",
+          "previous_id": "para_b2213c420972075aec37186d",
+          "next_id": "para_7bf1c6e360f2c179fffe8037",
+          "source_spans": [
+            {
+              "bbox": [
+                97.2421875,
+                307.2254638671875,
+                512.4931030273438,
+                485.4339599609375
+              ],
+              "block_char_end": 1121,
+              "block_char_start": 0,
+              "block_id": "p000012_b00002",
+              "char_end": 2296,
+              "char_start": 1175,
+              "page_index": 12,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_7bf1c6e360f2c179fffe8037",
+          "global_order": 52,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_c6e5dc0164367d465c9db04d",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_c6e5dc0164367d465c9db04d",
+          "previous_id": "para_0a7b2d7830743a84b0bbda13",
+          "next_id": "para_e87156d748665cc95977dc23",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                508.6337890625,
+                534.9764404296875,
+                663.2451171875
+              ],
+              "block_char_end": 639,
+              "block_char_start": 0,
+              "block_id": "p000012_b00003",
+              "char_end": 2936,
+              "char_start": 2297,
+              "page_index": 12,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_e87156d748665cc95977dc23",
+          "global_order": 53,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_c6e5dc0164367d465c9db04d",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_c6e5dc0164367d465c9db04d",
+          "previous_id": "para_7bf1c6e360f2c179fffe8037",
+          "next_id": "para_bc148d3c92689d7f87c82069",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                665.3837890625,
+                534.9497680664062,
+                716.4951171875
+              ],
+              "block_char_end": 204,
+              "block_char_start": 0,
+              "block_id": "p000012_b00004",
+              "char_end": 3141,
+              "char_start": 2937,
+              "page_index": 12,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            },
+            {
+              "bbox": [
+                76.9921875,
+                72.13330078125,
+                534.9712524414062,
+                157.74462890625
+              ],
+              "block_char_end": 311,
+              "block_char_start": 0,
+              "block_id": "p000013_b00000",
+              "char_end": 311,
+              "char_start": 0,
+              "page_index": 13,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_bc148d3c92689d7f87c82069",
+          "global_order": 54,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_c6e5dc0164367d465c9db04d",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_c6e5dc0164367d465c9db04d",
+          "previous_id": "para_e87156d748665cc95977dc23",
+          "next_id": "para_ab5bfd7aa127ecf6ade368e6",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                159.88330078125,
+                534.9330444335938,
+                314.49462890625
+              ],
+              "block_char_end": 588,
+              "block_char_start": 0,
+              "block_id": "p000013_b00001",
+              "char_end": 900,
+              "char_start": 312,
+              "page_index": 13,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_ab5bfd7aa127ecf6ade368e6",
+          "global_order": 55,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_c6e5dc0164367d465c9db04d",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_c6e5dc0164367d465c9db04d",
+          "previous_id": "para_bc148d3c92689d7f87c82069",
+          "next_id": "para_5acdce6023a8777c29250f58",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                316.63330078125,
+                534.8724365234375,
+                506.49462890625
+              ],
+              "block_char_end": 755,
+              "block_char_start": 0,
+              "block_id": "p000013_b00002",
+              "char_end": 1656,
+              "char_start": 901,
+              "page_index": 13,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_5acdce6023a8777c29250f58",
+          "global_order": 56,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_c6e5dc0164367d465c9db04d",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_c6e5dc0164367d465c9db04d",
+          "previous_id": "para_ab5bfd7aa127ecf6ade368e6",
+          "next_id": "para_e5903faec94abfb1902e69b8",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                508.63330078125,
+                534.9833374023438,
+                663.24462890625
+              ],
+              "block_char_end": 577,
+              "block_char_start": 0,
+              "block_id": "p000013_b00003",
+              "char_end": 2234,
+              "char_start": 1657,
+              "page_index": 13,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_e5903faec94abfb1902e69b8",
+          "global_order": 57,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_c6e5dc0164367d465c9db04d",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_c6e5dc0164367d465c9db04d",
+          "previous_id": "para_5acdce6023a8777c29250f58",
+          "next_id": "para_e6095028ee461c600c9e27cf",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                665.38330078125,
+                534.8021240234375,
+                716.49462890625
+              ],
+              "block_char_end": 158,
+              "block_char_start": 0,
+              "block_id": "p000013_b00004",
+              "char_end": 2393,
+              "char_start": 2235,
+              "page_index": 13,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_e6095028ee461c600c9e27cf",
+          "global_order": 58,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_c6e5dc0164367d465c9db04d",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_c6e5dc0164367d465c9db04d",
+          "previous_id": "para_e5903faec94abfb1902e69b8",
+          "next_id": "para_21367b81ad95fd7388ce06a9",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                72.13330078125,
+                534.9959716796875,
+                209.49462890625
+              ],
+              "block_char_end": 529,
+              "block_char_start": 0,
+              "block_id": "p000014_b00000",
+              "char_end": 529,
+              "char_start": 0,
+              "page_index": 14,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_21367b81ad95fd7388ce06a9",
+          "global_order": 59,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_c6e5dc0164367d465c9db04d",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_c6e5dc0164367d465c9db04d",
+          "previous_id": "para_e6095028ee461c600c9e27cf",
+          "next_id": "para_123ab942466e32d9b5c72831",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                211.63330078125,
+                534.9661865234375,
+                331.74462890625
+              ],
+              "block_char_end": 437,
+              "block_char_start": 0,
+              "block_id": "p000014_b00001",
+              "char_end": 967,
+              "char_start": 530,
+              "page_index": 14,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_123ab942466e32d9b5c72831",
+          "global_order": 60,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_c6e5dc0164367d465c9db04d",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_c6e5dc0164367d465c9db04d",
+          "previous_id": "para_21367b81ad95fd7388ce06a9",
+          "next_id": "para_96ec9180d90c7281f353986b",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                333.88330078125,
+                534.9423217773438,
+                505.74462890625
+              ],
+              "block_char_end": 695,
+              "block_char_start": 0,
+              "block_id": "p000014_b00002",
+              "char_end": 1663,
+              "char_start": 968,
+              "page_index": 14,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_96ec9180d90c7281f353986b",
+          "global_order": 61,
+          "existing_classification": "paragraph",
+          "classification_decision_in_this_task": null,
+          "parent_id": "node_c6e5dc0164367d465c9db04d",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_c6e5dc0164367d465c9db04d",
+          "previous_id": "para_123ab942466e32d9b5c72831",
+          "next_id": "para_fe5c9345b7efe365fea204f5",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                507.88330078125,
+                535.0189208984375,
+                627.99462890625
+              ],
+              "block_char_end": 496,
+              "block_char_start": 0,
+              "block_id": "p000014_b00003",
+              "char_end": 2160,
+              "char_start": 1664,
+              "page_index": 14,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        }
+      ],
+      "quotes_membership_only": [
+        {
+          "paragraph_id": "para_686c6e7b89ac2f0b6c309b09",
+          "global_order": 49,
+          "page_indexes": [
+            11,
+            12
+          ],
+          "membership_and_sequence_confirmed": true,
+          "formatting_classification_internal_segmentation_or_full_fidelity_approved": false
+        },
+        {
+          "paragraph_id": "para_0a7b2d7830743a84b0bbda13",
+          "global_order": 51,
+          "page_indexes": [
+            12
+          ],
+          "membership_and_sequence_confirmed": true,
+          "formatting_classification_internal_segmentation_or_full_fidelity_approved": false
+        }
+      ],
+      "quote_continuation_scope_note": "As referências existentes da citação 49 abrangem páginas 12–13 e permanecem no intervalo da seção. Não se aprova sua composição interna, junção ou fidelidade textual nesta tarefa.",
+      "next_boundary_only": {
+        "title": "PODERES E TALENTOS",
+        "node_id": "node_b336e49012dedd8ae408cf0f",
+        "page_local": 15,
+        "page_index": 14,
+        "block_id": "p000014_b00004",
+        "bbox_pt": [
+          76.9921875,
+          665.6279907226562,
+          288.58209228515625,
+          691.6790161132812
+        ],
+        "classification_reviewed_or_approved": false
+      },
+      "last_record_bottom_pt": 627.99462890625,
+      "gap_after_last_record_to_boundary_pt": 37.63336181640625,
+      "scope_result": "Os 14 registros ocupam o intervalo da seção em ordem; nenhum registro de outra seção foi incorporado e a navegação permanece recíproca."
+    }
+  },
+  "checks": {
+    "execution": "Asserts direcionados desta tarefa complementares à inspeção visual. Sem reprocessamento, limpeza integral, suíte global ou outras revisões.",
+    "quote_exclusion": "Testes sobre as citações limitam-se à pertença, páginas dentro do intervalo, posição na sequência, navegação e vínculos de ancestralidade. Não há teste nem aprovação de sua tipografia, recuo, segmentação interna ou fidelidade integral.",
+    "passed": 25,
+    "failed": 0,
+    "results": [
+      {
+        "test": "versao_e_fonte_pdf_correspondem_ao_alvo",
+        "result": "passed"
+      },
+      {
+        "test": "arquivos_identicos_byte_a_byte_ao_pacote_publicado",
+        "result": "passed"
+      },
+      {
+        "test": "titulo_unico_na_pagina_no_e_elemento_primario",
+        "result": "passed"
+      },
+      {
+        "test": "transcricao_exata_pdf_bruto_elemento_estrutura",
+        "result": "passed"
+      },
+      {
+        "test": "fonte_tamanho_peso_e_bbox_conferidos_diretamente_no_pdf",
+        "result": "passed"
+      },
+      {
+        "test": "titulo_final_identificado_no_pdf_somente_como_limite",
+        "result": "passed"
+      },
+      {
+        "test": "posicoes_dos_12_registros_comuns_correspondem_as_linhas_do_pdf",
+        "result": "passed"
+      },
+      {
+        "test": "source_spans_do_titulo_validos_e_preservados",
+        "result": "passed"
+      },
+      {
+        "test": "identificadores_derivados_do_no_e_elemento_consistentes",
+        "result": "passed"
+      },
+      {
+        "test": "estilo_de_secao_e_separacao_do_corpo_coerentes",
+        "result": "passed"
+      },
+      {
+        "test": "cadeia_obra_capitulo_secao_nivel_3_valida_sem_ciclo",
+        "result": "passed"
+      },
+      {
+        "test": "subsecao_anterior_nao_e_ancestral_da_secao_alvo",
+        "result": "passed"
+      },
+      {
+        "test": "escopo_exato_14_registros_ordens_48_a_61_sem_intrusos",
+        "result": "passed"
+      },
+      {
+        "test": "primeiro_e_ultimo_registros_correspondem_aos_inicios_informados",
+        "result": "passed"
+      },
+      {
+        "test": "citacoes_49_e_51_somente_pertencimento_e_posicao",
+        "result": "passed"
+      },
+      {
+        "test": "ordem_visual_dos_14_registros_monotonica",
+        "result": "passed"
+      },
+      {
+        "test": "previous_next_reciprocos_incluindo_limites_47_e_62",
+        "result": "passed"
+      },
+      {
+        "test": "parent_chapter_section_e_document_id_validos_nos_14",
+        "result": "passed"
+      },
+      {
+        "test": "continuidade_do_registro_53_entre_paginas_13_e_14_preservada",
+        "result": "passed"
+      },
+      {
+        "test": "fim_do_registro_61_anterior_ao_cabecalho_seguinte",
+        "result": "passed"
+      },
+      {
+        "test": "intervalos_de_caracteres_dos_12_registros_comuns_validos",
+        "result": "passed"
+      },
+      {
+        "test": "fatias_dos_registros_comuns_sem_sobreposicao",
+        "result": "passed"
+      },
+      {
+        "test": "gate_global_review_required_e_bloqueado",
+        "result": "passed"
+      },
+      {
+        "test": "pdf_bruto_historico_derivados_e_alertas_intactos",
+        "result": "passed"
+      },
+      {
+        "test": "registros_das_revisoes_001_a_004_preservados",
+        "result": "passed"
+      }
+    ]
+  },
+  "changes": {
+    "corrections": [],
+    "before": {
+      "classification": "section",
+      "level": 3,
+      "parent_id": "node_0357e0c292c6ecffe3791f27",
+      "record_count": 14
+    },
+    "after": {
+      "classification": "section",
+      "level": 3,
+      "parent_id": "node_0357e0c292c6ecffe3791f27",
+      "record_count": 14
+    },
+    "corpus_files_modified": [],
+    "ids_changed": false,
+    "source_spans_changed": false,
+    "pdf_or_raw_changed": false,
+    "prior_reviews_modified": false,
+    "application": "Registro complementar auditável somente. Não houve necessidade de reescrever corpus, documentação, histórico ou relatório-base; a confirmação não foi aplicada automaticamente ao estado global."
+  },
+  "remaining_uncertainty": {
+    "target_classification_hierarchy_and_membership_ambiguities": [],
+    "specific_block_quote_reviews": "As duas citações permanecem pendentes de suas revisões específicas; nenhum resultado desta tarefa as aprova nesses aspectos.",
+    "next_title_review": "PODERES E TALENTOS não foi revisado ou aprovado; usado somente como limite.",
+    "other_nine_pending_reviews": "Continuam abertas, sem execução ou aprovação nesta tarefa.",
+    "identity_scope": "Não se atesta cópia local (2) não fornecida; a decisão se limita aos hashes da versão publicada registrada.",
+    "fidelity_limit": "Inspeção documental por assistente automatizado e testes direcionados não equivalem a revisão humana ou certificação visual integral."
+  },
+  "global_approval": {
+    "status": "review_required",
+    "chunking_gate_allowed": false,
+    "fidelity_certified": false,
+    "human_approval_claimed": false,
+    "base_report_unchanged": true,
+    "prohibited_processing_executed": false,
+    "note": "Confirmado exclusivamente o alvo da Tarefa 005. As outras nove revisões continuam abertas e o relatório-base mantém seu estado histórico e o bloqueio global."
+  }
+}
