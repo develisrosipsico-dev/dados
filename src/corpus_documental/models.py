@@ -23,6 +23,7 @@ class Config:
     ocr_dpi: int = 300
     join_hyphens: bool = False
     reviewed_line_hyphens: tuple[str, ...] = ()
+    editorial_amendments: tuple[str, ...] = ()
     merge_pages: bool = False
     document_id: str | None = None
     bibliographic_evidence: dict | None = None
@@ -41,6 +42,10 @@ class Config:
                 or any(not re.fullmatch(r"[\wÀ-ÿ]+(?:-[\wÀ-ÿ]+)+", form)
                        for form in self.reviewed_line_hyphens)):
             raise ValueError("Hifenizações revisadas devem ser formas únicas como revela-se.")
+        if (len(set(self.editorial_amendments)) != len(self.editorial_amendments)
+                or any("=" not in item or not all(part.strip() for part in item.split("=", 1))
+                       for item in self.editorial_amendments)):
+            raise ValueError("Emendas editoriais devem usar a forma DOCUMENTAL=PROPOSTA.")
         if not re.fullmatch(r"[A-Za-z0-9_]+(?:\+[A-Za-z0-9_]+)*", self.ocr_language):
             raise ValueError("Idiomas OCR devem usar nomes como por ou por+eng.")
         if self.bibliographic_evidence is not None and not isinstance(self.bibliographic_evidence, dict):

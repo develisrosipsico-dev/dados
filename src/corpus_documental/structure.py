@@ -6,6 +6,7 @@ import statistics
 from .layout import font_size, margin_key, reading_order, repeated_margins
 from .models import stable_id
 from .normalization import normalize_document
+from .provenance import source_refs
 from .composition import body_metrics, paragraph_segments, bounds
 from .hierarchy import layout_hints
 from .graphics import drawing_elements
@@ -60,6 +61,38 @@ def sentences(text, paragraph_id):
              "paragraph_id": paragraph_id, "order": i + 1, "char_start": start,
              "char_end": end, "text": text[start:end], "quality_status": "provisional_rule_based"}
             for i, (start, end) in enumerate(zip(boundaries, boundaries[1:])) if end > start]
+
+
+def editorial_amendments(text, paragraph_id, mapping, spans, configured):
+    """Propostas editoriais opcionais permanecem separadas do texto documental."""
+    result = []
+    for decision in configured:
+        documentary, proposed = (part.strip() for part in decision.split("=", 1))
+        for occurrence in re.finditer(re.escape(documentary), text):
+            refs = []
+            for run in mapping:
+                left = max(occurrence.start(), run["clean_start"])
+                right = min(occurrence.end(), run["clean_end"])
+                if left >= right:
+                    continue
+                if run["kind"] == "identity":
+                    raw_start = run["text_raw_start"] + left-run["clean_start"]
+                    raw_end = raw_start + right-left
+                else:
+                    raw_start, raw_end = run["text_raw_start"], run["text_raw_end"]
+                refs.extend(source_refs(raw_start, raw_end, spans))
+            result.append({
+                "amendment_id": stable_id("amend", paragraph_id, occurrence.start(), occurrence.end(), proposed),
+                "documentary_text": documentary,
+                "proposed_text": proposed,
+                "text_clean_start": occurrence.start(),
+                "text_clean_end": occurrence.end(),
+                "status": "proposed_unverified",
+                "applied_to_text_clean": False,
+                "basis": "editorial_proposal_not_literal_pdf_transcription",
+                "source_refs": refs,
+            })
+    return result
 
 
 def _fold(text):
@@ -227,6 +260,16 @@ def build_structure(pages, metadata, version, config, audit):
                           "source_spans": spans, "transformations": transforms, "normalization_map": mapping,
                           "quality_status": "review_required" if uncertain or page["status"] != "ok" else "automated",
                           "classification": kind}
+                amendments = editorial_amendments(clean, identity, mapping, spans, config.editorial_amendments)
+                if amendments:
+                    record["editorial_amendments"] = amendments
+                    for amendment in amendments:
+                        audit.add("editorial_amendment", "Emenda editorial proposta e não aplicada ao texto documental.",
+                                  severity="warning", unit_id=identity,
+                                  amendment_id=amendment["amendment_id"],
+                                  documentary_text=amendment["documentary_text"],
+                                  proposed_text=amendment["proposed_text"],
+                                  status=amendment["status"])
                 if kind == "table_text":
                     record["related_table_ids"] = [identity for identity, table in page_tables if _inside(segment["bbox"], table["bbox"])]
                 if kind in {"footnote", "endnote", "endnote_candidate"}:

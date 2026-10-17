@@ -10,6 +10,7 @@ from corpus_documental.cli import main
 from corpus_documental.composition import make_segment
 from corpus_documental.models import Config
 from corpus_documental.normalization import normalize_document
+from corpus_documental.structure import editorial_amendments
 from corpus_documental.pipeline import process
 from corpus_documental.storage import load_corpus
 from corpus_documental.validation import validate
@@ -145,6 +146,28 @@ def test_enclitic_line_break_preserves_lexical_hyphen_and_provenance():
     ambiguous, _, _ = normalize_document("A palavra anali-\nse permanece ambígua.",
                                          Config(pages=(0,)), Audit(), "ambigua")
     assert ambiguous == "A palavra anali- se permanece ambígua."
+
+
+def test_editorial_amendment_stays_separate_from_documentary_text():
+    raw = "são pré-\nrequisi-tos para a criatividade"
+    span = {"page_index": 0, "block_id": "b", "block_char_start": 0,
+            "block_char_end": len(raw), "char_start": 100, "char_end": 100+len(raw),
+            "bbox": [10, 10, 200, 30], "pdf_page_label": None, "printed_page_number": None}
+    config = Config(pages=(0,), reviewed_line_hyphens=("pré-requisi-tos",),
+                    editorial_amendments=("pré-requisi-tos=pré-requisitos",))
+    clean, changes, mapping = normalize_document(raw, config, Audit(), "p", [span])
+    amendments = editorial_amendments(clean, "p", mapping, [span], config.editorial_amendments)
+
+    assert clean == "são pré-requisi-tos para a criatividade"
+    assert changes[0]["operation"] == "join_reviewed_hyphen_layout"
+    assert changes[0]["deleted_text_raw_ranges"] == [[8, 9]]
+    assert len(amendments) == 1
+    amendment = amendments[0]
+    assert amendment["documentary_text"] == "pré-requisi-tos"
+    assert amendment["proposed_text"] == "pré-requisitos"
+    assert amendment["status"] == "proposed_unverified"
+    assert amendment["applied_to_text_clean"] is False
+    assert len(amendment["source_refs"]) == 2
 
 
 def test_gate_approved_only_when_implemented_checks_have_no_pending_cases(tmp_path, capsys):

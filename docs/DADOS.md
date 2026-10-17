@@ -108,6 +108,7 @@ Cada registro contém:
 | `transformations` | Operação e valores completos `before`/`after`, encadeados |
 | `classification`, `quality_status` | Tipo e estado da revisão |
 | `normalization_map` | Intervalos limpos ligados ao texto bruto composto e às origens físicas |
+| `editorial_amendments` | Propostas editoriais opcionais, separadas e não aplicadas ao texto documental |
 | `hierarchy_review_required` | Necessidade de revisar o contexto ancestral |
 | `sentences` | Períodos subordinados, com IDs e offsets no texto **limpo** |
 
@@ -124,6 +125,11 @@ em pontuação e exceções de abreviaturas. `normalization_map` registra interv
 composto e `source_refs` físicos correspondentes. Separadores introduzidos na
 composição são explicitados. Operações de NFC podem mapear um grupo de caracteres
 a um intervalo, sem prometer alinhamento lexical um a um.
+
+Cada item de `editorial_amendments` registra `documentary_text`, `proposed_text`,
+intervalos em `text_clean`, `source_refs`, justificativa, estado de verificação e
+se a proposta foi aplicada. Propostas `proposed_unverified` mantêm
+`applied_to_text_clean = false`; elas não substituem a transcrição visível no PDF.
 
 ## `elements.jsonl`
 

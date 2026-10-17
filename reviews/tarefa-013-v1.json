@@ -1,0 +1,306 @@
+{
+  "task_id": "TAREFA_013",
+  "review_id": "tarefa-013-v1",
+  "record_version": 1,
+  "created_at_utc": "2026-10-17T03:54:19Z",
+  "decision": "corrected",
+  "reviewer_kind": "automated_assistant_visual_and_structural_review_not_human",
+  "target": {
+    "historical_0_2_0": {
+      "paragraph_id": "para_e8a04dd4bb3175102d71fe8f",
+      "event_id": "event_000189"
+    },
+    "base_0_2_1": {
+      "paragraph_id": "para_9223c4c446178773dab76b1a",
+      "event_id": "event_000190",
+      "event_code": "hyphenation_candidate",
+      "section_id": "node_8302cb6fa95590985601e8a7"
+    },
+    "corrected_0_2_2": {
+      "paragraph_id": "para_c2292c144fe3cfe4cfb83fe2",
+      "layout_event_id": "event_000190",
+      "normalization_event_id": "event_000191",
+      "editorial_event_id": "event_000193",
+      "section_id": "node_556172862409fc5a3ea1bfc5"
+    },
+    "paragraph_global_order": 64,
+    "section_title": "PODERES E TALENTOS",
+    "page_local": 16,
+    "page_index": 15,
+    "block_id": "p000015_b00002",
+    "source_span": {
+      "page_index": 15,
+      "block_id": "p000015_b00002",
+      "block_char_start": 0,
+      "block_char_end": 278,
+      "char_start": 1479,
+      "char_end": 1757,
+      "bbox": [76.9921875, 437.38330078125, 534.7041625976562, 505.74462890625]
+    }
+  },
+  "versions": {
+    "historical_application_version": "0.2.0",
+    "base_application_version": "0.2.1",
+    "corrected_application_version": "0.2.2",
+    "base_corpus_version": "corpus_022b45189da97ba52b27e7ef",
+    "corrected_corpus_version": "corpus_d0a65ff175869223b26ee04b",
+    "base_git_commit": "031bcf24f017f49aa9deb4a6c0dce1fbdfdc86b7",
+    "corrected_implementation_sha256": "fed647133bf01033659d3ce8df3813365245638c036df8c1f5e11f33e423eb37",
+    "identity_note": "Os IDs determinísticos mudaram com a versão da aplicação e a configuração. O vínculo auditável usa source_spans idênticos e lineage.jsonl."
+  },
+  "source_hashes": {
+    "base_original.pdf": "dabd10538ffdc866c6fa24187ffb1b9f784f647a01d5286a9c6a91cd7015633d",
+    "corrected_original.pdf": "dabd10538ffdc866c6fa24187ffb1b9f784f647a01d5286a9c6a91cd7015633d",
+    "base_pages_raw.jsonl": "64e0b2d3cc7adf6c53a663470080fecf2a03ab203c55d5ed08817a248de56811",
+    "corrected_pages_raw.jsonl": "64e0b2d3cc7adf6c53a663470080fecf2a03ab203c55d5ed08817a248de56811",
+    "base_metadata.json": "a19b1246ae773cdc29fa02c9ff84689d0142bad336f37c0ea524faaebb2cea3b",
+    "corrected_metadata.json": "2def83b44f006c6f5191da6930aae44d95b80f3f41e3880bd7cc39fe89a586be",
+    "base_structure.json": "4a3a5e0f4750591ca7452e4e0def5f3783dbbd00307b1c88482d57f8d92d50c2",
+    "corrected_structure.json": "d65d7469cdd993ffc41cee02d47540c5c54442c8acfa887e0a8e927a1c3cd17f",
+    "base_paragraphs.jsonl": "93cec6307e8f4811b1c77b86bebd0f124a40c14eff374443005756092b7b961c",
+    "corrected_paragraphs.jsonl": "4a27d1faa10cf9a4fa5ea03bc3167b4da54ea20d72f8a6e5ba16d552fd7386df",
+    "base_elements.jsonl": "0b93108b90b36fc2bcb006733fc62ae0fe52738f51cebccf28ba990c79185aed",
+    "corrected_elements.jsonl": "c6d316fd67582fc3c5523e98043963672d168a3bbaea98bf88e5b0ecd7fcd3b4",
+    "base_processing_log.jsonl": "6c6e52c3dbdb72d57e6bc5f3bfb4bbca9ab75824096422b72788557c4baeba3b",
+    "corrected_processing_log.jsonl": "8696b7a34cd97771c4d93ebe656e5e1a1f0a54a3913b4457e7ec87b4d5c33613",
+    "base_validation_report.json": "f987f79ab7c03dc7b547a1a751aa7edbe4802813a2d02e7bd8205cabc5ac8ab0",
+    "corrected_validation_report.json": "78d340a6695b5d81c99f04ef049e6155612d72a20525c166bbdf8f373d181390",
+    "corrected_lineage.jsonl": "a8deb0b2ddeb9969dc5de3a2a1999f68caed7e7d7b28e608f1f0fffbbc5d0efe",
+    "story-capitulo-1-revisao-documental-v0.2.2.zip": "0af12c937c03f7b187be9569ca837a41bee19d14cbd0722d7c74197be9bb1125",
+    "normalization.py": "4b3c3859816135237b9bf15576472da61475a8c4287b5ca560fa9d81776dd896",
+    "structure.py": "0e871e5a3121aa853a748afc27bc4dd223b17d1588e5a082e934d5f3f9bfd3d6",
+    "quality.py": "eb9f60b5e03d89b0bbb9a7a62900409756ea0af872ff565477f44be869fad33d",
+    "models.py": "4d6bb62a6574eb8b2f9f5c42682c4cdd707eb672a7f96cfa4d03381c84eb91ac",
+    "cli.py": "e5dc6bbf9dda6af7bb7ec7ebd6ab9a6e5be4137b71c9281b4bdd2de16d13c7ee"
+  },
+  "evidence": {
+    "visual_inspection_performed": true,
+    "pdf_page": {
+      "page_local": 16,
+      "page_index": 15,
+      "first_line": {
+        "text_end": "são pré-",
+        "bbox": [99.4921875, 437.38330078125, 534.6539306640625, 453.99462890625],
+        "baseline_y": 450.75,
+        "font": "LiberationSerif",
+        "size_pt": 15.0
+      },
+      "next_line": {
+        "text_start": "requisi-tos para a criatividade",
+        "bbox": [76.9921875, 454.63330078125, 534.6734008789062, 471.24462890625],
+        "baseline_y": 468.0,
+        "font": "LiberationSerif",
+        "size_pt": 15.0
+      },
+      "finding": "A imagem e as linhas nativas mostram o hífen após 'pré', a quebra física e o segundo hífen dentro de 'requisi-tos'. As linhas são consecutivas e têm a mesma fonte, tamanho e composição de corpo."
+    },
+    "before": {
+      "text_raw_fragment": "pré-\nrequisi-tos",
+      "text_clean_fragment": "pré- requisi-tos",
+      "line_break_raw_range": [68, 69],
+      "event": {
+        "event_id": "event_000190",
+        "code": "hyphenation_candidate",
+        "severity": "warning",
+        "applied": false
+      }
+    },
+    "after": {
+      "text_raw_fragment": "pré-\nrequisi-tos",
+      "text_clean_fragment": "pré-requisi-tos",
+      "transformation": {
+        "operation": "join_reviewed_hyphen_layout",
+        "deleted_text_raw_ranges": [[68, 69]],
+        "deleted_character": "newline",
+        "first_hyphen_raw_index": 67,
+        "second_hyphen_raw_index": 76,
+        "both_printed_hyphens_preserved": true
+      }
+    },
+    "editorial_amendment": {
+      "amendment_id": "amend_ffbc86f38e6de58593633e3b",
+      "documentary_text": "pré-requisi-tos",
+      "proposed_text": "pré-requisitos",
+      "status": "proposed_unverified",
+      "applied_to_text_clean": false,
+      "basis": "editorial_proposal_not_literal_pdf_transcription",
+      "text_clean_range": [64, 79],
+      "source_refs": [
+        {
+          "text_raw_range": [64, 68],
+          "page_char_range": [1543, 1547]
+        },
+        {
+          "text_raw_range": [69, 80],
+          "page_char_range": [1548, 1559]
+        }
+      ],
+      "additional_documentary_evidence": "Nenhuma outra ocorrência de 'pré-requisitos' foi localizada nas 18 páginas do recorte; a proposta não foi tratada como transcrição do PDF."
+    },
+    "root_cause": {
+      "module": "src/corpus_documental/normalization.py",
+      "function": "normalize_document",
+      "description": "A regra revisada de quebra com hífen capturava somente o primeiro token à direita. Em 'pré-\\nrequisi-tos', ela via 'pré-requisi' e não reconhecia a forma completa autorizada; join_layout_lines convertia então o newline em espaço."
+    },
+    "correction_scope": {
+      "reviewed_line_hyphens": ["revela-se", "pré-requisi-tos"],
+      "editorial_amendments": ["pré-requisi-tos=pré-requisitos"],
+      "matches_in_base_pages_raw": 1,
+      "other_paragraph_text_clean_changes": 0,
+      "text_raw_changes": 0
+    },
+    "provenance": {
+      "normalization_map_errors": [],
+      "clean_text_coverage_complete": true,
+      "raw_gap_for_removed_layout_character": [68, 69],
+      "amendment_documentary_source_ranges": [[64, 68], [69, 80]],
+      "source_spans_unchanged": true,
+      "sentence_ranges_after": [[0, 164], [164, 223], [223, 277]],
+      "pdf_and_pages_raw_unchanged": true,
+      "history_preserved": true
+    }
+  },
+  "changes": {
+    "code": [
+      "A captura da forma explicitamente revisada passou a aceitar hífens internos no token à direita da quebra.",
+      "Foi adicionada a configuração editorial_amendments no formato DOCUMENTAL=PROPOSTA.",
+      "Emendas editoriais são armazenadas separadamente, com source_refs, estado proposed_unverified e sem alteração de text_clean.",
+      "A validação bloqueia emendas com intervalo, texto, estado, aplicação ou proveniência inconsistentes."
+    ],
+    "tests": [
+      "Caso sintético com pré-\\nrequisi-tos, remoção exclusiva do newline e emenda separada.",
+      "Regressão no PDF real para offsets, dois hífens, source_refs, sentenças e evento.",
+      "Comparação dos 72 parágrafos da 0.2.1 por source_spans, permitindo mudança limpa somente na ordem 64.",
+      "Regressão explícita da correção revela-se da Tarefa 012."
+    ],
+    "artifacts": [
+      "Criado corpora/story-capitulo-1-revisao-documental-v0.2.2 a partir do pages_raw.jsonl da 0.2.1.",
+      "Criado lineage.jsonl com 72 vínculos por source_spans idênticos.",
+      "Criado story-capitulo-1-revisao-documental-v0.2.2.zip sem sobrescrever a 0.2.1."
+    ],
+    "base_files_modified": false,
+    "pdf_modified": false,
+    "pages_raw_modified": false,
+    "task_014_executed": false,
+    "bibliographic_reconciliation_executed": false,
+    "vector_or_retrieval_processing_executed": false
+  },
+  "lineage": {
+    "method": "exact_match_of_ordered_source_spans",
+    "record_count": 72,
+    "target": {
+      "previous_paragraph_id": "para_9223c4c446178773dab76b1a",
+      "current_paragraph_id": "para_c2292c144fe3cfe4cfb83fe2",
+      "relation": "identical_source_spans",
+      "global_order": 64
+    },
+    "task_012_target": {
+      "previous_paragraph_id": "para_7a4532fb517da39e27092937",
+      "current_paragraph_id": "para_4c5aa2d974da42e60a1b5458",
+      "global_order": 8,
+      "text_clean_contains": "revela-se"
+    }
+  },
+  "checks": [
+    {
+      "test": "visual_inspection",
+      "method": "Renderizar e examinar somente a página local 16 e confrontar as linhas nativas do PDF.",
+      "result": "passed",
+      "evidence": "'pré-' termina em y=450.75 e 'requisi-tos' começa em y=468.0; os dois hífens são visíveis.",
+      "limitations": "Inspeção automatizada; não equivale a aprovação humana."
+    },
+    {
+      "test": "base_version_resolution",
+      "method": "Localizar por bloco, faixa de caracteres, ordem e texto bruto na 0.2.1.",
+      "result": "passed",
+      "evidence": "Localizado para_9223c4c446178773dab76b1a e event_000190 no bloco p000015_b00002, página [1479,1757).",
+      "limitations": "O arquivo lineage próprio da 0.2.1 não existia; a correspondência histórica foi conferida por origens físicas idênticas."
+    },
+    {
+      "test": "raw_identity",
+      "method": "Comparar SHA-256 e bytes de original.pdf e pages_raw.jsonl entre 0.2.1 e 0.2.2.",
+      "result": "passed",
+      "evidence": "Os hashes são idênticos e os 72 text_raw coincidem.",
+      "limitations": "A correção existe somente nos derivados."
+    },
+    {
+      "test": "documentary_normalization",
+      "method": "Comparar transformação, texto anterior/posterior e intervalo removido.",
+      "result": "passed",
+      "evidence": "Somente [68,69), contendo newline, foi removido; a saída é pré-requisi-tos e ambos os hífens foram preservados.",
+      "limitations": "A decisão vale para esta forma explicitamente configurada."
+    },
+    {
+      "test": "editorial_separation",
+      "method": "Conferir campo, evento, intervalo limpo e source_refs da proposta pré-requisitos.",
+      "result": "passed",
+      "evidence": "A proposta está proposed_unverified, applied_to_text_clean=false e aponta para as fatias brutas [64,68) e [69,80).",
+      "limitations": "O recorte não fornece evidência para aprovar a remoção do hífen interno."
+    },
+    {
+      "test": "normalization_map_and_sentences",
+      "method": "Executar validate_map e comparar cada texto de sentença com sua fatia em text_clean.",
+      "result": "passed",
+      "evidence": "Nenhum erro no mapa; períodos cobrem [0,164), [164,223) e [223,277).",
+      "limitations": "As fronteiras de sentença continuam baseadas em regra."
+    },
+    {
+      "test": "scope_and_lineage",
+      "method": "Relacionar todos os parágrafos por source_spans e comparar text_raw/text_clean.",
+      "result": "passed",
+      "evidence": "72 vínculos um-para-um; somente a ordem 64 mudou em text_clean. lineage.jsonl registra os IDs 0.2.1→0.2.2.",
+      "limitations": "IDs mudam pela política de identidade da versão."
+    },
+    {
+      "test": "task_012_regression",
+      "method": "Localizar revela-\\nse na 0.2.2 e conferir sua forma limpa.",
+      "result": "passed",
+      "evidence": "para_4c5aa2d974da42e60a1b5458 contém exatamente uma ocorrência de revela-se.",
+      "limitations": "Não reabre a decisão documental da Tarefa 012."
+    },
+    {
+      "test": "automated_suite",
+      "method": "Executar .venv/bin/python -m pytest -q.",
+      "result": "passed",
+      "evidence": "68 passed in 6.19s.",
+      "limitations": "Testes automatizados não substituem inspeção visual humana."
+    },
+    {
+      "test": "corpus_validation",
+      "method": "Executar corpus validate na versão 0.2.2.",
+      "result": "passed",
+      "evidence": "raw_integrity=passed, checks.errors=[], documentary_quality.blockers=[] e status=review_required.",
+      "limitations": "Há 13 itens de revisão, incluindo a proposta editorial não verificada."
+    },
+    {
+      "test": "global_gate",
+      "method": "Executar corpus check-ready na versão 0.2.2.",
+      "result": "passed_expected_block",
+      "evidence": "Exit 2; chunking_gate.allowed=false; pending_review_count=13.",
+      "limitations": "O corpus não está liberado para chunking."
+    },
+    {
+      "test": "package_integrity",
+      "method": "Executar unzip -t no pacote 0.2.2.",
+      "result": "passed",
+      "evidence": "No errors detected; o ZIP contém original.pdf, histórico, derivados e lineage.jsonl.",
+      "limitations": "O hash do ZIP autentica este pacote, não constitui assinatura digital."
+    }
+  ],
+  "remaining_uncertainty": {
+    "target_layout": [],
+    "editorial_amendment": "A grafia pré-requisitos é plausível, mas não está literalmente documentada no recorte; permanece proposed_unverified e não aplicada.",
+    "other_reviews": "As demais pendências não foram examinadas nesta tarefa.",
+    "task_014": "Não executada.",
+    "fidelity_limit": "A correção pontual não declara fidelidade integral nem aprovação humana."
+  },
+  "global_approval": {
+    "status": "review_required",
+    "chunking_gate_allowed": false,
+    "pending_review_count": 13,
+    "fidelity_certified": false,
+    "human_approval_claimed": false,
+    "prohibited_processing_executed": false,
+    "note": "A quebra de linha foi corrigida. A emenda editorial continua não verificada e as demais pendências permanecem abertas."
+  }
+}

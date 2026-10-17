@@ -40,6 +40,56 @@ def test_page_3_revela_se_preserves_lexical_hyphen(reviewed_story):
                    for e in data["events"])
 
 
+def test_page_16_pre_requisitos_separates_layout_from_editorial_amendment(reviewed_story):
+    data = reviewed_story["data"]
+    paragraph = next(p for p in data["paragraphs"] if "pré-\nrequisi-tos" in p["text_raw"])
+    assert paragraph["paragraph_global_order"] == 64
+    assert "pré-requisi-tos" in paragraph["text_clean"]
+    assert "pré- requisi-tos" not in paragraph["text_clean"]
+    assert "pré-requisitos" not in paragraph["text_clean"]
+    change = next(c for c in paragraph["transformations"]
+                  if c["operation"] == "join_reviewed_hyphen_layout")
+    assert change["deleted_text_raw_ranges"] == [[68, 69]]
+    amendment, = paragraph["editorial_amendments"]
+    assert amendment["documentary_text"] == "pré-requisi-tos"
+    assert amendment["proposed_text"] == "pré-requisitos"
+    assert amendment["status"] == "proposed_unverified"
+    assert amendment["applied_to_text_clean"] is False
+    assert len(amendment["source_refs"]) == 2
+    assert [(ref["text_raw_start"], ref["text_raw_end"]) for ref in amendment["source_refs"]] == [(64, 68), (69, 80)]
+    assert "".join(paragraph["text_raw"][ref["text_raw_start"]:ref["text_raw_end"]]
+                   for ref in amendment["source_refs"]) == amendment["documentary_text"]
+    first = paragraph["sentences"][0]
+    assert first["text"] == paragraph["text_clean"][first["char_start"]:first["char_end"]]
+
+    previous = next(p for p in data["events"]
+                    if p["code"] == "raw_extraction_reused")
+    assert previous["previous_corpus_version"] == "corpus_022b45189da97ba52b27e7ef"
+
+
+def test_page_16_revision_preserves_every_other_clean_paragraph(reviewed_story):
+    from corpus_documental.storage import read_jsonl
+
+    current = reviewed_story["data"]["paragraphs"]
+    previous = read_jsonl(reviewed_story["previous"] / "paragraphs.jsonl")
+    by_spans = {
+        tuple((s["page_index"], s["block_id"], s["block_char_start"], s["block_char_end"])
+              for s in p["source_spans"]): p
+        for p in previous
+    }
+    changed = []
+    for paragraph in current:
+        key = tuple((s["page_index"], s["block_id"], s["block_char_start"], s["block_char_end"])
+                    for s in paragraph["source_spans"])
+        before = by_spans[key]
+        assert paragraph["text_raw"] == before["text_raw"]
+        if paragraph["text_clean"] != before["text_clean"]:
+            changed.append((before, paragraph))
+    assert len(changed) == 1
+    assert changed[0][0]["paragraph_global_order"] == changed[0][1]["paragraph_global_order"] == 64
+    assert any("revela-se" in paragraph["text_clean"] for paragraph in current)
+
+
 def test_page_13_long_quotation_is_one_visual_unit(reviewed_story):
     data = reviewed_story["data"]
     relevant = [p for p in data["paragraphs"] if any(s["page_index"] == 12 for s in p["source_spans"])]

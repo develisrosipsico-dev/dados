@@ -51,6 +51,15 @@ def assess_document(metadata, pages, structure, paragraphs, elements, events):
             issue("missing_paragraph_source", unit_id=identifier)
             continue
         words = re.findall(r"\b[^\W\d_]+\b", paragraph["text_clean"])
+        for amendment in paragraph.get("editorial_amendments", []):
+            start, end = amendment.get("text_clean_start"), amendment.get("text_clean_end")
+            if (not isinstance(start, int) or not isinstance(end, int) or not 0 <= start < end <= len(paragraph["text_clean"])
+                    or paragraph["text_clean"][start:end] != amendment.get("documentary_text")
+                    or amendment.get("applied_to_text_clean") is not False
+                    or amendment.get("status") != "proposed_unverified"
+                    or not amendment.get("source_refs")):
+                issue("editorial_amendment_provenance", unit_id=identifier,
+                      amendment_id=amendment.get("amendment_id"))
         if len(words) == 1:
             review.append({"code": "single_word_paragraph", "unit_id": identifier, "text": paragraph["text_clean"]})
         # A mesma unidade não pode retroceder horizontalmente dentro de uma linha.
@@ -163,7 +172,7 @@ def assess_document(metadata, pages, structure, paragraphs, elements, events):
     if raw_calls != calls:
         issue("note_call_coverage", expected=raw_calls, actual=calls)
     for event in events:
-        if event["severity"] == "warning" and event["code"] in {"hyphenation_candidate", "suspect_characters", "ocr_applied", "no_text", "page_continuation_ambiguous"}:
+        if event["severity"] == "warning" and event["code"] in {"hyphenation_candidate", "editorial_amendment", "suspect_characters", "ocr_applied", "no_text", "page_continuation_ambiguous"}:
             review.append({"code": event["code"], "event_id": event["event_id"], "unit_id": event.get("unit_id")})
     return {"status": "blocked" if blockers else "review_required" if review else "approved",
             "blockers": blockers, "review_items": review,

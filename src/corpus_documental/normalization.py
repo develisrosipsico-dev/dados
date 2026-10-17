@@ -43,7 +43,7 @@ def normalize_document(raw, config, audit, unit_id, source_spans=(), word_eviden
     edits("reuse_existing_line_boundary_space", [(m.start(), m.end(), "") for m in re.finditer(r"(?<=[ \t])\n(?=\S)", text)])
     reviewed_forms = {form.casefold() for form in config.reviewed_line_hyphens}
     reviewed = []
-    for match in re.finditer(r"([\wÀ-ÿ]+)-[ \t]*\n+(\w+)", text):
+    for match in re.finditer(r"([\wÀ-ÿ]+)-[ \t]*\n+(\w+(?:-\w+)*)", text):
         prefix = re.search(r"[\w-]+$", text[:match.start()+len(match[1])])
         retained = (prefix[0] if prefix else match[1])+"-"+match[2]
         if retained.casefold() in reviewed_forms:
