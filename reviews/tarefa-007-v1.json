@@ -1,0 +1,1387 @@
+{
+  "task_id": "TAREFA_007",
+  "review_id": "tarefa-007-v1",
+  "record_version": 1,
+  "created_at_utc": "2026-10-17T00:25:22.896677+00:00",
+  "decision": "confirmed",
+  "reviewer_kind": "automated_assistant_visual_and_structural_review_not_human",
+  "unit": {
+    "node_id": "node_8e6704a148cca3f0b9dbd2d0",
+    "element_id": "elem_e646cb7c786f8705deca1f41",
+    "title": "O CONHECIMENTO DA ARTE MAXIMIZA O TALENTO",
+    "classification": "section",
+    "level": 3,
+    "parent_id": "node_0357e0c292c6ecffe3791f27",
+    "base_quality_status": "review_required",
+    "page_local": 17,
+    "page_index": 16,
+    "block_id": "p000016_b00002",
+    "source_spans": [
+      {
+        "bbox": [
+          76.9921875,
+          386.62799072265625,
+          498.4329833984375,
+          437.42901611328125
+        ],
+        "block_char_end": 41,
+        "block_char_start": 0,
+        "block_id": "p000016_b00002",
+        "char_end": 1139,
+        "char_start": 1098,
+        "page_index": 16,
+        "pdf_page_label": null,
+        "printed_page_number": null
+      }
+    ]
+  },
+  "sources": {
+    "application_version": "0.2.0",
+    "corpus_version": "corpus_d43918f06609b65f21f89425",
+    "base_git_commit": "9c32e4dc5733e623ed855f9d3cbc1640e93ac41b",
+    "published_package": "story-capitulo-1-revisao-documental-v0.2.0.zip",
+    "published_package_sha256": "3c40e59046f51875b7c12bdba26572ab222499d36fe2fa7f0262cda77a412481",
+    "file_sha256": {
+      "original.pdf": "dabd10538ffdc866c6fa24187ffb1b9f784f647a01d5286a9c6a91cd7015633d",
+      "metadata.json": "f0cd8e1be56eacbe189b15ca6f5267bfb37da1fc9022e11d62892515347158c9",
+      "structure.json": "4d24cc423c343e6886e0842c8b3b9953a75d947a31fcc23a95cc907e297f269c",
+      "pages_raw.jsonl": "64e0b2d3cc7adf6c53a663470080fecf2a03ab203c55d5ed08817a248de56811",
+      "paragraphs.jsonl": "a89f1e48e0bbc1f5ddfd4584792b6a87b67f340dafa8d00ea51a5ee60b0a1900",
+      "elements.jsonl": "7db9c696d5449ff8ccf1d3eb573657b8bcf6863ad83c5df1ee3b02c40e005631",
+      "validation_report.json": "794068fd3b258e5e39456b928e1aeed4c1c6c4cfe6cb72aff6d5eba099860547"
+    },
+    "request_text_sha256": "d9aae1ae712a85337631c3d60a0990b3725fba97f897b2bec95561b2365dfd70",
+    "substitution": {
+      "requested": "structure(2).json",
+      "examined": "structure.json",
+      "reason": "structure(2).json indisponível. Utilizado structure.json do pacote publicado 0.2.0, após conferir SHA-256 e igualdade byte a byte. original.pdf é idêntico a story-capitulo-1.pdf. A decisão se vincula aos hashes registrados."
+    }
+  },
+  "evidence": {
+    "visual_inspection_performed": true,
+    "render_scale": 1.5,
+    "page_dimensions_pt": [
+      612,
+      792
+    ],
+    "visual_scope": [
+      {
+        "page_local": 17,
+        "page_index": 16,
+        "region": "página inteira",
+        "purpose": "Título em duas linhas, parágrafos 68/69 e início do intervalo; texto anterior somente como contexto de posição."
+      },
+      {
+        "page_local": 18,
+        "page_index": 17,
+        "region": "página inteira",
+        "purpose": "Continuação do 69, parágrafos 70–72 e separação espacial das seis notas; notas usadas apenas como limite, sem revisar conteúdo ou chamadas."
+      },
+      {
+        "page_local": 12,
+        "page_index": 11,
+        "clip_pt": [
+          65,
+          537,
+          255,
+          575
+        ],
+        "purpose": "Comparação do padrão visual de seção, sem reabrir sua revisão."
+      }
+    ],
+    "typography": {
+      "font": "CenturyGothic-Bold",
+      "size_pt": 21.247499465942383,
+      "bold": true,
+      "uppercase": true,
+      "alignment": "left_at_body_margin",
+      "bbox_pt": [
+        76.9921875,
+        386.62799072265625,
+        498.4329833984375,
+        437.42901611328125
+      ],
+      "line_count": 2,
+      "native_title_lines": [
+        {
+          "text": "O CONHECIMENTO DA ARTE MAXIMIZA O",
+          "bbox": [
+            76.9921875,
+            386.62799072265625,
+            498.4329833984375,
+            412.67901611328125
+          ]
+        },
+        {
+          "text": "TALENTO",
+          "bbox": [
+            76.9921875,
+            411.37799072265625,
+            164.51235961914062,
+            437.42901611328125
+          ]
+        }
+      ],
+      "line_pitch_pt": 24.75,
+      "gap_from_previous_body_bbox_pt": 37.63336181640625,
+      "gap_to_body_bbox_pt": 17.95428466796875,
+      "measurement_note": "Caixas tipográficas podem se sobrepor levemente entre linhas; espaçamentos não são medidas dos contornos da tinta.",
+      "comparison_style_only": {
+        "title": "ESTÓRIA E VIDA",
+        "font": "CenturyGothic-Bold",
+        "size_pt": 21.247499465942383,
+        "classification_reviewed_or_approved": false
+      }
+    },
+    "text": {
+      "native_pdf_lines": [
+        "O CONHECIMENTO DA ARTE MAXIMIZA O",
+        "TALENTO"
+      ],
+      "raw_block": "O CONHECIMENTO DA ARTE MAXIMIZA O\nTALENTO",
+      "element_raw": "O CONHECIMENTO DA ARTE MAXIMIZA O\nTALENTO",
+      "element_clean": "O CONHECIMENTO DA ARTE MAXIMIZA O TALENTO",
+      "structure_title": "O CONHECIMENTO DA ARTE MAXIMIZA O TALENTO",
+      "exact_raw_to_pdf_lines": true,
+      "exact_clean_to_pdf_lines_joined_by_space": true,
+      "layout_normalization_already_present": [
+        {
+          "after": "O CONHECIMENTO DA ARTE MAXIMIZA O TALENTO",
+          "before": "O CONHECIMENTO DA ARTE MAXIMIZA O\nTALENTO",
+          "operation": "join_layout_lines"
+        }
+      ],
+      "raw_block_range": [
+        0,
+        41
+      ],
+      "raw_page_range": [
+        1098,
+        1139
+      ]
+    },
+    "observations": [
+      "As duas linhas compartilham fonte, tamanho, peso, margem e composição contínua; a segunda contém TALENTO. São um único título, não dois cabeçalhos independentes.",
+      "O título em caixa alta e sem serifa corresponde ao padrão de seção. A cadeia existente aponta diretamente ao capítulo, sem passar por PODERES E TALENTOS.",
+      "O parágrafo 68 começa após o título; o 69 tem recuo inicial próprio na mesma página. Sua continuação na página 18 está alinhada à margem do corpo, seguida pelo recuo de um novo parágrafo de ordem 70.",
+      "O trecho final da página 17 termina em Seus e a continuação começa por companheiros de trabalho. Os dois trechos conservam um único paragraph_id.",
+      "O parágrafo 72 termina com Ele queima violentamente, mas não resulta em nada. Após espaço e linha separadora, há seis unidades numeradas em corpo menor, fora dos parágrafos correntes.",
+      "A presença e a localização das notas foram examinadas apenas para delimitação. Não foi revisado ou aprovado seu conteúdo, classificação individual, correspondência com chamadas ou normalização."
+    ],
+    "ancestry": {
+      "chain_work_to_unit": [
+        {
+          "node_id": "doc_68538e2dac8d252a47d272de",
+          "kind": "work",
+          "title": "Story — Capítulo 1 — O problema da estória",
+          "level": null,
+          "parent_id": null
+        },
+        {
+          "node_id": "node_0357e0c292c6ecffe3791f27",
+          "kind": "chapter",
+          "title": "O PROBLEMA DA ESTÓRIA",
+          "level": 2,
+          "parent_id": "doc_68538e2dac8d252a47d272de"
+        },
+        {
+          "node_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "kind": "section",
+          "title": "O CONHECIMENTO DA ARTE MAXIMIZA O TALENTO",
+          "level": 3,
+          "parent_id": "node_0357e0c292c6ecffe3791f27"
+        }
+      ],
+      "previous_section_is_ancestor": false,
+      "cycles_detected": false
+    },
+    "paragraph_scope": {
+      "count": 5,
+      "global_orders": [
+        68,
+        72
+      ],
+      "paragraphs": [
+        {
+          "paragraph_id": "para_66ef8804ded1fe6dd65c0d1a",
+          "global_order": 68,
+          "text_start": "Mesmo que o talento para estória seja raro, nós frequentemente encontramos pessoas que parecem tê-lo",
+          "text_end": " a moeda do contato humano. E quando uma meia dúzia de almas se reúne para esse ritual no meio da manhã, sempre haverá pelo menos um com esse talento.",
+          "parent_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "previous_id": "para_c65e4f152ff9574b12cf7b1c",
+          "next_id": "para_db9eeb4e08b699526de92fa8",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                455.38330078125,
+                534.8668212890625,
+                575.49462890625
+              ],
+              "block_char_end": 457,
+              "block_char_start": 0,
+              "block_id": "p000016_b00003",
+              "char_end": 1597,
+              "char_start": 1140,
+              "page_index": 16,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_db9eeb4e08b699526de92fa8",
+          "global_order": 69,
+          "text_start": "Digamos que essa manhã nossa contadora narra para seus amigos a estória de “Como Eu Coloquei Meus Fi",
+          "text_end": "do ônibus essa manhã”. Seus companheiros de trabalho se reclinam satisfeitos, murmurando, “nossa, é verdade, Helen, meus filhos são bem assim também”.",
+          "parent_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "previous_id": "para_66ef8804ded1fe6dd65c0d1a",
+          "next_id": "para_9cd0cfb8ba41f50801c99978",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                577.63330078125,
+                534.942626953125,
+                714.99462890625
+              ],
+              "block_char_end": 573,
+              "block_char_start": 0,
+              "block_id": "p000016_b00004",
+              "char_end": 2171,
+              "char_start": 1598,
+              "page_index": 16,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            },
+            {
+              "bbox": [
+                76.9921875,
+                72.13330078125,
+                534.2776489257812,
+                105.99462890625
+              ],
+              "block_char_end": 122,
+              "block_char_start": 0,
+              "block_id": "p000017_b00000",
+              "char_end": 122,
+              "char_start": 0,
+              "page_index": 17,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_9cd0cfb8ba41f50801c99978",
+          "global_order": 70,
+          "text_start": "Agora digamos que a vez de contar a estória passe para o sujeito ao seu lado, que conta aos outros o",
+          "text_end": "bonita em seu caixão”. No meio de sua rendição, o resto volta para a cafeteira para mais uma xícara, com suas orelhas tapadas para seu sofrido relato.",
+          "parent_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "previous_id": "para_db9eeb4e08b699526de92fa8",
+          "next_id": "para_d924bdd313dbef772c9daa1a",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                108.13330078125,
+                534.9593505859375,
+                228.24462890625
+              ],
+              "block_char_end": 449,
+              "block_char_start": 0,
+              "block_id": "p000017_b00001",
+              "char_end": 572,
+              "char_start": 123,
+              "page_index": 17,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_d924bdd313dbef772c9daa1a",
+          "global_order": 71,
+          "text_start": "Dada a escolha entre um material trivial brilhantemente contado contra um material profundo mal cont",
+          "text_end": "a reduzem o profundo ao banal. Você pode ter a visão de um Buda, mas se você não consegue contar uma estória, suas ideias se tornam secas como um giz.",
+          "parent_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "previous_id": "para_9cd0cfb8ba41f50801c99978",
+          "next_id": "para_c6cd52d0a4c1a86a9540cf9b",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                230.38330078125,
+                534.85546875,
+                333.24462890625
+              ],
+              "block_char_end": 422,
+              "block_char_start": 0,
+              "block_id": "p000017_b00002",
+              "char_end": 995,
+              "char_start": 573,
+              "page_index": 17,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        },
+        {
+          "paragraph_id": "para_c6cd52d0a4c1a86a9540cf9b",
+          "global_order": 72,
+          "text_start": "Talento para estória é primário, enquanto talento literário é secundário, porém essencial. Esse prin",
+          "text_end": "alento forjar uma estória. Pois talento sem o conhecimento da arte é como combustível sem um motor. Ele queima violentamente, mas não resulta em nada.",
+          "parent_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "previous_id": "para_d924bdd313dbef772c9daa1a",
+          "next_id": null,
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                335.38330078125,
+                535.0234375,
+                507.24462890625
+              ],
+              "block_char_end": 677,
+              "block_char_start": 0,
+              "block_id": "p000017_b00003",
+              "char_end": 1673,
+              "char_start": 996,
+              "page_index": 17,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        }
+      ],
+      "paragraph_69_continuation": {
+        "paragraph_id": "para_db9eeb4e08b699526de92fa8",
+        "pages_local": [
+          17,
+          18
+        ],
+        "first_part_end": "a final explosiva: “e foi assim que\neu coloquei aquela pirralhada dentro do ônibus essa manhã”. Seus",
+        "second_part_start": "companheiros de trabalho se reclinam satisfeitos, murmurando, “nossa, é\nverdade, Helen, meus filhos ",
+        "final_text_end": "essa manhã”. Seus companheiros de trabalho se reclinam satisfeitos, murmurando, “nossa, é verdade, Helen, meus filhos são bem assim também”.",
+        "integral_raw_reconstruction_matches": true
+      },
+      "final_body_paragraph_id": "para_c6cd52d0a4c1a86a9540cf9b",
+      "final_body_next_id": null,
+      "notes_boundary_only": {
+        "page_local": 18,
+        "page_index": 17,
+        "count": 6,
+        "first_note_bbox": [
+          76.9921875,
+          556.9572143554688,
+          531.9894409179688,
+          569.4334716796875
+        ],
+        "first_note_char_start": 1674,
+        "body_72_bbox": [
+          76.9921875,
+          335.38330078125,
+          535.0234375,
+          507.24462890625
+        ],
+        "body_72_char_end": 1673,
+        "gap_pt": 49.71258544921875,
+        "elements": [
+          {
+            "element_id": "elem_a2ba4afd2655bfb77c97ac30",
+            "existing_kind_not_individually_validated": "endnote",
+            "source_spans": [
+              {
+                "bbox": [
+                  76.9921875,
+                  556.9572143554688,
+                  531.9894409179688,
+                  569.4334716796875
+                ],
+                "block_char_end": 102,
+                "block_char_start": 0,
+                "block_id": "p000017_b00004",
+                "char_end": 1776,
+                "char_start": 1674,
+                "page_index": 17,
+                "pdf_page_label": null,
+                "printed_page_number": null
+              }
+            ]
+          },
+          {
+            "element_id": "elem_43718248c9cc000b8489dff9",
+            "existing_kind_not_individually_validated": "endnote",
+            "source_spans": [
+              {
+                "bbox": [
+                  76.9921875,
+                  573.4572143554688,
+                  401.78369140625,
+                  585.9334716796875
+                ],
+                "block_char_end": 72,
+                "block_char_start": 0,
+                "block_id": "p000017_b00005",
+                "char_end": 1849,
+                "char_start": 1777,
+                "page_index": 17,
+                "pdf_page_label": null,
+                "printed_page_number": null
+              }
+            ]
+          },
+          {
+            "element_id": "elem_0659a4cfa5ffcce744bec3a5",
+            "existing_kind_not_individually_validated": "endnote",
+            "source_spans": [
+              {
+                "bbox": [
+                  76.9921875,
+                  589.9572143554688,
+                  534.5584106445312,
+                  627.9334716796875
+                ],
+                "block_char_end": 288,
+                "block_char_start": 0,
+                "block_id": "p000017_b00006",
+                "char_end": 2138,
+                "char_start": 1850,
+                "page_index": 17,
+                "pdf_page_label": null,
+                "printed_page_number": null
+              }
+            ]
+          },
+          {
+            "element_id": "elem_e14c1f41c3fb0a48fb74443c",
+            "existing_kind_not_individually_validated": "endnote",
+            "source_spans": [
+              {
+                "bbox": [
+                  76.9921875,
+                  631.9572143554688,
+                  534.9542846679688,
+                  657.1834716796875
+                ],
+                "block_char_end": 143,
+                "block_char_start": 0,
+                "block_id": "p000017_b00007",
+                "char_end": 2282,
+                "char_start": 2139,
+                "page_index": 17,
+                "pdf_page_label": null,
+                "printed_page_number": null
+              }
+            ]
+          },
+          {
+            "element_id": "elem_0d0f8d6b0fdedaa5f7d4c74e",
+            "existing_kind_not_individually_validated": "endnote",
+            "source_spans": [
+              {
+                "bbox": [
+                  76.9921875,
+                  661.2072143554688,
+                  532.1157836914062,
+                  673.6834716796875
+                ],
+                "block_char_end": 101,
+                "block_char_start": 0,
+                "block_id": "p000017_b00008",
+                "char_end": 2384,
+                "char_start": 2283,
+                "page_index": 17,
+                "pdf_page_label": null,
+                "printed_page_number": null
+              }
+            ]
+          },
+          {
+            "element_id": "elem_219b4fdf13614289f3bd51f4",
+            "existing_kind_not_individually_validated": "endnote",
+            "source_spans": [
+              {
+                "bbox": [
+                  76.9921875,
+                  677.7072143554688,
+                  479.1616516113281,
+                  690.1834716796875
+                ],
+                "block_char_end": 84,
+                "block_char_start": 0,
+                "block_id": "p000017_b00009",
+                "char_end": 2469,
+                "char_start": 2385,
+                "page_index": 17,
+                "pdf_page_label": null,
+                "printed_page_number": null
+              }
+            ]
+          }
+        ],
+        "content_or_calls_reviewed": false,
+        "individual_notes_approved": false
+      }
+    }
+  },
+  "checks": {
+    "execution": "Asserts direcionados complementares à inspeção visual automatizada. Cada resultado inclui método e evidência observada; nenhuma suíte global ou outra revisão foi executada.",
+    "passed": 31,
+    "failed": 0,
+    "results": [
+      {
+        "test": "versao_e_fonte_pdf_identificadas",
+        "method": "Conferir versão e SHA-256 do PDF copiado, PDF de entrada e metadata.",
+        "result": "passed",
+        "evidence": {
+          "application_version": "0.2.0",
+          "corpus_version": "corpus_d43918f06609b65f21f89425",
+          "pdf_sha256": "dabd10538ffdc866c6fa24187ffb1b9f784f647a01d5286a9c6a91cd7015633d",
+          "input_pdf_sha256": "dabd10538ffdc866c6fa24187ffb1b9f784f647a01d5286a9c6a91cd7015633d"
+        }
+      },
+      {
+        "test": "fontes_correspondem_ao_pacote_publicado",
+        "method": "Comparar bytes de cada arquivo examinado com sua entrada no ZIP publicado 0.2.0.",
+        "result": "passed",
+        "evidence": {
+          "byte_matches": {
+            "original.pdf": true,
+            "metadata.json": true,
+            "structure.json": true,
+            "pages_raw.jsonl": true,
+            "paragraphs.jsonl": true,
+            "elements.jsonl": true,
+            "validation_report.json": true
+          },
+          "structure_sha256": "4d24cc423c343e6886e0842c8b3b9953a75d947a31fcc23a95cc907e297f269c"
+        }
+      },
+      {
+        "test": "titulo_visual_em_duas_linhas_e_uma_unidade",
+        "method": "Conferir as duas linhas nativas dentro da caixa, um só bloco bruto, um só nó e um só elemento primário; inspeção visual complementar.",
+        "result": "passed",
+        "evidence": {
+          "native_lines": [
+            {
+              "text": "O CONHECIMENTO DA ARTE MAXIMIZA O",
+              "bbox": [
+                76.9921875,
+                386.62799072265625,
+                498.4329833984375,
+                412.67901611328125
+              ]
+            },
+            {
+              "text": "TALENTO",
+              "bbox": [
+                76.9921875,
+                411.37799072265625,
+                164.51235961914062,
+                437.42901611328125
+              ]
+            }
+          ],
+          "raw_block_id": "p000016_b00002",
+          "node_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "element_id": "elem_e646cb7c786f8705deca1f41",
+          "independent_TALENTO_node": false
+        }
+      },
+      {
+        "test": "transcricao_exata_preservando_quebra_no_bruto",
+        "method": "Comparar o bruto com as linhas PDF unidas por LF e o título limpo com essas mesmas linhas unidas por um espaço.",
+        "result": "passed",
+        "evidence": {
+          "pdf_lines": [
+            "O CONHECIMENTO DA ARTE MAXIMIZA O",
+            "TALENTO"
+          ],
+          "raw": "O CONHECIMENTO DA ARTE MAXIMIZA O\nTALENTO",
+          "clean": "O CONHECIMENTO DA ARTE MAXIMIZA O TALENTO",
+          "node_title": "O CONHECIMENTO DA ARTE MAXIMIZA O TALENTO"
+        }
+      },
+      {
+        "test": "normalizacao_do_titulo_explicitamente_auditada",
+        "method": "Conferir a transformação existente join_layout_lines e seus valores completos antes/depois; sem executar normalização nova.",
+        "result": "passed",
+        "evidence": {
+          "existing_transformations": [
+            {
+              "after": "O CONHECIMENTO DA ARTE MAXIMIZA O TALENTO",
+              "before": "O CONHECIMENTO DA ARTE MAXIMIZA O\nTALENTO",
+              "operation": "join_layout_lines"
+            }
+          ]
+        }
+      },
+      {
+        "test": "tipografia_das_duas_linhas_conferida_no_pdf",
+        "method": "Comparar fonte, tamanho e flags dos spans nativos com o bruto e exigir o mesmo estilo em ambas as linhas.",
+        "result": "passed",
+        "evidence": {
+          "native_spans": [
+            {
+              "text": "O CONHECIMENTO DA ARTE MAXIMIZA O",
+              "font": "CenturyGothic-Bold",
+              "size": 21.247499465942383,
+              "flags": 20
+            },
+            {
+              "text": "TALENTO",
+              "font": "CenturyGothic-Bold",
+              "size": 21.247499465942383,
+              "flags": 20
+            }
+          ]
+        }
+      },
+      {
+        "test": "caixa_do_titulo_cobre_as_duas_linhas",
+        "method": "Comparar a bbox declarada com a união geométrica das duas linhas nativas.",
+        "result": "passed",
+        "evidence": {
+          "native_union_bbox": [
+            76.9921875,
+            386.62799072265625,
+            498.4329833984375,
+            437.42901611328125
+          ],
+          "source_bbox": [
+            76.9921875,
+            386.62799072265625,
+            498.4329833984375,
+            437.42901611328125
+          ]
+        }
+      },
+      {
+        "test": "posicoes_dos_cinco_paragrafos_correspondem_ao_pdf",
+        "method": "Conferir união das linhas por source_span e localização de cada linha no PDF nativo (tolerância 0,001 pt).",
+        "result": "passed",
+        "evidence": {
+          "matched_native_line_counts": {
+            "para_66ef8804ded1fe6dd65c0d1a": 7,
+            "para_db9eeb4e08b699526de92fa8": 10,
+            "para_9cd0cfb8ba41f50801c99978": 7,
+            "para_d924bdd313dbef772c9daa1a": 6,
+            "para_c6cd52d0a4c1a86a9540cf9b": 10
+          },
+          "source_span_count": 6,
+          "source_spans_location": "evidence.paragraph_scope.paragraphs[].source_spans"
+        }
+      },
+      {
+        "test": "reconstrucao_bruta_dos_cinco_paragrafos_corresponde_ao_pdf",
+        "method": "Concatenar os textos das linhas PDF nas origens declaradas e comparar com cada text_raw, mantendo quebras e pontuação.",
+        "result": "passed",
+        "evidence": {
+          "exact_native_to_raw_matches": {
+            "para_66ef8804ded1fe6dd65c0d1a": true,
+            "para_db9eeb4e08b699526de92fa8": true,
+            "para_9cd0cfb8ba41f50801c99978": true,
+            "para_d924bdd313dbef772c9daa1a": true,
+            "para_c6cd52d0a4c1a86a9540cf9b": true
+          },
+          "matched_native_line_counts": {
+            "para_66ef8804ded1fe6dd65c0d1a": 7,
+            "para_db9eeb4e08b699526de92fa8": 10,
+            "para_9cd0cfb8ba41f50801c99978": 7,
+            "para_d924bdd313dbef772c9daa1a": 6,
+            "para_c6cd52d0a4c1a86a9540cf9b": 10
+          }
+        }
+      },
+      {
+        "test": "intervalos_do_titulo_validos",
+        "method": "Conferir página, bloco e fatias brutas da página/bloco, com igualdade de source_spans no nó e elemento.",
+        "result": "passed",
+        "evidence": {
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                386.62799072265625,
+                498.4329833984375,
+                437.42901611328125
+              ],
+              "block_char_end": 41,
+              "block_char_start": 0,
+              "block_id": "p000016_b00002",
+              "char_end": 1139,
+              "char_start": 1098,
+              "page_index": 16,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ],
+          "raw_text": "O CONHECIMENTO DA ARTE MAXIMIZA O\nTALENTO"
+        }
+      },
+      {
+        "test": "ids_do_no_e_elemento_consistentes",
+        "method": "Recalcular identidades determinísticas a partir da versão, das fatias físicas e do elemento, sem alterar IDs.",
+        "result": "passed",
+        "evidence": {
+          "node_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "element_id": "elem_e646cb7c786f8705deca1f41",
+          "corpus_version": "corpus_d43918f06609b65f21f89425"
+        }
+      },
+      {
+        "test": "padrao_de_secao_alinhamento_e_espacos_coerentes",
+        "method": "Comparar estilo com referência anterior e verificar separação geométrica do texto anterior e do corpo seguinte.",
+        "result": "passed",
+        "evidence": {
+          "comparison_font": "CenturyGothic-Bold",
+          "comparison_size_pt": 21.247499465942383,
+          "left_margin_pt": 76.9921875,
+          "gap_before_title_pt": 37.63336181640625,
+          "gap_after_title_pt": 17.95428466796875
+        }
+      },
+      {
+        "test": "hierarquia_de_secao_nivel_3_valida_sem_ciclos",
+        "method": "Percorrer parent_id até a obra com detecção de nós repetidos; conferir tipo, nível e pai direto.",
+        "result": "passed",
+        "evidence": {
+          "chain_unit_to_work": [
+            "node_8e6704a148cca3f0b9dbd2d0",
+            "node_0357e0c292c6ecffe3791f27",
+            "doc_68538e2dac8d252a47d272de"
+          ],
+          "kind": "section",
+          "level": 3,
+          "parent_id": "node_0357e0c292c6ecffe3791f27",
+          "cycles_detected": false
+        }
+      },
+      {
+        "test": "secao_anterior_nao_e_ancestral",
+        "method": "Verificar que PODERES E TALENTOS não aparece na cadeia do alvo.",
+        "result": "passed",
+        "evidence": {
+          "excluded_previous_section_id": "node_b336e49012dedd8ae408cf0f",
+          "actual_chain": [
+            "node_8e6704a148cca3f0b9dbd2d0",
+            "node_0357e0c292c6ecffe3791f27",
+            "doc_68538e2dac8d252a47d272de"
+          ]
+        }
+      },
+      {
+        "test": "cinco_paragrafos_exatos_ordens_68_a_72",
+        "method": "Comparar IDs e ordens recebidos com os registros de seção e o intervalo geométrico até a área de notas.",
+        "result": "passed",
+        "evidence": {
+          "paragraph_ids": [
+            "para_66ef8804ded1fe6dd65c0d1a",
+            "para_db9eeb4e08b699526de92fa8",
+            "para_9cd0cfb8ba41f50801c99978",
+            "para_d924bdd313dbef772c9daa1a",
+            "para_c6cd52d0a4c1a86a9540cf9b"
+          ],
+          "global_orders": [
+            68,
+            69,
+            70,
+            71,
+            72
+          ],
+          "geometric_interval_ids": [
+            "para_66ef8804ded1fe6dd65c0d1a",
+            "para_db9eeb4e08b699526de92fa8",
+            "para_9cd0cfb8ba41f50801c99978",
+            "para_d924bdd313dbef772c9daa1a",
+            "para_c6cd52d0a4c1a86a9540cf9b"
+          ]
+        }
+      },
+      {
+        "test": "integridade_individual_paragrafo_68",
+        "method": "Conferir ID único, ancestralidade, navegação recíproca e origens dentro do corpo principal; reconstituir text_raw pelas fatias físicas.",
+        "result": "passed",
+        "evidence": {
+          "paragraph_id": "para_66ef8804ded1fe6dd65c0d1a",
+          "global_order": 68,
+          "parent_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "previous_id": "para_c65e4f152ff9574b12cf7b1c",
+          "next_id": "para_db9eeb4e08b699526de92fa8",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                455.38330078125,
+                534.8668212890625,
+                575.49462890625
+              ],
+              "block_char_end": 457,
+              "block_char_start": 0,
+              "block_id": "p000016_b00003",
+              "char_end": 1597,
+              "char_start": 1140,
+              "page_index": 16,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ],
+          "chain_unit_to_work": [
+            "node_8e6704a148cca3f0b9dbd2d0",
+            "node_0357e0c292c6ecffe3791f27",
+            "doc_68538e2dac8d252a47d272de"
+          ]
+        }
+      },
+      {
+        "test": "integridade_individual_paragrafo_69",
+        "method": "Conferir ID único, ancestralidade, navegação recíproca e origens dentro do corpo principal; reconstituir text_raw pelas fatias físicas.",
+        "result": "passed",
+        "evidence": {
+          "paragraph_id": "para_db9eeb4e08b699526de92fa8",
+          "global_order": 69,
+          "parent_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "previous_id": "para_66ef8804ded1fe6dd65c0d1a",
+          "next_id": "para_9cd0cfb8ba41f50801c99978",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                577.63330078125,
+                534.942626953125,
+                714.99462890625
+              ],
+              "block_char_end": 573,
+              "block_char_start": 0,
+              "block_id": "p000016_b00004",
+              "char_end": 2171,
+              "char_start": 1598,
+              "page_index": 16,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            },
+            {
+              "bbox": [
+                76.9921875,
+                72.13330078125,
+                534.2776489257812,
+                105.99462890625
+              ],
+              "block_char_end": 122,
+              "block_char_start": 0,
+              "block_id": "p000017_b00000",
+              "char_end": 122,
+              "char_start": 0,
+              "page_index": 17,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ],
+          "chain_unit_to_work": [
+            "node_8e6704a148cca3f0b9dbd2d0",
+            "node_0357e0c292c6ecffe3791f27",
+            "doc_68538e2dac8d252a47d272de"
+          ]
+        }
+      },
+      {
+        "test": "integridade_individual_paragrafo_70",
+        "method": "Conferir ID único, ancestralidade, navegação recíproca e origens dentro do corpo principal; reconstituir text_raw pelas fatias físicas.",
+        "result": "passed",
+        "evidence": {
+          "paragraph_id": "para_9cd0cfb8ba41f50801c99978",
+          "global_order": 70,
+          "parent_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "previous_id": "para_db9eeb4e08b699526de92fa8",
+          "next_id": "para_d924bdd313dbef772c9daa1a",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                108.13330078125,
+                534.9593505859375,
+                228.24462890625
+              ],
+              "block_char_end": 449,
+              "block_char_start": 0,
+              "block_id": "p000017_b00001",
+              "char_end": 572,
+              "char_start": 123,
+              "page_index": 17,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ],
+          "chain_unit_to_work": [
+            "node_8e6704a148cca3f0b9dbd2d0",
+            "node_0357e0c292c6ecffe3791f27",
+            "doc_68538e2dac8d252a47d272de"
+          ]
+        }
+      },
+      {
+        "test": "integridade_individual_paragrafo_71",
+        "method": "Conferir ID único, ancestralidade, navegação recíproca e origens dentro do corpo principal; reconstituir text_raw pelas fatias físicas.",
+        "result": "passed",
+        "evidence": {
+          "paragraph_id": "para_d924bdd313dbef772c9daa1a",
+          "global_order": 71,
+          "parent_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "previous_id": "para_9cd0cfb8ba41f50801c99978",
+          "next_id": "para_c6cd52d0a4c1a86a9540cf9b",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                230.38330078125,
+                534.85546875,
+                333.24462890625
+              ],
+              "block_char_end": 422,
+              "block_char_start": 0,
+              "block_id": "p000017_b00002",
+              "char_end": 995,
+              "char_start": 573,
+              "page_index": 17,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ],
+          "chain_unit_to_work": [
+            "node_8e6704a148cca3f0b9dbd2d0",
+            "node_0357e0c292c6ecffe3791f27",
+            "doc_68538e2dac8d252a47d272de"
+          ]
+        }
+      },
+      {
+        "test": "integridade_individual_paragrafo_72",
+        "method": "Conferir ID único, ancestralidade, navegação recíproca e origens dentro do corpo principal; reconstituir text_raw pelas fatias físicas.",
+        "result": "passed",
+        "evidence": {
+          "paragraph_id": "para_c6cd52d0a4c1a86a9540cf9b",
+          "global_order": 72,
+          "parent_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "chapter_id": "node_0357e0c292c6ecffe3791f27",
+          "section_id": "node_8e6704a148cca3f0b9dbd2d0",
+          "previous_id": "para_d924bdd313dbef772c9daa1a",
+          "next_id": null,
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                335.38330078125,
+                535.0234375,
+                507.24462890625
+              ],
+              "block_char_end": 677,
+              "block_char_start": 0,
+              "block_id": "p000017_b00003",
+              "char_end": 1673,
+              "char_start": 996,
+              "page_index": 17,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ],
+          "chain_unit_to_work": [
+            "node_8e6704a148cca3f0b9dbd2d0",
+            "node_0357e0c292c6ecffe3791f27",
+            "doc_68538e2dac8d252a47d272de"
+          ]
+        }
+      },
+      {
+        "test": "ordem_visual_e_distribuicao_por_paginas",
+        "method": "Comparar coordenadas iniciais crescentes e listas de páginas das origens com a distribuição prevista.",
+        "result": "passed",
+        "evidence": {
+          "page_indexes_by_order": {
+            "68": [
+              16
+            ],
+            "69": [
+              16,
+              17
+            ],
+            "70": [
+              17
+            ],
+            "71": [
+              17
+            ],
+            "72": [
+              17
+            ]
+          },
+          "first_positions_by_order": {
+            "68": [
+              16,
+              455.38330078125,
+              76.9921875
+            ],
+            "69": [
+              16,
+              577.63330078125,
+              76.9921875
+            ],
+            "70": [
+              17,
+              108.13330078125,
+              76.9921875
+            ],
+            "71": [
+              17,
+              230.38330078125,
+              76.9921875
+            ],
+            "72": [
+              17,
+              335.38330078125,
+              76.9921875
+            ]
+          }
+        }
+      },
+      {
+        "test": "continuidade_do_69_entre_paginas_17_e_18",
+        "method": "Conferir um único ID com dois spans, encaixe literal no ponto de quebra e início/fim indicados na tarefa.",
+        "result": "passed",
+        "evidence": {
+          "paragraph_id": "para_db9eeb4e08b699526de92fa8",
+          "first_part_end": "a final explosiva: “e foi assim que\neu coloquei aquela pirralhada dentro do ônibus essa manhã”. Seus",
+          "second_part_start": "companheiros de trabalho se reclinam satisfeitos, murmurando, “nossa, é\nverdade, Helen, meus filhos ",
+          "final_text_end": "essa manhã”. Seus companheiros de trabalho se reclinam satisfeitos, murmurando, “nossa, é verdade, Helen, meus filhos são bem assim também”.",
+          "source_spans": [
+            {
+              "bbox": [
+                76.9921875,
+                577.63330078125,
+                534.942626953125,
+                714.99462890625
+              ],
+              "block_char_end": 573,
+              "block_char_start": 0,
+              "block_id": "p000016_b00004",
+              "char_end": 2171,
+              "char_start": 1598,
+              "page_index": 16,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            },
+            {
+              "bbox": [
+                76.9921875,
+                72.13330078125,
+                534.2776489257812,
+                105.99462890625
+              ],
+              "block_char_end": 122,
+              "block_char_start": 0,
+              "block_id": "p000017_b00000",
+              "char_end": 122,
+              "char_start": 0,
+              "page_index": 17,
+              "pdf_page_label": null,
+              "printed_page_number": null
+            }
+          ]
+        }
+      },
+      {
+        "test": "recuos_e_fronteiras_dos_paragrafos_coerentes",
+        "method": "Conferir início do corpo na margem, recuo de novos parágrafos, continuação sem recuo e separação vertical entre parágrafos na mesma página.",
+        "result": "passed",
+        "evidence": {
+          "first_line_x_by_order": {
+            "68": 76.9921875,
+            "69": 99.4921875,
+            "70": 99.4921875,
+            "71": 99.4921875,
+            "72": 99.4921875
+          },
+          "continuation_69_first_line_x": 76.9921875,
+          "body_margin_x": 76.9921875
+        }
+      },
+      {
+        "test": "origens_sem_sobreposicao",
+        "method": "Comparar todos os pares de intervalos no mesmo bloco e página.",
+        "result": "passed",
+        "evidence": {
+          "source_count": 6,
+          "intervals": [
+            {
+              "page_index": 16,
+              "block_id": "p000016_b00003",
+              "range": [
+                0,
+                457
+              ]
+            },
+            {
+              "page_index": 16,
+              "block_id": "p000016_b00004",
+              "range": [
+                0,
+                573
+              ]
+            },
+            {
+              "page_index": 17,
+              "block_id": "p000017_b00000",
+              "range": [
+                0,
+                122
+              ]
+            },
+            {
+              "page_index": 17,
+              "block_id": "p000017_b00001",
+              "range": [
+                0,
+                449
+              ]
+            },
+            {
+              "page_index": 17,
+              "block_id": "p000017_b00002",
+              "range": [
+                0,
+                422
+              ]
+            },
+            {
+              "page_index": 17,
+              "block_id": "p000017_b00003",
+              "range": [
+                0,
+                677
+              ]
+            }
+          ],
+          "overlap_pairs": 0
+        }
+      },
+      {
+        "test": "seis_blocos_de_origem_cobertos_sem_omissao",
+        "method": "Comparar os blocos brutos do corpo com as seis origens dos cinco parágrafos e exigir cobertura integral de cada bloco.",
+        "result": "passed",
+        "evidence": {
+          "body_blocks": [
+            {
+              "page_index": 16,
+              "block_id": "p000016_b00003",
+              "char_count": 457
+            },
+            {
+              "page_index": 16,
+              "block_id": "p000016_b00004",
+              "char_count": 573
+            },
+            {
+              "page_index": 17,
+              "block_id": "p000017_b00000",
+              "char_count": 122
+            },
+            {
+              "page_index": 17,
+              "block_id": "p000017_b00001",
+              "char_count": 449
+            },
+            {
+              "page_index": 17,
+              "block_id": "p000017_b00002",
+              "char_count": 422
+            },
+            {
+              "page_index": 17,
+              "block_id": "p000017_b00003",
+              "char_count": 677
+            }
+          ],
+          "full_span_coverage": true
+        }
+      },
+      {
+        "test": "termino_do_72_e_fim_da_navegacao",
+        "method": "Comparar a frase final e verificar que 72 é o último registro corrente com next_id null.",
+        "result": "passed",
+        "evidence": {
+          "last_paragraph_id": "para_c6cd52d0a4c1a86a9540cf9b",
+          "final_text": "alento forjar uma estória. Pois talento sem o conhecimento da arte é como combustível sem um motor. Ele queima violentamente, mas não resulta em nada.",
+          "next_id": null,
+          "last_global_order": 72
+        }
+      },
+      {
+        "test": "separacao_espacial_e_textual_entre_corpo_e_notas",
+        "method": "Conferir seis elementos de notas após o fim do 72, sem sobreposição de coordenadas nem intervalos de caracteres.",
+        "result": "passed",
+        "evidence": {
+          "paragraph_72_bbox": [
+            76.9921875,
+            335.38330078125,
+            535.0234375,
+            507.24462890625
+          ],
+          "paragraph_72_char_end": 1673,
+          "first_note_bbox": [
+            76.9921875,
+            556.9572143554688,
+            531.9894409179688,
+            569.4334716796875
+          ],
+          "first_note_char_start": 1674,
+          "note_element_count": 6,
+          "spatial_gap_pt": 49.71258544921875
+        }
+      },
+      {
+        "test": "notas_fora_dos_paragrafos_correntes",
+        "method": "Verificar que os seis elementos de notas permanecem separados e nenhum parágrafo reivindica seus blocos; sem validar conteúdo, chamadas ou classificação individual.",
+        "result": "passed",
+        "evidence": {
+          "note_element_ids": [
+            "elem_a2ba4afd2655bfb77c97ac30",
+            "elem_43718248c9cc000b8489dff9",
+            "elem_0659a4cfa5ffcce744bec3a5",
+            "elem_e14c1f41c3fb0a48fb74443c",
+            "elem_0d0f8d6b0fdedaa5f7d4c74e",
+            "elem_219b4fdf13614289f3bd51f4"
+          ],
+          "note_blocks": [
+            {
+              "page_index": 17,
+              "block_id": "p000017_b00004"
+            },
+            {
+              "page_index": 17,
+              "block_id": "p000017_b00005"
+            },
+            {
+              "page_index": 17,
+              "block_id": "p000017_b00006"
+            },
+            {
+              "page_index": 17,
+              "block_id": "p000017_b00007"
+            },
+            {
+              "page_index": 17,
+              "block_id": "p000017_b00008"
+            },
+            {
+              "page_index": 17,
+              "block_id": "p000017_b00009"
+            }
+          ],
+          "paragraphs_claiming_note_blocks": 0,
+          "individual_note_approval": false
+        }
+      },
+      {
+        "test": "estado_global_review_required_e_gate_bloqueado",
+        "method": "Conferir estado e indicadores do relatório-base sem reavaliar outras pendências.",
+        "result": "passed",
+        "evidence": {
+          "status": "review_required",
+          "chunking_gate_allowed": false,
+          "fidelity_certified": false
+        }
+      },
+      {
+        "test": "arquivos_base_historico_e_pendencias_preservados",
+        "method": "Comparar os SHA-256 de todos os arquivos preexistentes do corpus e do PDF de entrada.",
+        "result": "passed",
+        "evidence": {
+          "files_checked": 27,
+          "hash_mismatches": [],
+          "consulted_file_sha256": {
+            "original.pdf": "dabd10538ffdc866c6fa24187ffb1b9f784f647a01d5286a9c6a91cd7015633d",
+            "metadata.json": "f0cd8e1be56eacbe189b15ca6f5267bfb37da1fc9022e11d62892515347158c9",
+            "structure.json": "4d24cc423c343e6886e0842c8b3b9953a75d947a31fcc23a95cc907e297f269c",
+            "pages_raw.jsonl": "64e0b2d3cc7adf6c53a663470080fecf2a03ab203c55d5ed08817a248de56811",
+            "paragraphs.jsonl": "a89f1e48e0bbc1f5ddfd4584792b6a87b67f340dafa8d00ea51a5ee60b0a1900",
+            "elements.jsonl": "7db9c696d5449ff8ccf1d3eb573657b8bcf6863ad83c5df1ee3b02c40e005631",
+            "validation_report.json": "794068fd3b258e5e39456b928e1aeed4c1c6c4cfe6cb72aff6d5eba099860547"
+          },
+          "scope": "Todos os arquivos do snapshot, inclusive histórico e relatório, sem modificar outras pendências."
+        }
+      },
+      {
+        "test": "revisoes_anteriores_preservadas",
+        "method": "Comparar SHA-256 dos registros já publicados, sem reabrir suas decisões.",
+        "result": "passed",
+        "evidence": {
+          "prior_review_sha256": {
+            "reviews/tarefa-002-v1.json": "2729c7ba228f1d1960602c52caac95081280e4ce9b18da75cd03acc7e308216d",
+            "reviews/tarefa-001-v1.json": "eca52e7fbcb03b367dcf4ea0a685a5b16dfbda6c6d127131561fbb339fcdba26",
+            "reviews/tarefa-004-v1.json": "725f5956f7ee3f3cb812e3f0365d4d777a5e67f17c5ddbc11f1db1e698e7686d",
+            "reviews/tarefa-005-v1.json": "0285370673bf1568e7e4003abc28061f4a4a88abe8c3b415defed41e769cfe53",
+            "reviews/tarefa-003-v1.json": "5327f8c4effbfee8dee97b9dee27b3cfb4956c22ee83ff3e1895e79807e7c37a",
+            "reviews/tarefa-006-v1.json": "a5476da133f4708f242d9e198d6384643b2e5485b98620f8b9463b81eff167f9",
+            "review_decisions/REVISAO_001.json": "aabaa5fc0575664eb7cef5eede1c2d7a97b3e6ea75bd1224036dfe4020af5e93"
+          },
+          "hash_mismatches": []
+        }
+      }
+    ]
+  },
+  "changes": {
+    "corrections": [],
+    "before": {
+      "classification": "section",
+      "level": 3,
+      "parent_id": "node_0357e0c292c6ecffe3791f27",
+      "paragraph_count": 5
+    },
+    "after": {
+      "classification": "section",
+      "level": 3,
+      "parent_id": "node_0357e0c292c6ecffe3791f27",
+      "paragraph_count": 5
+    },
+    "corpus_files_modified": [],
+    "ids_changed": false,
+    "source_spans_changed": false,
+    "pdf_or_raw_changed": false,
+    "prior_reviews_modified": false,
+    "application": "Registro complementar somente. A transformação preexistente que reúne o título foi verificada, não refeita. Não houve necessidade de correção estrutural nem reescrita do corpus ou relatório-base."
+  },
+  "remaining_uncertainty": {
+    "target_title_structure_and_scope_ambiguities": [],
+    "notes_scope_exclusion": "Conteúdo, classificação individual e chamadas das notas não foram aprovados; apenas sua separação do corpo foi verificada.",
+    "other_seven_pending_reviews": "Permanecem abertas, sem execução ou aprovação nesta tarefa.",
+    "identity_scope": "Não se atesta cópia local (2) não fornecida; a decisão se limita ao snapshot publicado 0.2.0 identificado por hash.",
+    "fidelity_limit": "A inspeção foi realizada por assistente automatizado. Testes e evidências pontuais não constituem aprovação humana nem fidelidade integral certificada."
+  },
+  "global_approval": {
+    "status": "review_required",
+    "chunking_gate_allowed": false,
+    "fidelity_certified": false,
+    "human_approval_claimed": false,
+    "base_report_unchanged": true,
+    "prohibited_processing_executed": false,
+    "note": "Confirmado exclusivamente o alvo da Tarefa 007. O relatório-base preserva suas pendências históricas, e as outras sete revisões continuam abertas."
+  }
+}
